@@ -4,11 +4,16 @@ public class Ejercicio2 {
 
     public static void main(String[] args){
 
-        int num = 7;
+        int num = 10;
 
         int res = 1;
 
-        if(num % 2 == 0){
+
+        if(num == 1 || num == 0){
+
+            res = 1;
+
+        }else if(num % 2 == 0){
 
             for(int i = 2; i < num+1; i+=2){
 
