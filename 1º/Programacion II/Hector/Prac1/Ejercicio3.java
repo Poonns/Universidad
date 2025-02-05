@@ -1,4 +1,4 @@
-package Hector;
+package Hector.Prac1;
 
 import java.util.Scanner;
 
@@ -13,31 +13,28 @@ public class Ejercicio3 {
         
         if(n < 2){
 
-            System.out.println(n + "o es primo");
+            System.out.println(n + " no es primo");
             return;
 
         } 
         
         boolean esPrimo = true;
         
-        for(int i = 2; i < n+1 ; i++){
-
+        for(int i = 2; i < n ; i++){
             if(n % i == 0){
-
                 esPrimo = false;
                 break;
-
             }
 
         }
 
         if(esPrimo){
 
-            System.err.println(n + "es primo");
+            System.err.println(n + " es primo");
 
         } else {
 
-            System.err.println(n + "no es primo");
+            System.err.println(n + " no es primo");
 
         }
 
