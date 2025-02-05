@@ -10,9 +10,25 @@ public class Ejercicio4 {
         int n = entrada.nextInt();
         entrada.close();
 
-        for(int i = 0; i < n+1 ; i++){
+        for(int i = 2; i < n ; i++){
 
-            
+            int divisores = 0;
+
+            for(int j = 1; j <= i; j++){
+
+                if(i % j == 0){
+
+                    divisores ++;
+
+                }
+
+            }
+
+            if(divisores == 2){
+
+                System.out.println(i);
+
+            }
 
         }
 
