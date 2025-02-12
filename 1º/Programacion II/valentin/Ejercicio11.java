@@ -6,21 +6,7 @@ public class Ejercicio11 {
 
     public static Boolean esVocal(char caracter){
 
-        Boolean vocal = false;
-
-        int[] vocales = {65,69,73,79,85};
-
-        for(int i = 0; i < vocales.length;i++){
-
-            if(vocales[i] == (int) caracter || vocales[i]+32 == (int) caracter){
-
-                vocal = true;
-                break;
-            }
-
-        }
-
-        return vocal;
+        return "aeiouAEIOU".indexOf(caracter) >= 0 ? true: false;
 
     }
 
