@@ -17,7 +17,7 @@ public class Ejercicio12 {
             if(caracter_ascii == 32 && caracteres != 0){
                  respuesta+=1;
                  caracteres = 0;
-            }else{
+            }else if(caracter_ascii != 32){
                 caracteres+=1;
             }
 
