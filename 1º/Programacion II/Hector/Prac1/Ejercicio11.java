@@ -4,15 +4,38 @@ import java.util.Scanner;
 
 public class Ejercicio11 {
 
+    public static boolean esVocal(char c) {
+        return "AEIOUaeiou".indexOf(c) >= 0;
+        }
+    
     public static boolean encaja(String patron, String cadena){
 
-        if(cadena.equals(patron)){
-            return true;
-        } else {
+        if(cadena.length() != patron.length()){
             return false;
         }
+         
+        for(int i = 0; i < cadena.length(); i++){
 
+            char patron_caracteres = patron.charAt(i);
+            char cadena_caracteres = cadena.charAt(i);
+
+            if(patron_caracteres == '.'){
+
+                if(!esVocal(cadena_caracteres)){
+                        return false;
+                }
+
+            } else if(patron_caracteres != cadena_caracteres){
+                return false;
+            }
+
+        }
+
+        return true;
     }
+          
+
+
     
     public static void main(String[] args) {
         
