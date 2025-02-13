@@ -49,7 +49,7 @@ public class Ejercicio11 {
         
         String patron = sc.nextLine();
         
-        System.out.println("Escribe el patron: ");
+        System.out.println("Escribe la cadena: ");
 
         String cadena = sc.nextLine();
 
