@@ -9,11 +9,6 @@ public class Ejercicio11 {
 
         }
     
-    public static boolean encaja(String patron, String cadena){
-
-        if(cadena.length() != patron.length()){
-
-    }
 
     public static boolean encaja(String patron, String cadena) {
         if (cadena.length() != patron.length()) {
