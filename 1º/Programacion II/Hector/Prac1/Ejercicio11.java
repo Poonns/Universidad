@@ -36,23 +36,6 @@ public class Ejercicio11 {
 
         return true;
     }
-          
-    
-
-        for (int i = 0; i < cadena.length(); i++) {
-            char patron_caracter = patron.charAt(i);
-            char cadena_caracter = cadena.charAt(i);
-
-            if (patron_caracter == '.') {
-                if (!esVocal(cadena_caracter)) {
-                    return false;
-                }
-            } else if (patron_caracter != cadena_caracter) {
-                return false;
-            }
-        }
-        return true;
-    }
 
 
     public static void main(String[] args) {
