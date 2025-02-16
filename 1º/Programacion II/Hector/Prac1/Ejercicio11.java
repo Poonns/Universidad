@@ -37,8 +37,6 @@ public class Ejercicio11 {
         return true;
     }
           
-
-
     
 
         for (int i = 0; i < cadena.length(); i++) {
