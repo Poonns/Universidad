@@ -1,0 +1,14 @@
+Debes crear un directorio llamado datos en la raíz de tu
+proyecto (no dentro del paquete para la práctica 1).
+Copia todos estos archivos dentro del directorio datos,
+excepto el archivo Ejercicios24a29.java que debe ir
+dentro del paquete de la práctica 1. Para completar los
+ejercicios del 24 al 29 de la práctica, solo debes completar
+los métodos proporcionados. No modifiques nada del resto del
+código. Tampoco es necesario que entiendas ese código
+(se usan elementos del lenguaje que todavía no hemos
+estudiado). Basta con completar los métodos correspondientes.
+
+El archivo Ejercicios24a29.java proporciona una serie
+de pruebas sobre todos los métodos requeridos que te ayudarán
+a detectar posibles errores en tu código.

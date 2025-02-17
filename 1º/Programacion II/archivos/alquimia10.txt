@@ -1,0 +1,7 @@
+tierra  fuego   lava
+lava    aire    piedra
+piedra  agua    arena
+piedra  aire    arena
+arena   arena   desierto
+arena   fuego   cristal
+cristal arena   reloj_de_arena
