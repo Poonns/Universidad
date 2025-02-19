@@ -1,4 +1,4 @@
-package Hector;
+package Hector.Prac1;
 
 public class Ejercicio19 {
     
