@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Ejercicio27 {
     
-        public static int[][] crearMatrizCombinaciones(String[] elementos, String fichero) throws FileNotFoundException {
+    public static int[][] crearMatrizCombinaciones(String[] elementos, String fichero) throws FileNotFoundException {
 
         int N = elementos.length;
         int[][] matriz = new int[N][N];
