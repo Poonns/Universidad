@@ -77,14 +77,87 @@ public class Ejercicio8 {
         public void añadir(Tarea tarea){
             int posicion = posicionInsercion(tarea);
 
-            Tarea[] nuevoVector = new Tarea[tarea.length + 1];
+            Tarea[] nuevoVector = new Tarea[tareas.length + 1];
 
-            for(int i = 0; i < tareas.length; i++){
-
+            for(int i = 0; i < posicion; i++){
+                nuevoVector[i] = tareas[i];
             }
+
+            nuevoVector[posicion] = tarea;
+
+            for(int i = posicion; i < tareas.length; i++){
+                nuevoVector[i+1] = tareas[i];
+            }
+
+            nuevoVector = tareas;
         }
 
+        public int cantidad(){
+            return tareas.length;
+        }
 
+        public Tarea[] consultar(Fecha fecha){
+            int contador = 0;
+
+            for(int i = 0; i < tareas.length; i++){
+                if(fecha.equals(tareas[i].fecha)){
+                    contador ++;
+                }
+            }
+
+            if(contador == 0){
+                return new Tarea[0];
+            }
+
+            Tarea[] nuevoVector = new Tarea[contador];
+            int i = 0;
+
+            for(int j = 0; j < nuevoVector.length; j++){
+                if(fecha.equals(tareas[j].fecha)){
+                    nuevoVector[i] = tareas[j];
+                    i++;
+                }
+            }
+
+            return nuevoVector;
+        }
+
+        public void borrarPasadas(Fecha fecha){
+            int eliminar = 0;
+            
+            for(int i = 0; i < tareas.length; i++){
+                if(fecha.año < tareas[i].fecha.año || fecha.año == tareas[i].fecha.año && fecha.mes < tareas[i].fecha.mes || fecha.año == tareas[i].fecha.año && fecha.mes == tareas[i].fecha.mes && fecha.dia < tareas[i].fecha.dia){
+                    eliminar++;
+                }
+            }
+            int dimensionVector = tareas.length - eliminar;
+            Tarea[] nuevoVector = new Tarea[dimensionVector];
+            int j = 0;
+
+            for(int i = 0; i < tareas.length; i++){
+                if(fecha.año >= tareas[i].fecha.año || fecha.año == tareas[i].fecha.año && fecha.mes >= tareas[i].fecha.mes || fecha.año == tareas[i].fecha.año && fecha.mes == tareas[i].fecha.mes && fecha.dia >= tareas[i].fecha.dia){
+                    nuevoVector[j] = tareas[i];
+                    j++;
+                }
+            }
+
+            tareas = nuevoVector;
+        }
+
+        public void borrar(){
+            Fecha hoy = new Fecha(9, 4, 2025);
+
+            borrarPasadas(hoy);
+        }
+
+        public String toString(){
+            String resultado = "";
+
+            for(int i = 0; i < tareas.length; i++){
+                resultado += tareas[i].toString() + "\n";
+            }
+            return resultado;
+        }
     }
 }
 
