@@ -2,7 +2,6 @@ package Hector.Prac2;
 
 import java.util.Locale;
 
-public class Ejercicio1 {
     
     public class Punto{
 
