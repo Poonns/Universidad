@@ -6,100 +6,7 @@ java.util.Calendar;
 
 public class Ejercicio5 {
 
-    public class Fecha{
-
-        private int dia;
-        private int mes;
-        private int año;
-
-        public Fecha(int dia, int mes, int año){
-
-            this.dia = dia;
-            this.mes = mes;
-            this.año = año;
-
-        }
-
-        public Fecha(Fecha otraFecha){
-
-            this.dia = otraFecha.dia;
-            this.mes = otraFecha.mes;
-            this.año = otraFecha.año;
-
-        }
-
-        public String toString(){
-            return dia + "/" + mes + "/" + año;
-        }
-
-        public boolean equals(Object otroObjeto){
-
-            if(this == otroObjeto){
-                return true;
-            }
-
-            if(otroObjeto instanceof Fecha){
-                return false;
-            }
-
-            Fecha otraFecha = (Fecha) otroObjeto;
-            return dia == otraFecha.dia && mes == otraFecha.mes && año == otraFecha.año;
-
-        }
-
-        public int compareTo(Fecha otraFecha){
-            if(this.año < otraFecha.año){
-                return -1;
-            } else if(this.año > otraFecha.año){
-                return 1;
-            }
-
-            if(this.mes < otraFecha.mes){
-                return -1;
-            } else if(this.mes > otraFecha.mes){
-                return 1;
-            }
-
-            if(this.dia < otraFecha.dia){
-                return -1;
-            } else if(this.dia > otraFecha.dia){
-                return 1;
-            }
-
-            return 0;
-        }
-
-        public int getDia(){
-            return this.dia;
-        }
-
-        public int getMes(){
-            return this.mes;
-        }
-
-        public int getAño(){
-            return this.año;
-        }
-
-        public Fecha diaSiguiente(){
-            int diaSiguiente = this.dia + 1;
-            int mes = this.mes;
-            int año = this.año;
-
-            if(diaSiguiente > diasMes(mes, año)){
-                diaSiguiente = 1;
-                mes++;
-            }
-
-            if(mes > 12){
-                mes = 1;
-                año++;
-            }
-
-            return new Fecha(diaSiguiente, mes, año);
-        }
-
-    }
+    
 
     public static boolean esAñoBisiesto(int año){
 
@@ -143,4 +50,99 @@ public class Ejercicio5 {
 
 
     
+}
+
+public class Fecha{
+
+    private int dia;
+    private int mes;
+    private int año;
+
+    public Fecha(int dia, int mes, int año){
+
+        this.dia = dia;
+        this.mes = mes;
+        this.año = año;
+
+    }
+
+    public Fecha(Fecha otraFecha){
+
+        this.dia = otraFecha.dia;
+        this.mes = otraFecha.mes;
+        this.año = otraFecha.año;
+
+    }
+
+    public String toString(){
+        return dia + "/" + mes + "/" + año;
+    }
+
+    public boolean equals(Object otroObjeto){
+
+        if(this == otroObjeto){
+            return true;
+        }
+
+        if(otroObjeto instanceof Fecha){
+            return false;
+        }
+
+        Fecha otraFecha = (Fecha) otroObjeto;
+        return dia == otraFecha.dia && mes == otraFecha.mes && año == otraFecha.año;
+
+    }
+
+    public int compareTo(Fecha otraFecha){
+        if(this.año < otraFecha.año){
+            return -1;
+        } else if(this.año > otraFecha.año){
+            return 1;
+        }
+
+        if(this.mes < otraFecha.mes){
+            return -1;
+        } else if(this.mes > otraFecha.mes){
+            return 1;
+        }
+
+        if(this.dia < otraFecha.dia){
+            return -1;
+        } else if(this.dia > otraFecha.dia){
+            return 1;
+        }
+
+        return 0;
+    }
+
+    public int getDia(){
+        return this.dia;
+    }
+
+    public int getMes(){
+        return this.mes;
+    }
+
+    public int getAño(){
+        return this.año;
+    }
+
+    public Fecha diaSiguiente(){
+        int diaSiguiente = this.dia + 1;
+        int mes = this.mes;
+        int año = this.año;
+
+        if(diaSiguiente > diasMes(mes, año)){
+            diaSiguiente = 1;
+            mes++;
+        }
+
+        if(mes > 12){
+            mes = 1;
+            año++;
+        }
+
+        return new Fecha(diaSiguiente, mes, año);
+    }
+
 }
