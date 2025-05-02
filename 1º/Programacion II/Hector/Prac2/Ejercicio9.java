@@ -1,7 +1,6 @@
 package Hector.Prac2;
 
 import java.util.Locale;
-import java.util.Vector;
 
 public class Ejercicio9 {
     public class Punto{
@@ -120,13 +119,52 @@ public class Ejercicio9 {
                 return 0;
             }
 
-            int distancias = 0;
-            for(int i = 0; i < cantidad; i++){
+            double distancias = 0;
+            for(int i = 0; i < cantidad -1; i++){
                 if(cantidad > 1){
                     distancias += puntos[i].distancia(puntos[i+1]);
                 }
             }
             return distancias;
+        }
+
+        public String toString(){
+            if(cantidad == 0){
+                return "";
+            }
+
+            if(cantidad == 1){
+                return puntos[0].toString();
+            }
+
+            String resultado = puntos[0].toString();
+
+            for(int i = 0; i < cantidad; i++){
+                resultado += "--" + puntos[i].toString();
+            }
+            return resultado;
+        }
+
+        public boolean equals(Object otroObjeto){
+            if(this == otroObjeto){
+                return true;
+            }
+            if(!(otroObjeto instanceof LineaPoligonal)){
+                return false;
+            }
+            LineaPoligonal nuevaLinea = (LineaPoligonal) otroObjeto;
+            
+            if(cantidad != nuevaLinea.cantidad){
+                return false;
+            }
+
+            for(int i = 0; i < cantidad; i++){
+                if(!(puntos[i].equals(nuevaLinea.puntos[i]))){
+                    return false;
+                }
+                
+            }
+            return true;    
         }
     }
 }
