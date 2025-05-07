@@ -31,7 +31,43 @@ public class ColaTrabajosEnlacesSimple implements ColaTrabajos {
             throw new NoSuchElementException("No hay elementos");
         }
 
+        TrabajoImpresora borrado = prim;
         prim = prim.getSiguiente();
+        talla --;
+
+        if(prim == null){
+            ult = null;
+        }
+
+        return borrado;
+    }
+
+    public TrabajoImpresora consultarTrabajo() throws NoSuchElementException{
+        if(prim == null){
+            throw new NoSuchElementException("La lista está vacía");
+        }
+         return prim;
+    }
+
+    public int getTalla(){
+        return talla;
+    }
+
+    public boolean esVacia(){
+        if(prim == null){
+            return false;
+        }
+        return true;
+    }
+
+    public String toString(){
+        String cadena = "[";
+        for(TrabajoImpresora actual = prim; actual != null; actual = actual.getSiguiente()){
+            cadena += actual.toString() + ",";
+        }
+        cadena += "]";
+
+        return cadena;
     }
 
 }

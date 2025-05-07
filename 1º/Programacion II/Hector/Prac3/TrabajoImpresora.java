@@ -2,22 +2,26 @@ package Hector.Prac3;
 
 
 public class TrabajoImpresora {
-    private int idTrabajador;
+    private int idTrabajo;
     private String idUsuario;
     private TrabajoImpresora siguiente;
 
 
-    public TrabajoImpresora(int idTrabajador, String idUsuario){
-        this.idTrabajador = idTrabajador;
+    public TrabajoImpresora(int idTrabajo, String idUsuario){
+        this.idTrabajo = idTrabajo;
         this.idUsuario = idUsuario;
     }
 
-    public int getIdTrabajador(){
-        return idTrabajador;
+    public int getIdTrabajo(){
+        return idTrabajo;
     }
 
     public String getIdUsuario(){
         return idUsuario;
+    }
+
+    public TrabajoImpresora getSiguiente(){
+        return siguiente;
     }
 
     public void setSiguiente(TrabajoImpresora siguiente) {
@@ -25,6 +29,6 @@ public class TrabajoImpresora {
     }    
     
     public String toString(){
-        return idTrabajador + "/" + idUsuario;
+        return idTrabajo + "/" + idUsuario;
     }
 }
