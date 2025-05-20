@@ -61,7 +61,31 @@ public class problema2 {
                     actual.sig = nuevoNodo;
                 }
             }
+        }
 
+        boolean seDebeBloquear(String usuario, int limite){
+            int total = 0;
+            for(Nodo actual = primero; actual != null; actual = actual.sig){
+                if(actual.uso.getUsuario().equals(usuario)){
+                    total += actual.uso.minutos;
+                }
+            }
+            return total > limite;
+        }
+        
+        void borrar(String usuario){
+            Nodo anterior = null;
+            for(Nodo actual = primero; actual != null; actual = actual.sig){
+                if(actual.uso.getUsuario().equals(usuario)){
+                    if(anterior == null){
+                        primero = actual.sig;
+                    } else{
+                        anterior.sig = actual.sig;
+                    }
+                } else{
+                    anterior = actual;
+                }
+            }
         }
     }
 }
