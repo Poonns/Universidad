@@ -139,19 +139,19 @@ public class problema1 {
             while(i < ocupados && j < otro.ocupados){
                 if(vector[i].getCodigo().compareTo(otro.vector[j].getCodigo()) < 0){
                     nuevo[k++] = new Medicamento(vector[i].getCodigo(), vector[i++].getStock());
-                } else if(vector[i].getCodigo().compareTo(otro.vector[j].getCodigo()) < 0){
-                    nuevo[k++] = new Medicamento(vector[j].getCodigo(), vector[j++].getStock());
+                } else if(vector[i].getCodigo().compareTo(otro.vector[j].getCodigo()) > 0){
+                    nuevo[k++] = new Medicamento(otro.vector[j].getCodigo(), otro.vector[j++].getStock());
                 } else{
-                    nuevo[k] = new Medicamento(vector[i++].getCodigo(), vector[j++].getStock());
+                    nuevo[k++] = new Medicamento(vector[i].getCodigo(), otro.vector[j++].getStock() + vector[i++].getStock());
                 }
             }
 
-            if(i < ocupados){
+            while(i < ocupados){
                 nuevo[k++] = new Medicamento(vector[i].getCodigo(), vector[i++].getStock());
             }
 
-            if(j < otro.ocupados){
-                nuevo[k++] = new Medicamento(vector[j].getCodigo(), vector[j++].getStock());
+            while(j < otro.ocupados){
+                nuevo[k++] = new Medicamento(otro.vector[j].getCodigo(), otro.vector[j++].getStock());
             }
              AlmacenMedicamentos nuevoAlmacen = new AlmacenMedicamentos();
              nuevoAlmacen.vector = nuevo;
