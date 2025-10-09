@@ -1,15 +1,28 @@
+/**
+ * @file complejoMain.cpp
+ * @brief Programa principal de números complejos
+ * @details
+ * Comprobar el funcionamiento de los operadores suma y producto de la clase Complejo,
+ * además genera un vector de números complejos usando'genVector()' y muestra el contenido del vector
+ * 
+ */
+
 #include <iostream>
 #include <vector>
-#include "complejo.cpp"
+#include "complejo.h"
 using namespace std;
 
 
 /**
- * Declaramos la función que nos añadirá los complejos al vector y cumplira lo siguiente:
- * 
+ * @brief Genera un vector de números complejos que cumple la siguiente especificación:
  * Func genVector(c: Complejo; n: Nat) dev v: Vector[0..n-1] de Complejo
  * {Pre: n > 0}
  * {Post: v[0] = (1,0) ∧ ∀α: 0 < α ≤ n-1: v[α] = v[α - 1] * c }
+ * 
+ * @param c numero complejo
+ * @param n tamaño del vector (n>0)
+ * @return vector<Complejo> vector generado
+ * 
  */
 vector<Complejo> genVector(const Complejo c, int n){
     //Creamos vector tamaño n;
@@ -28,8 +41,12 @@ vector<Complejo> genVector(const Complejo c, int n){
 
 int main(){
     /**
-     * Creamos dos objetos para comprobar si las 
-     * operaciones se realizan de manera correcta
+     * @brief Entrada del programa
+     * 
+     * Operaciones que realiza:
+     *  - Comprueba los operadores de suma y producto de la clase Complejo
+     *  - Genera un vector de tamaño n = 10
+     *  - Muestra los resultados por pantalla
      */
     
     Complejo c1;
