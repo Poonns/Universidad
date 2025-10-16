@@ -10,7 +10,7 @@
  * @file complejo.cpp
  */
 
-#include <cstdlib>
+#include <cmath>
 #include <iostream>
 #include <cassert>
 
@@ -55,7 +55,7 @@ bool Complejo::operator==(const Complejo c) const
  * @param im Parte imaginaria
  */
 
-void Complejo::setRec(float re, float im) 
+void Complejo::SetRec(float re, float im) 
 {
     mod = sqrt(re*re + im*im);
     if(re == 0 && im == 0)
@@ -65,7 +65,7 @@ void Complejo::setRec(float re, float im)
     if(arg < 0)
         arg = arg + 2 * M_PI;
 
-    assert(inv());
+    assert(Inv());
 }
 
 /**
@@ -73,7 +73,7 @@ void Complejo::setRec(float re, float im)
  * @return Parte real
  */
 
-float Complejo::getReal() const 
+float Complejo::GetReal() const 
 {
     return mod * cos(arg);
 }
@@ -83,7 +83,7 @@ float Complejo::getReal() const
  * @return Parte imaginaria
  */
 
-float Complejo::getImag() const 
+float Complejo::GetImag() const 
 {
     return mod * sin(arg);
 }
@@ -93,7 +93,8 @@ float Complejo::getImag() const
  * @return true si el complejo es válido, false en caso contrario
  */
 
-bool Complejo::inv() const{
+bool Complejo::Inv() const
+{
     if((mod >= 0) && (arg >= 0) && (arg < 2*M_PI))
         return true;
     return false;
@@ -105,27 +106,30 @@ bool Complejo::inv() const{
  * @param a Nuevo argumento (radianes)
  */
 
-void Complejo::set(float m, float a){
-    if(mod < 0){
+void Complejo::Set(float m, float a)
+{
+    if(mod < 0)
+    {
         mod = -m;
         a += 2*M_PI;
-    } else {
+    } 
+    else
         mod = m;
-    }
 
-    if(a < 0){
-        while(a < 0){
+    if(a < 0)
+    {
+        while(a < 0)
             a += 2*M_PI;
-        }
-    } else {
-        while(a >= 2*M_PI){
+    } 
+    else 
+    {
+        while(a >= 2*M_PI)
             a -= 2*M_PI;
-        }
     }
-
+    
     arg = a;
 
-    assert(inv());
+    assert(Inv());
 }
 
 /**
@@ -134,13 +138,14 @@ void Complejo::set(float m, float a){
  * @return Complejo resultado de la operación
  */
 
-Complejo& Complejo::operator+(const Complejo c) const{
+Complejo Complejo::operator+(const Complejo c) const
+{
     Complejo nuevo;
     
-    float r = getReal() + c.getReal();
-    float i = getImag() + c.getImag();
+    float r = GetReal() + c.GetReal();
+    float i = GetImag() + c.GetImag();
 
-    nuevo.setRec(r, i);
+    nuevo.SetRec(r, i);
 
     return nuevo;
 }
@@ -151,10 +156,11 @@ Complejo& Complejo::operator+(const Complejo c) const{
  * @return Complejo resultado de la operación
  */
 
-Complejo Complejo::operator*(const Complejo &c) const {
+Complejo Complejo::operator*(const Complejo &c) const 
+{
     Complejo result;
 
-    result.set(mod * c.mod, arg + c.arg); 
+    result.Set(mod * c.mod, arg + c.arg); 
 
     return result;
 }
@@ -163,8 +169,9 @@ Complejo Complejo::operator*(const Complejo &c) const {
  * @brief Muestra el número complejo con la forma: a + bi.
  */
 
-void Complejo::print() const {
-    std::cout << getReal() << " + " << getImag() << "i" << std::endl;
+void Complejo::Print() const 
+{
+    cout << GetReal() << " + " << GetImag() << "i" << endl;
 }
 
 

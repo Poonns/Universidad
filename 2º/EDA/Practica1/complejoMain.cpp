@@ -24,12 +24,14 @@ using namespace std;
  * @return vector<Complejo> vector generado
  * 
  */
+ 
+ /*
 vector<Complejo> genVector(const Complejo c, int n){
     //Creamos vector tamaño n;
     vector<Complejo> v(n);
 
     //Modificamos v[0] para cumplir con el enunciado
-    v[0].setRec(1,0);
+    v[0].SetRec(1.0,0.0);
 
     //Asginamos los valores al resto de elementos del vector
     for(int i = 1; i < n; i++){
@@ -37,7 +39,7 @@ vector<Complejo> genVector(const Complejo c, int n){
     }
 
     return v;
-}
+}*/
 
 int main(){
     /**
@@ -53,38 +55,39 @@ int main(){
     Complejo c2;
 
     //Asignamos valores a los objetos creados
-    c1.setRec(3,4);
-    c2.setRec(2,3);
+    c1.SetRec(3.0, 4.0);
+    c2.SetRec(2.0, 3.0);
 
     //Prueba del operator+
     Complejo suma = c1 + c2;
     cout << "Suma: "; 
-    c1.print();
+    c1.Print();
     cout<< "+"; 
-    c2.print();
+    c2.Print();
     cout<< "="; 
-    suma.print();
+    suma.Print();
 
     //Prueba del operator*
     Complejo multiplicacion = c1 * c2;
     cout << "Multiplicación: "; 
-    c1.print();
+    c1.Print();
     cout << "*"; 
-    c2.print(); 
+    c2.Print(); 
     cout << "= "; 
-    multiplicacion.print();
+    multiplicacion.Print();
 
     //Asignamos valores a los parámetros que pasaremos a la función definida previamente
     Complejo c(2,M_PI/4);
-    int n = 10;
+/*    int n = 10;
 
     //Creamos el vector y lo mostramos por pantalla
     vector<Complejo> nuevoVector = genVector(c,n);
 
-    for(int i = 0; i < nuevoVector.size(); i++){
+    for(int i = 0; i < nuevoVector.size(); i++)
+    {
         cout << "v[" << i << "] = ";
         nuevoVector[i].print();
     }
-
+*/
     return 0;
 }

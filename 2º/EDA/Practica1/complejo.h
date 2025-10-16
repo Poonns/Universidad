@@ -23,6 +23,7 @@ using namespace std;
  */
 class Complejo
 {
+private:
     /**
      * Modulo del complejo
      */
@@ -39,7 +40,7 @@ public:
     /**
     * Crea un complejo inicializandolo a 0 + 0i
     */
-    Complejo() {mod = 0; arg = 0; }
+    Complejo() {mod = 0; arg = 0; };
 
     /**
     * Crea un complejo con un valor inicial para el modulo y el argumento.
@@ -52,19 +53,19 @@ public:
     * Invariante de clase para complejos en notacion polar.
     * @return Indicador de complejo valido (true) o invalido (false).
     */
-    bool inv();
+    bool Inv() const;
 
     /**
     * Obtiene la parte real del complejo.
     * @return Parte real del complejo.
     */
-    float getReal() const;
+    float GetReal() const;
 
     /**
     * Obtiene la parte imaginaria del complejo.
     * @return Parte imaginaria del complejo.
     */
-    float getImag() const;
+    float GetImag() const;
 
     /**
     * Suma dos complejos.
@@ -78,7 +79,7 @@ public:
     * @param c Parametro explicito del producto.
     * @return Complejo resultado del producto.
     */
-    Complejo operator*(const Complejo c) const;
+    Complejo operator*(const Complejo &c) const;
 
     /**
     * Compara dos complejos e indica si son iguales.
@@ -92,7 +93,7 @@ public:
     * @param m Nuevo modulo.
     * @param a Nuevo argumento.
     */
-    void set(float m, float a);
+    void Set(float m, float a);
 
     /**
     * Asigna nuevos valores al modulo y argumento del complejo
@@ -101,12 +102,12 @@ public:
     * @param r Coordenada real
     * @param i Coordenada imaginaria
     */
-    void setRec(float r, float i);
+    void SetRec(float r, float i);
 
     /**
     * Imprime el complejo por pantalla
     */
-    void print() const;
+    void Print() const;
 };
 
 #endif
