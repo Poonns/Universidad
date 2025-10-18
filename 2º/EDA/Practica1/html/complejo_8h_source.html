@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Práctica1: Archivo de código fuente complejo.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Práctica1
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">complejo.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="complejo_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#ifndef _COMPLEJO_H</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#define _COMPLEJO_H</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classComplejo.html">   24</a></span><span class="keyword">class </span><a class="code hl_class" href="classComplejo.html">Complejo</a></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">float</span> mod;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">float</span> arg;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classComplejo.html#a47ff5b1401713b53d025867a9fb5e6a0">   43</a></span>    <a class="code hl_function" href="classComplejo.html#a47ff5b1401713b53d025867a9fb5e6a0">Complejo</a>() {mod = 0; arg = 0; };</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_function" href="classComplejo.html#a47ff5b1401713b53d025867a9fb5e6a0">Complejo</a>(<span class="keywordtype">float</span> m, <span class="keywordtype">float</span> a);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classComplejo.html#a93756afd8141a5ba3b6b5cf7c57a25f9">Inv</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="classComplejo.html#aa7bf72988a12eb0ae68fe1aef64b0d08">GetReal</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="classComplejo.html#a4718f562e2f54d9c2eaa54f1c0979436">GetImag</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_class" href="classComplejo.html">Complejo</a> <a class="code hl_function" href="classComplejo.html#a5d3ab363dffcbff1a1d68f414baa9806">operator+</a>(<span class="keyword">const</span> <a class="code hl_class" href="classComplejo.html">Complejo</a> c) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <a class="code hl_class" href="classComplejo.html">Complejo</a> <a class="code hl_function" href="classComplejo.html#adc4f60184d81453bbf0f018c4691ae21">operator*</a>(<span class="keyword">const</span> <a class="code hl_class" href="classComplejo.html">Complejo</a> &amp;c) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classComplejo.html#a61fd3bccc0538510f21027ba04897c6b">operator==</a>(<span class="keyword">const</span> <a class="code hl_class" href="classComplejo.html">Complejo</a> c) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classComplejo.html#a2aa321379ab2cde56ba7b5ac037426e3">Set</a>(<span class="keywordtype">float</span> m, <span class="keywordtype">float</span> a);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classComplejo.html#a69d7d8b5b3c7e36ab5e548376c2092a3">SetRec</a>(<span class="keywordtype">float</span> r, <span class="keywordtype">float</span> i);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classComplejo.html#a5c4ab1ff2f10d926b93febf4f2414b88">Print</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>};</div>
+</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassComplejo_html"><div class="ttname"><a href="classComplejo.html">Complejo</a></div><div class="ttdef"><b>Definition</b> complejo.h:25</div></div>
+<div class="ttc" id="aclassComplejo_html_a2aa321379ab2cde56ba7b5ac037426e3"><div class="ttname"><a href="classComplejo.html#a2aa321379ab2cde56ba7b5ac037426e3">Complejo::Set</a></div><div class="ttdeci">void Set(float m, float a)</div><div class="ttdoc">Asigna nuevos valores al módulo y argumento.</div><div class="ttdef"><b>Definition</b> complejo.cpp:109</div></div>
+<div class="ttc" id="aclassComplejo_html_a4718f562e2f54d9c2eaa54f1c0979436"><div class="ttname"><a href="classComplejo.html#a4718f562e2f54d9c2eaa54f1c0979436">Complejo::GetImag</a></div><div class="ttdeci">float GetImag() const</div><div class="ttdoc">Obtiene la parte imaginaria del complejo.</div><div class="ttdef"><b>Definition</b> complejo.cpp:86</div></div>
+<div class="ttc" id="aclassComplejo_html_a47ff5b1401713b53d025867a9fb5e6a0"><div class="ttname"><a href="classComplejo.html#a47ff5b1401713b53d025867a9fb5e6a0">Complejo::Complejo</a></div><div class="ttdeci">Complejo()</div><div class="ttdef"><b>Definition</b> complejo.h:43</div></div>
+<div class="ttc" id="aclassComplejo_html_a5c4ab1ff2f10d926b93febf4f2414b88"><div class="ttname"><a href="classComplejo.html#a5c4ab1ff2f10d926b93febf4f2414b88">Complejo::Print</a></div><div class="ttdeci">void Print() const</div><div class="ttdoc">Muestra el número complejo con la forma: a + bi.</div><div class="ttdef"><b>Definition</b> complejo.cpp:172</div></div>
+<div class="ttc" id="aclassComplejo_html_a5d3ab363dffcbff1a1d68f414baa9806"><div class="ttname"><a href="classComplejo.html#a5d3ab363dffcbff1a1d68f414baa9806">Complejo::operator+</a></div><div class="ttdeci">Complejo operator+(const Complejo c) const</div><div class="ttdoc">Suma dos complejos.</div><div class="ttdef"><b>Definition</b> complejo.cpp:141</div></div>
+<div class="ttc" id="aclassComplejo_html_a61fd3bccc0538510f21027ba04897c6b"><div class="ttname"><a href="classComplejo.html#a61fd3bccc0538510f21027ba04897c6b">Complejo::operator==</a></div><div class="ttdeci">bool operator==(const Complejo c) const</div><div class="ttdoc">Compara si dos complejos son iguales.</div><div class="ttdef"><b>Definition</b> complejo.cpp:44</div></div>
+<div class="ttc" id="aclassComplejo_html_a69d7d8b5b3c7e36ab5e548376c2092a3"><div class="ttname"><a href="classComplejo.html#a69d7d8b5b3c7e36ab5e548376c2092a3">Complejo::SetRec</a></div><div class="ttdeci">void SetRec(float r, float i)</div><div class="ttdoc">Establece el complejo a partir de sus componentes rectangulares.</div><div class="ttdef"><b>Definition</b> complejo.cpp:58</div></div>
+<div class="ttc" id="aclassComplejo_html_a93756afd8141a5ba3b6b5cf7c57a25f9"><div class="ttname"><a href="classComplejo.html#a93756afd8141a5ba3b6b5cf7c57a25f9">Complejo::Inv</a></div><div class="ttdeci">bool Inv() const</div><div class="ttdoc">Comprueba si el complejo cumple las condiciones del invariante.</div><div class="ttdef"><b>Definition</b> complejo.cpp:96</div></div>
+<div class="ttc" id="aclassComplejo_html_aa7bf72988a12eb0ae68fe1aef64b0d08"><div class="ttname"><a href="classComplejo.html#aa7bf72988a12eb0ae68fe1aef64b0d08">Complejo::GetReal</a></div><div class="ttdeci">float GetReal() const</div><div class="ttdoc">Obtiene la parte real del complejo.</div><div class="ttdef"><b>Definition</b> complejo.cpp:76</div></div>
+<div class="ttc" id="aclassComplejo_html_adc4f60184d81453bbf0f018c4691ae21"><div class="ttname"><a href="classComplejo.html#adc4f60184d81453bbf0f018c4691ae21">Complejo::operator*</a></div><div class="ttdeci">Complejo operator*(const Complejo &amp;c) const</div><div class="ttdoc">Multiplica dos complejos.</div><div class="ttdef"><b>Definition</b> complejo.cpp:159</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

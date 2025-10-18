@@ -25,7 +25,7 @@ using namespace std;
  * 
  */
  
- /*
+ 
 vector<Complejo> genVector(const Complejo c, int n){
     //Creamos vector tamaño n;
     vector<Complejo> v(n);
@@ -39,7 +39,7 @@ vector<Complejo> genVector(const Complejo c, int n){
     }
 
     return v;
-}*/
+}
 
 int main(){
     /**
@@ -78,16 +78,16 @@ int main(){
 
     //Asignamos valores a los parámetros que pasaremos a la función definida previamente
     Complejo c(2,M_PI/4);
-/*    int n = 10;
+    int n = 10;
 
     //Creamos el vector y lo mostramos por pantalla
     vector<Complejo> nuevoVector = genVector(c,n);
 
-    for(int i = 0; i < nuevoVector.size(); i++)
+    for(size_t i = 0; i < nuevoVector.size(); i++)
     {
         cout << "v[" << i << "] = ";
-        nuevoVector[i].print();
+        nuevoVector[i].Print();
     }
-*/
+
     return 0;
 }
