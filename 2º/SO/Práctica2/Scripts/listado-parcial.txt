@@ -1,0 +1,8 @@
+Usuario: root
+UID: 0
+Información complementaria: root
+
+Usuario: daemon
+UID: 1
+Información complementaria: daemon
+

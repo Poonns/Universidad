@@ -1,0 +1,20 @@
+#!/bin/bash
+
+while [[ $# -gt 0 ]]
+do
+
+    nombre="$1"
+
+    if [ ! -e "$nombre" ]; then
+        echo "no existe: $nombre"
+
+    elif [ ! -f "$nombre" ]; then
+        echo "existe; pero no es un fichero normal: $nombre"
+
+    else
+        echo "$(wc -l < "$nombre") $nombre"
+    fi
+
+    shift
+
+done

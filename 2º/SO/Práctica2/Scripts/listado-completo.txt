@@ -1,0 +1,168 @@
+Usuario: root
+UID: 0
+Información complementaria: root
+
+Usuario: daemon
+UID: 1
+Información complementaria: daemon
+
+Usuario: bin
+UID: 2
+Información complementaria: bin
+
+Usuario: sys
+UID: 3
+Información complementaria: sys
+
+Usuario: sync
+UID: 4
+Información complementaria: sync
+
+Usuario: games
+UID: 5
+Información complementaria: games
+
+Usuario: man
+UID: 6
+Información complementaria: man
+
+Usuario: lp
+UID: 7
+Información complementaria: lp
+
+Usuario: mail
+UID: 8
+Información complementaria: mail
+
+Usuario: news
+UID: 9
+Información complementaria: news
+
+Usuario: uucp
+UID: 10
+Información complementaria: uucp
+
+Usuario: proxy
+UID: 13
+Información complementaria: proxy
+
+Usuario: www-data
+UID: 33
+Información complementaria: www-data
+
+Usuario: backup
+UID: 34
+Información complementaria: backup
+
+Usuario: list
+UID: 38
+Información complementaria: Mailing List Manager
+
+Usuario: irc
+UID: 39
+Información complementaria: ircd
+
+Usuario: _apt
+UID: 42
+Información complementaria: 
+
+Usuario: nobody
+UID: 65534
+Información complementaria: nobody
+
+Usuario: systemd-network
+UID: 998
+Información complementaria: systemd Network Management
+
+Usuario: tss
+UID: 100
+Información complementaria: TPM software stack,,,
+
+Usuario: systemd-coredump
+UID: 997
+Información complementaria: systemd Core Dumper
+
+Usuario: systemd-timesync
+UID: 996
+Información complementaria: systemd Time Synchronization
+
+Usuario: messagebus
+UID: 101
+Información complementaria: 
+
+Usuario: usbmux
+UID: 102
+Información complementaria: usbmux daemon,,,
+
+Usuario: sshd
+UID: 103
+Información complementaria: 
+
+Usuario: dnsmasq
+UID: 104
+Información complementaria: dnsmasq,,,
+
+Usuario: avahi
+UID: 105
+Información complementaria: Avahi mDNS daemon,,,
+
+Usuario: speech-dispatcher
+UID: 106
+Información complementaria: Speech Dispatcher,,,
+
+Usuario: fwupd-refresh
+UID: 107
+Información complementaria: fwupd-refresh user,,,
+
+Usuario: pulse
+UID: 108
+Información complementaria: PulseAudio daemon,,,
+
+Usuario: saned
+UID: 109
+Información complementaria: 
+
+Usuario: geoclue
+UID: 110
+Información complementaria: 
+
+Usuario: sddm
+UID: 111
+Información complementaria: Simple Desktop Display Manager
+
+Usuario: polkitd
+UID: 995
+Información complementaria: polkit
+
+Usuario: rtkit
+UID: 112
+Información complementaria: RealtimeKit,,,
+
+Usuario: colord
+UID: 113
+Información complementaria: colord colour management daemon,,,
+
+Usuario: user1
+UID: 1000
+Información complementaria: User One,,,
+
+Usuario: tcpdump
+UID: 114
+Información complementaria: 
+
+Usuario: Debian-exim
+UID: 115
+Información complementaria: 
+
+Usuario: uuidd
+UID: 116
+Información complementaria: 
+
+Usuario: iperf3
+UID: 117
+Información complementaria: 
+
+Usuario: libvirt-qemu
+UID: 64055
+Información complementaria: Libvirt Qemu,,,
+

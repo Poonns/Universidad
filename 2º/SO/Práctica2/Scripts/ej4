@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#Separamos los campos (IFS) y los leemos para todas las lineas 
+while IFS=':' read login passwd uid gid gecos home shell
+do
+	#Introducimos los campos 
+	echo "Usuario: $login"
+	echo "UID: $uid"
+	echo "Información complementaria: $gecos"
+	echo ""
+#Cerramos el bucle pasándole el archivo como parámetro
+done  

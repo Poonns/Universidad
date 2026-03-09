@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#Comprobar que se le pasa 1 argumento
+[ $# -ne 1 ] && { echo "Tienes que pasarle un único argumento: ./ej1 archivo" ; exit; }
+
+#Definimos la variable con el primer argumento para no tener que renombrar todo el script
+nombre="$1"
+
+#Comprobamos si NO existe el archivo
+[ ! -e "$nombre" ] && { echo "El fichero $nombre no existe"; exit; }
+
+#Si el archivo existe pero no es un fichero normal
+[ ! -f "$nombre" ] && { echo "$nombre existe, pero no es un fichero normal"; exit; }
+
+#Si el archivo existe Y es un fichero, contamos las líneas
+[ -f "$nombre" ] &&  echo "$nombre existe. Líneas: $(wc -l < "$nombre")"

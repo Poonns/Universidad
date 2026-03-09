@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#Comprobar que hay 2 argumentos
+[ $# -ne 2 ] && { echo "Tienes que pasarle 2 argumentos (nombrebase, nº): ./ej3 fich 3"; exit; }
+
+#Comprobamos que el 2º argument es un numero
+[[ "$2" =~ ^[0-9]+$ ]] || { echo "El 2º argumento no es número"; exit; }
+
+#Definimos las variables 
+nombrebase="$1"
+n=$(( $2 ))	#Evaluamos el segundo argumento como un nº, sino lo es lanzará un error
+
+i=0
+while [[ $i -lt $n ]]
+do
+	#Creamos el archivo con nombre: nombrebase_i
+	touch "${nombrebase}_$i"
+
+	#Añadimos el contenido al archivo
+	echo "Este fichero debería de tener como nombre: ${nombrebase}_$i" > "${nombrebase}_$i"
+	echo "Este fichero ha sido creado en el instante: $(date)" >> "${nombrebase}_$i"
+
+	#Incrementamos la variable
+	i=$(( i+1 ))
+done
