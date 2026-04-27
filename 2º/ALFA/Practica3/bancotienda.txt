@@ -1,0 +1,12 @@
+1. Sí, el autómata producto demuestra que es posible llegar a esta situación. Ocurre con la secuencia P -> D -> C.
+
+2. Se trata de un mal protocolo porque no garantiza la seguridad de todas las partes. Específicamente, deja a la tienda vulnerable ante clientes malintencionados. Un usuario podría pagar, esperar a que la tienda le envíe el producto a casa y, antes de que el banco procese la transferencia, darle al botón de cancelar. El cliente recuperaría su dinero y se quedaría con el artículo gratis.
+
+3. El error de diseño está en que el autómata de la tienda permite la transición "C" desde estados en los que ya se ha ejecutado la acción "D". Una vez que el producto ha salido de la tienda, la opción de cancelar la compra electrónicamente debería estar bloqueada.
+
+CADENAS DE COMPORTAMIENTO DESEABLE (compras con éxito):
+- PLDT
+- PDLT
+
+CADENAS DE COMPORTAMIENTO NO DESEABLE (fraude):
+- PDC

@@ -1,0 +1,8 @@
+El nuevo protocolo es correcto porque elimina la vulnerabilidad que permitía al cliente obtener el producto gratis. Al modificar el AFD de la tienda y eliminar las transiciones "C" desde los estados posteriores a la acción "D", nos aseguramos de que nunca pueda derivar en una cancelación si el producto ya ha sido enviado. Ahora, el único estado de aceptación posible que incluya la acción de despachar requiere obligatoriamente que también se produzca la transferencia, protegiendo así el dinero del vendedor.
+
+CADENAS ACEPTADAS: 
+- PLDT
+- PDLT
+
+CADENAS NO ACEPTADAS:
+- PDC

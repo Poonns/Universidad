@@ -1,0 +1,6 @@
+-Cadenas aceptadas:
+	Vi:d;Ci=n;
+	Ci=n;Ci=r;Vi:c;
+Cadenas NO aceptadas:
+	Ci:f;
+	Vi:d;Ci=r
