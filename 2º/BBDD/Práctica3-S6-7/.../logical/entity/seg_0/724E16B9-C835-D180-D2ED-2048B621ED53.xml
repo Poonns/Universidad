@@ -1,0 +1,155 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="724E16B9-C835-D180-D2ED-2048B621ED53" name="al053_relacion">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:06:03 UTC</createdTime>
+<generatorID>B88F1929-F065-961C-5181-42DC864DBC4B</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<engineerTo>
+<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<generateDiscrimColumn>true</generateDiscrimColumn>
+<discriminatorAttributeID>5F6A87E0-8094-048A-2593-45513B658B5F</discriminatorAttributeID>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="2C9EFC4C-7B8D-B694-60E8-101673C61B63">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:06:03 UTC</createdTime>
+<generatorID>F8D1EC37-D949-20A7-64F7-583277C58883</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<engineerTo>
+<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>F3C29603-D227-F724-79E1-21FB1A8783CB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="subtipo" id="5F6A87E0-8094-048A-2593-45513B658B5F">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:06:03 UTC</createdTime>
+<generatorID>0D851B0E-D8FA-52CF-7D97-F5E7A744804C</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<engineerTo>
+<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+</engineerTo>
+<constraintName>ch_inh_al053_relacion</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>964777AC-737A-3971-3E37-CB5EB88586C0</domain>
+<listOfValues>
+<valueDef value="AL053_FORMACION" description=""/>
+<valueDef value="AL053_LABORAL" description=""/>
+<valueDef value="AL053_PERSONAL" description=""/>
+<valueDef value="AL053_RELACION" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="desde" id="87B8A904-53FE-1C93-4F40-CFB3FBE00C69">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:06:03 UTC</createdTime>
+<generatorID>AD3EA50A-13CC-8EF6-D48C-CF675B836C61</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<engineerTo>
+<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2D2128BB-00CD-F7BF-1C17-0D6DB1B46654</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="hasta" id="93C0B8BF-3544-8AF4-960D-BCF01BB67920">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:06:03 UTC</createdTime>
+<generatorID>7BFDE9E3-44B9-DBB3-4455-73E4FDD55D34</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<engineerTo>
+<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2D2128BB-00CD-F7BF-1C17-0D6DB1B46654</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="al053 persona id" id="8D3060B3-9910-E587-96CC-C97AFC2688A0">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:06:03 UTC</createdTime>
+<generatorID>6635BCB8-B54E-33B0-7636-80216F5E1ED1</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<engineerTo>
+<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+</engineerTo>
+<referedAttribute>2428DBDB-7A48-D1EE-8183-E725FDE8666F</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>F3C29603-D227-F724-79E1-21FB1A8783CB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="al053 persona id1" id="A0ABC23E-F749-6736-3C06-6F733938BB52">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:06:03 UTC</createdTime>
+<generatorID>7E80E8DA-2C3B-9B90-4378-398320B3CF3D</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<engineerTo>
+<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+</engineerTo>
+<referedAttribute>2428DBDB-7A48-D1EE-8183-E725FDE8666F</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>F3C29603-D227-F724-79E1-21FB1A8783CB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="al053 lugar id" id="CE57E525-50E9-3C48-E973-A255952E7C33">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:06:03 UTC</createdTime>
+<generatorID>11B1E44F-8F95-2092-10FA-91C15404AB14</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<engineerTo>
+<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+</engineerTo>
+<referedAttribute>55BF10D0-0C84-7068-E621-68BCF00A2981</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>F3C29603-D227-F724-79E1-21FB1A8783CB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="BC376ED5-E4E3-07CE-D54E-6D2261664B1D">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:25:46 UTC</createdTime>
+<generatorID>1B2201D6-59B7-BB20-FC02-DC6FEC448FA5</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<engineerTo>
+<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>2C9EFC4C-7B8D-B694-60E8-101673C61B63</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>F3C29603-D227-F724-79E1-21FB1A8783CB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FBC6C884-F69B-B4D1-2022-7C26CCC5C8A6" name="al053 relacion pk">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:06:03 UTC</createdTime>
+<generatorID>54031C41-DE00-2D5E-9F15-F6F4D0787192</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<engineerTo>
+<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2C9EFC4C-7B8D-B694-60E8-101673C61B63</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

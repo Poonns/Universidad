@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="al053_lab_emp_fk" directorySegmentName="seg_0" id="715F7B91-AA8F-FE24-61D0-C4C0B3CCFDFA">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:06:03 UTC</createdTime>
+<generatorID>4D7E47BF-9C72-01CF-050A-955D7BB8721B</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<engineerTo>
+<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+</engineerTo>
+<sourcePk>877E70F9-B47A-625A-2413-4A385C40C4B1</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>0EE7A8C4-0680-5CB3-F01F-4D5FE242113E</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>D892ACC4-2F07-7EDF-7064-C79094B4A3A5</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

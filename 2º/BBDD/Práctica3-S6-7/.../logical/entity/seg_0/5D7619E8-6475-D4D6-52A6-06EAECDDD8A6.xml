@@ -1,0 +1,116 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5D7619E8-6475-D4D6-52A6-06EAECDDD8A6" name="al053_lugar">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:06:03 UTC</createdTime>
+<generatorID>EB1A9436-0C65-E11E-756C-F41ECCC8E56A</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<engineerTo>
+<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="55BF10D0-0C84-7068-E621-68BCF00A2981">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:06:03 UTC</createdTime>
+<generatorID>73E754C4-BF12-FF94-6967-9706145D4809</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<engineerTo>
+<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>F3C29603-D227-F724-79E1-21FB1A8783CB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="direccion" id="2A094BD7-336F-5F9B-7ABD-94EC3754C18C">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:06:03 UTC</createdTime>
+<generatorID>BD86247B-877E-BB16-731E-A640CF5BA7E5</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<engineerTo>
+<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>95749E14-8135-1AD1-B634-FCF8F0F1FD2F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="poblacion" id="DD6BBED2-8BF7-BE80-655A-390DCDB0DBEA">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:06:03 UTC</createdTime>
+<generatorID>5AE9682D-DB79-1702-2C03-CC04FBBFF499</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<engineerTo>
+<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>4FDA050B-7A94-598D-CB61-39E135A03638</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pais" id="8B69FAFE-ADD7-0A0F-105D-EB4F01C9ACA0">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:06:03 UTC</createdTime>
+<generatorID>92D1282B-EDC9-D1AF-393A-7CBDC7C5891A</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<engineerTo>
+<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>964777AC-737A-3971-3E37-CB5EB88586C0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="latitud" id="E21787A0-2583-9DE5-39EE-69EBE27B3069">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:06:03 UTC</createdTime>
+<generatorID>F0462354-5C3F-A057-CF52-08A8E4F78F40</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<engineerTo>
+<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>9C3D358E-FDC4-19D5-5852-AF57F4444D4A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="longitud" id="46BFD63D-6ABA-AB76-2E1B-73AB04DC9EF8">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:06:03 UTC</createdTime>
+<generatorID>5692E3BA-F8E9-5F09-B955-771AB27467DA</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<engineerTo>
+<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>9C3D358E-FDC4-19D5-5852-AF57F4444D4A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1B645267-BD5C-1D88-B192-D580457F3C56" name="al053 lugar pk">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:06:03 UTC</createdTime>
+<generatorID>0A6FCE3D-F55F-A9F3-52C4-C4EE03A94B47</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<engineerTo>
+<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>55BF10D0-0C84-7068-E621-68BCF00A2981</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

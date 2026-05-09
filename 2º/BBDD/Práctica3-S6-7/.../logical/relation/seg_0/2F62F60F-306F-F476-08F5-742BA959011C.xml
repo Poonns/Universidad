@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="al053_form_centro_fk" directorySegmentName="seg_0" id="2F62F60F-306F-F476-08F5-742BA959011C">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:06:03 UTC</createdTime>
+<generatorID>DCFFDE8D-1DAB-B95E-E425-5201F99ABAA0</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<engineerTo>
+<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+</engineerTo>
+<sourcePk>877E70F9-B47A-625A-2413-4A385C40C4B1</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>0D54AB3B-3CE7-53DD-3DEB-3D058B93B7F2</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>BA905580-397F-7B4D-9593-1FBFC46CAAB0</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

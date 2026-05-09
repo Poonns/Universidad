@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="al053_inst_lugar_fk" directorySegmentName="seg_0" id="68F18DEF-5F7B-B765-C0E3-16C6D97183E7">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:06:03 UTC</createdTime>
+<generatorID>0A92918D-7A25-7149-9E30-B0FE193631E7</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<engineerTo>
+<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+</engineerTo>
+<sourcePk>1B645267-BD5C-1D88-B192-D580457F3C56</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>5D7619E8-6475-D4D6-52A6-06EAECDDD8A6</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>AE25D490-8BF4-AEBF-C21B-AF7426C5DF44</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

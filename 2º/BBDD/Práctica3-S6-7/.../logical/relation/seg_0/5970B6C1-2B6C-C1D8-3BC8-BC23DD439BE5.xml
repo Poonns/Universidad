@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="al053_lug_obra_fk" directorySegmentName="seg_0" id="5970B6C1-2B6C-C1D8-3BC8-BC23DD439BE5">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:06:03 UTC</createdTime>
+<generatorID>FE3C9009-4B6E-7643-8F9B-3BBA5583F5A6</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<engineerTo>
+<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+</engineerTo>
+<sourcePk>1B645267-BD5C-1D88-B192-D580457F3C56</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>5D7619E8-6475-D4D6-52A6-06EAECDDD8A6</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>43122EE1-1EBA-221C-E951-C9E0BA9F4D3F</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="AL053_Script_Domains">
+<domains>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Date_0_0_0" id="2D2128BB-00CD-F7BF-1C17-0D6DB1B46654">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:01:07 UTC</createdTime>
+<ownerDesignName>...</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>AL053_Script_Domains</fileName>
+<logicalDatatype>LOGDT007</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_100" id="4FDA050B-7A94-598D-CB61-39E135A03638">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:01:07 UTC</createdTime>
+<ownerDesignName>...</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>100</dataTypeSize>
+<fileName>AL053_Script_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_150" id="95749E14-8135-1AD1-B634-FCF8F0F1FD2F">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:01:07 UTC</createdTime>
+<ownerDesignName>...</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>150</dataTypeSize>
+<fileName>AL053_Script_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_50" id="964777AC-737A-3971-3E37-CB5EB88586C0">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:01:07 UTC</createdTime>
+<ownerDesignName>...</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>50</dataTypeSize>
+<fileName>AL053_Script_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_0_0_0" id="9C3D358E-FDC4-19D5-5852-AF57F4444D4A">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:01:07 UTC</createdTime>
+<ownerDesignName>...</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>AL053_Script_Domains</fileName>
+<logicalDatatype>LOGDT019</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_500" id="CCC17E23-1CA6-8091-0030-F19C69450ACA">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:01:07 UTC</createdTime>
+<ownerDesignName>...</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>500</dataTypeSize>
+<fileName>AL053_Script_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_20" id="E2EE6DD7-5E61-C3DC-517A-303302D2163D">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:01:07 UTC</createdTime>
+<ownerDesignName>...</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>20</dataTypeSize>
+<fileName>AL053_Script_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Integer_0_0_0" id="F3C29603-D227-F724-79E1-21FB1A8783CB">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:01:07 UTC</createdTime>
+<ownerDesignName>...</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>AL053_Script_Domains</fileName>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Domain>
+</domains>
+</DomainFile>
