@@ -1,0 +1,80 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="53008703-29EE-8317-AEF6-561E978D801A" name="AL053_FORMACION">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>C1C8C06B-27B1-AB94-6DF5-A2612A2467D4</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>F1FF1C0D-F531-20A7-2B69-B54A990E10DA</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="06E84954-79F0-3E65-1FD2-9D4AC27A50FB">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>C3ABB891-D99E-3682-CF3E-71D41BCD5F07</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>14B8D1B5-0A0E-9DE6-17FC-9E6440047878</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7D8100C3-8202-3093-5817-90E2247A7526" referredColumn="A8A14BE4-293D-3ECD-0BCE-8299CF56207F"/>
+</associations>
+</Column>
+<Column name="AL053_CENTRO_id" id="A7C2544C-8456-40B8-A6A5-CA7041094BE6">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>F4EBFE51-3FAD-1114-3617-658725BCA9B0</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>BC572CC5-A9B4-8EA1-EC51-1B5C356E4302</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D2EC9F2A-4558-DBFD-6D94-A5D77DD438CE" referredColumn="7B5D7ACA-DF92-7C60-8935-AF8B312ED37C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1DA95D06-CAD9-027F-988F-4881FBC59633" name="AL053_FORMACION_PK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>59C3329C-0782-1FA2-45F3-8B81F0460B62</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>F3E1A369-5105-02C6-51C0-83264835B7E0</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="06E84954-79F0-3E65-1FD2-9D4AC27A50FB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D0E3DD58-75F3-A4E1-DFD7-6E408A7B98A2" name="AL053_FORM_CENTRO_FK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>78CC37AB-45B1-A4C0-88F3-346D02975413</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A7C2544C-8456-40B8-A6A5-CA7041094BE6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A63993F3-ABEC-DBEA-D410-FBF1C3AFF2A7" name="AL053_FORM_REL_FK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>503E6037-ECA7-79A5-2487-D342C1A4740B</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="06E84954-79F0-3E65-1FD2-9D4AC27A50FB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

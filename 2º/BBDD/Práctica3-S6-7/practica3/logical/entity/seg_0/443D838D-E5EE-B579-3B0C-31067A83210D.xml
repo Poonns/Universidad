@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="443D838D-E5EE-B579-3B0C-31067A83210D" name="AL053_PERSONAL">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>4AD4FCB5-F62B-B84A-7521-9AF5A74F5493</importedID>
+<engineerTo>
+<item key="1977F924-0995-3F1B-C8CE-D04693E4FB8E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>C1166270-35F9-43AA-E606-F154B7E57B73</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+</Entity>

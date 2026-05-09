@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="4AD68E35-442A-015E-4268-45AA6D31FC15" containerWithKeyObject="81A97352-0FF6-E560-8EBF-C2CAA4CE039C" localFKIndex="0950F384-0635-A807-9605-B26F93FD405E" name="AL053_EMP_INST_FK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>2B173DBA-90C6-BFC3-D4F8-88DACEF85D1B</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>35D64593-9258-5C63-D7E8-30E48BB30895</importedID>
+<referredTableLongName>AL053_INSTITUCION</referredTableLongName>
+<arc>F232DCD2-D739-8EEA-690A-6E1AA12D755B</arc>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D3B07FFD-EFEA-A1AD-6336-3371A84938A7</referredTableID>
+<keyObject>F83900D5-ADCD-E101-2B98-1A17861AFD97</keyObject>
+<referredKeyID>F83900D5-ADCD-E101-2B98-1A17861AFD97</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<discriminatorValue>AL053_EMPRESA</discriminatorValue>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

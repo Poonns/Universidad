@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="con_obra" directorySegmentName="seg_0" id="8956C181-F659-60D7-63A9-459FFB5742CB">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>A240039C-4DEE-9503-4817-8D0BAE59BC16</importedID>
+<engineerTo>
+<item key="1977F924-0995-3F1B-C8CE-D04693E4FB8E" value="true"/>
+</engineerTo>
+<sourcePk>32C4009A-7082-EB23-B29A-778EA1D3D710</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>DC53287A-CC50-3A98-7F55-238CC321421D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>36544912-AC86-B5D6-AB84-9C38DAA031F5</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

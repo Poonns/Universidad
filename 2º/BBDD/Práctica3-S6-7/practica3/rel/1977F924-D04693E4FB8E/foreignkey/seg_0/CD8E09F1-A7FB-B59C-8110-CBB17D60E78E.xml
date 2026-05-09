@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CD8E09F1-A7FB-B59C-8110-CBB17D60E78E" containerWithKeyObject="5B769A7E-5D85-90B0-A78D-C6C50317E567" localFKIndex="92E21EE0-8D24-A69D-8C10-C3898063A221" name="AL053_PERS_REL_FK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>153675AE-CE4C-C6B7-2F97-A4BED3F8EC86</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>C9CACDCB-0444-1FFE-EECD-A6F3306AD9B8</importedID>
+<referredTableLongName>AL053_RELACION</referredTableLongName>
+<arc>593FEF3C-9160-CB77-EA69-0E44BE0169B1</arc>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8311D58D-6538-11ED-A997-6522A7F7EF30</referredTableID>
+<keyObject>96944A04-AD3A-1EF3-1ABA-32B5FC981CB9</keyObject>
+<referredKeyID>96944A04-AD3A-1EF3-1ABA-32B5FC981CB9</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<discriminatorValue>AL053_PERSONAL</discriminatorValue>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

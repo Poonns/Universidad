@@ -1,0 +1,36 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C1C8C06B-27B1-AB94-6DF5-A2612A2467D4" name="AL053_FORMACION">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>D7B4B798-C77A-4981-B32B-865ED81244BF</importedID>
+<engineerTo>
+<item key="1977F924-0995-3F1B-C8CE-D04693E4FB8E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>C1166270-35F9-43AA-E606-F154B7E57B73</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="F4EBFE51-3FAD-1114-3617-658725BCA9B0">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>78CC37AB-45B1-A4C0-88F3-346D02975413</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>EA90AFD5-C600-DF35-2259-8A252C7B047A</importedID>
+<engineerTo>
+<item key="1977F924-0995-3F1B-C8CE-D04693E4FB8E" value="true"/>
+</engineerTo>
+<referedAttribute>79853BF3-B1C0-8731-D716-746016766A09</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

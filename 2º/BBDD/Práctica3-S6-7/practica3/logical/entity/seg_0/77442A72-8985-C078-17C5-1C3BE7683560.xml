@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="77442A72-8985-C078-17C5-1C3BE7683560" name="AL053_INSTITUCION">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>92DF2DCB-4CB6-010F-1564-CE0D7D72643C</importedID>
+<engineerTo>
+<item key="1977F924-0995-3F1B-C8CE-D04693E4FB8E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<generateDiscrimColumn>true</generateDiscrimColumn>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="79853BF3-B1C0-8731-D716-746016766A09">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>55125873-5217-BF0A-BB47-12BF8A248FE6</importedID>
+<engineerTo>
+<item key="1977F924-0995-3F1B-C8CE-D04693E4FB8E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="244AD84F-4A21-C3D1-B8AD-3769BA2DB875">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>427B5F19-2606-7CF9-F54B-45360FAD95BA</importedID>
+<engineerTo>
+<item key="1977F924-0995-3F1B-C8CE-D04693E4FB8E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="creacion" id="CBCBF9E7-CBAA-30D2-F535-FFE559219513">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>65357B71-2692-7B1E-3B74-BB6FB35B5F72</importedID>
+<engineerTo>
+<item key="1977F924-0995-3F1B-C8CE-D04693E4FB8E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="D9C0D5A6-6A48-A4CA-DCC0-B27DB2C95D89">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>C76F32AE-5B9A-8935-CA7A-FC4CCEFA6BDE</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>9C59E233-EF44-70BF-FF2D-FBFC162D0B85</importedID>
+<engineerTo>
+<item key="1977F924-0995-3F1B-C8CE-D04693E4FB8E" value="true"/>
+</engineerTo>
+<referedAttribute>E10DCC24-9C81-7ECD-5020-06500588AAE5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo_inst" id="EE209E0A-611E-1089-6E44-BE184624A1CB">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>D637C51F-9BB2-6346-BC68-0BE442D52ED1</importedID>
+<engineerTo>
+<item key="1977F924-0995-3F1B-C8CE-D04693E4FB8E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1F3FA1AF-408F-0557-5749-4934B07FE5F4" name="institucion PK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>08D0227B-4BCE-7907-773A-16C68311DC0A</importedID>
+<engineerTo>
+<item key="1977F924-0995-3F1B-C8CE-D04693E4FB8E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>79853BF3-B1C0-8731-D716-746016766A09</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

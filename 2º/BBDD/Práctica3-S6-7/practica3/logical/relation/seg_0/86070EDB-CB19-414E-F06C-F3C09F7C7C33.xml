@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="sucede" directorySegmentName="seg_0" id="86070EDB-CB19-414E-F06C-F3C09F7C7C33">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>937B8F1E-EADB-2137-A187-F0CA2B04C9B1</importedID>
+<engineerTo>
+<item key="1977F924-0995-3F1B-C8CE-D04693E4FB8E" value="true"/>
+</engineerTo>
+<sourcePk>EEBC064B-0F37-4D4F-A4CB-6FF16179D85B</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F3DC57F3-9E15-5ABA-A85B-415508825E5E</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>C1166270-35F9-43AA-E606-F154B7E57B73</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

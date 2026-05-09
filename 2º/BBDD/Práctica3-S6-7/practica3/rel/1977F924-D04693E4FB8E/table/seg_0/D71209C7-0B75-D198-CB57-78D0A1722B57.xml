@@ -1,0 +1,67 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D71209C7-0B75-D198-CB57-78D0A1722B57" name="AL053_CENTRO">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>73A88331-259C-0816-0320-9E57B7C0B2A2</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>5F46EC5D-C8F0-C2C2-BC7E-2A22804BE565</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="7B5D7ACA-DF92-7C60-8935-AF8B312ED37C">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>79853BF3-B1C0-8731-D716-746016766A09</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>818A03B0-7EF9-8744-FAB8-BF3DB2A49F27</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="03A7D94C-674A-DA4C-A325-8F23FA20150B" referredColumn="32486163-9B70-4ECF-D9E7-5840B520915F"/>
+</associations>
+</Column>
+<Column name="especialidad" id="60B7C933-0420-55BA-A6BC-50C612C3779C">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>6565F6AB-1048-CCE2-F1BA-9E063AC35576</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>DE0F04C5-295C-8D63-710D-4752015F4FDE</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="206D8A96-EE58-5F06-3563-4FAD5F54738D" name="AL053_CENTRO_PK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>1F3FA1AF-408F-0557-5749-4934B07FE5F4</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>14B367E4-B3BD-3458-08E1-C96D0D53DAF7</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7B5D7ACA-DF92-7C60-8935-AF8B312ED37C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="20CECD56-F96C-2637-96BC-06D54E848AB7" name="AL053_CENTRO_INST_FK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>3CF93807-7E7E-9D28-E21E-415853D3C7C0</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7B5D7ACA-DF92-7C60-8935-AF8B312ED37C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

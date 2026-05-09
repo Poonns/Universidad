@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7936553D-35F8-A93A-05F0-D208004030FD" name="AL053_CREA">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>A83EDB29-B9CB-36D9-55B8-3B341BBDDECA</importedID>
+<ordsAlias>crea</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="AL053_PERSONA_id" id="FCFBE086-BAAD-A612-012F-548D3C11DDAC">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>9E61CADB-5877-218A-BB91-DDC8D4ECEC12</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A388BC53-0F4F-88AD-62F8-9C4BC5FF05E0" referredColumn="4F14DA4F-647C-3BBC-B2E9-ED9E8A64F3F9"/>
+</associations>
+</Column>
+<Column name="AL053_OBRA_id" id="79A898FD-AE7D-7077-D3B3-9094761615D4">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>2F9EA469-FAFA-7600-8D5D-5E2A2B70BD5B</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="155CB2A7-FECF-D1AE-C523-BF31F0151AE5" referredColumn="D950CA42-D089-6380-617C-D231C56F6251"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9F9558CE-0266-9DD3-BEA3-6F5C51D0979D" name="crea_PK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>E1E5CED1-A6A5-9915-9D9B-0C7AE77E783B</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FCFBE086-BAAD-A612-012F-548D3C11DDAC"/>
+<colUsage columnID="79A898FD-AE7D-7077-D3B3-9094761615D4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6BF2D638-3C5B-D182-9DCD-E0E1847F6CCD" name="AL053_PERS_CAUSA_FK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>F86E62C3-A39C-0A4C-CB9B-2DAB08FB3595</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FCFBE086-BAAD-A612-012F-548D3C11DDAC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6D04D79A-F8E0-B896-6F0D-56A759DA6784" name="AL053_CREA_OBRA_FK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>F86E62C3-A39C-0A4C-CB9B-2DAB08FB3595</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="79A898FD-AE7D-7077-D3B3-9094761615D4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

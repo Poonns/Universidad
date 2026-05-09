@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="practica3" id="CF31CAAD-AE09-5D98-6298-A0B146317E73" version="3.5">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:19:37 UTC</createdTime>
+<ownerDesignName>practica3</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>CF31CAAD-AE09-5D98-6298-A0B146317E73</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="7E9F5DAB-9E10-3E35-1673-104DED0C927D">
+<designStoragePath>/Users/hectorpons/universidad/2º/BBDD/Práctica3-S6-7/Práctica3</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

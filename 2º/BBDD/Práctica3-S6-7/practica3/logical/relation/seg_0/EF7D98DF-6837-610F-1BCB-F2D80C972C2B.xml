@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="en empresa" directorySegmentName="seg_0" id="EF7D98DF-6837-610F-1BCB-F2D80C972C2B">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>976A4C99-64DC-2E85-DE39-937941E8378D</importedID>
+<engineerTo>
+<item key="1977F924-0995-3F1B-C8CE-D04693E4FB8E" value="true"/>
+</engineerTo>
+<sourcePk>1F3FA1AF-408F-0557-5749-4934B07FE5F4</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F52264F5-C9AE-F64D-3C74-FD21BD34CD03</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>36544912-AC86-B5D6-AB84-9C38DAA031F5</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

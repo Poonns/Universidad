@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="conv1" directorySegmentName="seg_0" id="D32F6850-5AE3-5C9E-D3D9-65C96E184ED7">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>A71F0D42-92C3-8527-DA91-6D3820A48783</importedID>
+<engineerTo>
+<item key="1977F924-0995-3F1B-C8CE-D04693E4FB8E" value="true"/>
+</engineerTo>
+<sourcePk>8012B14B-C848-CF4D-465B-13B3587D5F83</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>271A27F4-C49E-544B-76A7-2D4A736AC5F4</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>C1166270-35F9-43AA-E606-F154B7E57B73</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

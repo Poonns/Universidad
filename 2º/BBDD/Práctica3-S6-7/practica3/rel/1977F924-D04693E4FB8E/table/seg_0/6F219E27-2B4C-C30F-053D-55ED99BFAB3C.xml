@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6F219E27-2B4C-C30F-053D-55ED99BFAB3C" name="AL053_PERSONA">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>271A27F4-C49E-544B-76A7-2D4A736AC5F4</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>B2106447-91F6-7256-0BD5-86F71C38191D</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="4F14DA4F-647C-3BBC-B2E9-ED9E8A64F3F9">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>D01E8EDD-AD63-84BF-12DD-D81D99C53279</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>BDB864C9-7282-1E94-2494-7CBD78515858</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="23BEEC01-C13A-1702-49F9-9B1A2379369D">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>4712FCDA-35FF-EC87-8F1A-B5E065C8DF64</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>936B742F-67E9-F3BB-9A7B-2E844CE30AFC</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="apellidos" id="F83D7C43-BFD0-0D54-726E-29F109E43D2B">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>5640832D-5219-EACD-C9F3-1B90F650FE90</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>9B85FE92-9C43-BC6B-87BF-5954846991A5</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nacimiento" id="AF65B90C-B7BA-E311-FDFE-0D5976BE2FA9">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>16AD8EA7-8EAF-F8E8-EBDD-703089B7AC85</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>6E53E7A5-6CBB-572B-58DA-4E9789C99B7D</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fallecimiento" id="92AEBE18-0AC1-9B96-4E2D-9E4FC0C18259">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>8DF16B53-5528-75D0-0C6E-576BD73FB3D0</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>7B13138E-D39F-E3CD-0E29-428036D390F4</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AL053_LUGAR_id" id="F61E7D8E-BBE2-DD5C-86ED-9710FD461ACE">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>13F96407-E0CA-5DDD-EAC6-10E640B32614</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>FD318203-5A57-8999-FDA5-071F3252CEDD</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4DAC9691-6421-BFAD-C73E-3EF13E3D14E1" referredColumn="C2E28993-73A5-0715-3348-E1565BB9F497"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E2CBCC7C-B7BD-CEB0-A84B-41425C5E0B6E" name="AL053_PERSONA_PK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>8012B14B-C848-CF4D-465B-13B3587D5F83</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>C9210756-245F-E6C2-8935-7E085DDA2DB0</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4F14DA4F-647C-3BBC-B2E9-ED9E8A64F3F9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B4EA5A50-7E83-A04A-1FBC-77A7045BA55E" name="AL053_PERSONA_AL053_LUGAR_FK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>AE51679C-8543-4820-9495-7209F25A542C</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F61E7D8E-BBE2-DD5C-86ED-9710FD461ACE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

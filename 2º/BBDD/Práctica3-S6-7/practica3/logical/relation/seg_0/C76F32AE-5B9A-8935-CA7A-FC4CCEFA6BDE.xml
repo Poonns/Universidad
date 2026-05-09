@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ubicacion" directorySegmentName="seg_0" id="C76F32AE-5B9A-8935-CA7A-FC4CCEFA6BDE">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>8983F24C-3A28-7BC8-9610-30F79FBB7DC4</importedID>
+<engineerTo>
+<item key="1977F924-0995-3F1B-C8CE-D04693E4FB8E" value="true"/>
+</engineerTo>
+<sourcePk>EEBC064B-0F37-4D4F-A4CB-6FF16179D85B</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F3DC57F3-9E15-5ABA-A85B-415508825E5E</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>77442A72-8985-C078-17C5-1C3BE7683560</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

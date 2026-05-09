@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7B16640B-BC87-9910-2245-AD7B3D050DDC" name="AL053_CAUSA">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>B87ADCEB-2EA7-0E26-9C65-2F8E3C6C7284</importedID>
+<ordsAlias>causa</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="AL053_RELACION_id" id="A297ADB8-B2CA-5706-04F7-091D59791441">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>F034A0E3-A042-E995-E166-AED9DCF195C3</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5D038B1A-A25A-A688-AF56-9FDE90393EAC" referredColumn="A8A14BE4-293D-3ECD-0BCE-8299CF56207F"/>
+</associations>
+</Column>
+<Column name="AL053_RELACION_id1" id="691F40B4-65C1-E863-5A07-90D109F20282">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>1A371B94-DEA5-28AB-98B0-63CEBC6B0A2E</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ECA44068-B040-26EB-5790-E50FE5C8461C" referredColumn="A8A14BE4-293D-3ECD-0BCE-8299CF56207F"/>
+</associations>
+</Column>
+<Column name="importancia" id="26FDAC8B-D04B-375B-8321-AF9D0B723AF5">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>CB63D264-67E2-0AB1-AD52-FB17AD98B19E</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>22A680E3-93D2-4CD1-3413-163D187E5132</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4D25E272-A72D-6EB9-19B2-E1A98B310DED" name="causa_PK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>5B124458-7DC7-6AF4-DE7B-D11709E09B45</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A297ADB8-B2CA-5706-04F7-091D59791441"/>
+<colUsage columnID="691F40B4-65C1-E863-5A07-90D109F20282"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F941626E-17D0-A715-2CF3-C126681FA588" name="causa_AL053_RELACION_FKv1">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>77E297CB-1D0D-0020-509F-F39EAF9DF53E</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="691F40B4-65C1-E863-5A07-90D109F20282"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="30BA22F9-F72D-A726-3D5A-2532F26DA839" name="causa_AL053_RELACION_FK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>77E297CB-1D0D-0020-509F-F39EAF9DF53E</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A297ADB8-B2CA-5706-04F7-091D59791441"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

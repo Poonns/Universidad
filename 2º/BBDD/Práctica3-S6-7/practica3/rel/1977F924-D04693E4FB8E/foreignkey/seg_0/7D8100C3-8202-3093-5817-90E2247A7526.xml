@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="7D8100C3-8202-3093-5817-90E2247A7526" containerWithKeyObject="53008703-29EE-8317-AEF6-561E978D801A" localFKIndex="A63993F3-ABEC-DBEA-D410-FBF1C3AFF2A7" name="AL053_FORM_REL_FK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>503E6037-ECA7-79A5-2487-D342C1A4740B</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>BAE05840-2010-EE02-09E9-D8DC43A41743</importedID>
+<referredTableLongName>AL053_RELACION</referredTableLongName>
+<arc>593FEF3C-9160-CB77-EA69-0E44BE0169B1</arc>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8311D58D-6538-11ED-A997-6522A7F7EF30</referredTableID>
+<keyObject>96944A04-AD3A-1EF3-1ABA-32B5FC981CB9</keyObject>
+<referredKeyID>96944A04-AD3A-1EF3-1ABA-32B5FC981CB9</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<discriminatorValue>AL053_FORMACION</discriminatorValue>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

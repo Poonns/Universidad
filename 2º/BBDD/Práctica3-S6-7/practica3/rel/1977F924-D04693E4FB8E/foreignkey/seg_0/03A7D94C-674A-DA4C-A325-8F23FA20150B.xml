@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="03A7D94C-674A-DA4C-A325-8F23FA20150B" containerWithKeyObject="D71209C7-0B75-D198-CB57-78D0A1722B57" localFKIndex="20CECD56-F96C-2637-96BC-06D54E848AB7" name="AL053_CENTRO_INST_FK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>3CF93807-7E7E-9D28-E21E-415853D3C7C0</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>E126453A-8FBC-394F-FFB5-9CCA2EB289A9</importedID>
+<referredTableLongName>AL053_INSTITUCION</referredTableLongName>
+<arc>F232DCD2-D739-8EEA-690A-6E1AA12D755B</arc>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D3B07FFD-EFEA-A1AD-6336-3371A84938A7</referredTableID>
+<keyObject>F83900D5-ADCD-E101-2B98-1A17861AFD97</keyObject>
+<referredKeyID>F83900D5-ADCD-E101-2B98-1A17861AFD97</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<discriminatorValue>AL053_CENTRO</discriminatorValue>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

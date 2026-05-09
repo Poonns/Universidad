@@ -1,0 +1,54 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5B769A7E-5D85-90B0-A78D-C6C50317E567" name="AL053_PERSONAL">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>443D838D-E5EE-B579-3B0C-31067A83210D</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>C04C83F7-5EAB-971B-D44B-06F7DEB7CFDD</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="66326C05-71D8-9A84-EB77-0CB763C213B7">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>C3ABB891-D99E-3682-CF3E-71D41BCD5F07</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>7AB11F93-EE44-DCF0-C8D9-08A10024BA7F</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CD8E09F1-A7FB-B59C-8110-CBB17D60E78E" referredColumn="A8A14BE4-293D-3ECD-0BCE-8299CF56207F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="61C6AF60-AC29-203C-11C9-636E2F2ED046" name="AL053_PERSONAL_PK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>59C3329C-0782-1FA2-45F3-8B81F0460B62</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<importedID>BFC3874F-D0B2-B6C0-3122-A7A177BCFFE7</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="66326C05-71D8-9A84-EB77-0CB763C213B7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="92E21EE0-8D24-A69D-8C10-C3898063A221" name="AL053_PERS_REL_FK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 19:20:39 UTC</createdTime>
+<generatorID>153675AE-CE4C-C6B7-2F97-A4BED3F8EC86</generatorID>
+<ownerDesignName>practica3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="66326C05-71D8-9A84-EB77-0CB763C213B7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
