@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="65891801-6271-0402-5405-EAB92DAA8242" name="al053_causa">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<ownerDesignName>...</ownerDesignName>
+<ordsAlias>causa</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="al053_relacion_id" id="CBEE76D7-0074-62A2-52B3-964CBECF0F89">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<ownerDesignName>...</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>F3C29603-D227-F724-79E1-21FB1A8783CB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="919C35CB-646D-2DC1-9E41-3DBD4D5A3B07" referredColumn="36946644-0BA5-1000-F78E-B02D3BB4C2EB"/>
+</associations>
+</Column>
+<Column name="al053_relacion_id1" id="4C4FA286-EC67-FE9F-EC94-E57DB4D75CA4">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<ownerDesignName>...</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>F3C29603-D227-F724-79E1-21FB1A8783CB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C9A2339C-0ECA-2CFE-30F5-F03BF8D42A78" referredColumn="36946644-0BA5-1000-F78E-B02D3BB4C2EB"/>
+</associations>
+</Column>
+<Column name="importancia" id="5EF46C52-4A88-74BA-B208-39E4722FC079">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>5DCFDA08-1B83-94F4-EFFC-F6F6B050E0DB</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="08E4D8CB-DB9C-7F7A-0344-2742B06D5B1B" name="causa_PK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<ownerDesignName>...</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CBEE76D7-0074-62A2-52B3-964CBECF0F89"/>
+<colUsage columnID="4C4FA286-EC67-FE9F-EC94-E57DB4D75CA4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="86A5C904-F941-104D-78E4-F4E7C3CBA1C5" name="AL053_CAU_REL_FK1">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>1B2201D6-59B7-BB20-FC02-DC6FEC448FA5</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CBEE76D7-0074-62A2-52B3-964CBECF0F89"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2E267D1F-6A9B-99D0-8CE6-294CF13C470C" name="AL053_CAU_REL_FK2">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>1B2201D6-59B7-BB20-FC02-DC6FEC448FA5</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4C4FA286-EC67-FE9F-EC94-E57DB4D75CA4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

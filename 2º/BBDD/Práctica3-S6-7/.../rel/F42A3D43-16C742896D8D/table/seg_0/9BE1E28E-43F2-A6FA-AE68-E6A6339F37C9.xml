@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9BE1E28E-43F2-A6FA-AE68-E6A6339F37C9" name="al053_formacion">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>BA905580-397F-7B4D-9593-1FBFC46CAAB0</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="0767EA4E-2864-A057-3952-FDA43900D2BD">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>2C9EFC4C-7B8D-B694-60E8-101673C61B63</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>F3C29603-D227-F724-79E1-21FB1A8783CB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4EC953C6-5C0B-85E2-3D52-B4BB9AD14A93" referredColumn="36946644-0BA5-1000-F78E-B02D3BB4C2EB"/>
+</associations>
+</Column>
+<Column name="al053_centro_id" id="695481B8-2E72-62AD-35C0-713ECE0D4AFF">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>1502F227-0505-C022-4E83-C8669EC8060C</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>F3C29603-D227-F724-79E1-21FB1A8783CB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E1ADA425-DE81-5A20-0DC6-9CD7A9E30AB0" referredColumn="2098C388-0E0C-26AF-EB58-CC82E6CC7154"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AB4A644E-FD2A-A25F-3CA1-AE6179B8A069" name="al053_formacion_PK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>FBC6C884-F69B-B4D1-2022-7C26CCC5C8A6</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0767EA4E-2864-A057-3952-FDA43900D2BD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BE1F8FE0-D445-6273-1239-FDDD3B0610E0" name="AL053_FORM_REL_FK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>9AEBF282-3A59-AB85-13D8-74758F191C54</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0767EA4E-2864-A057-3952-FDA43900D2BD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2FE38967-DD50-48DE-F7C9-78132A621D01" name="AL053_FORM_CENTRO_FK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>2F62F60F-306F-F476-08F5-742BA959011C</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="695481B8-2E72-62AD-35C0-713ECE0D4AFF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

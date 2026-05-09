@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="23657919-DBCA-067E-1EAB-240895C4948D" name="al053_personal">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>247E9ADA-0B1C-F33A-1C42-E17AAFAB7871</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="89A14560-964B-7D41-125C-8AFCDEC347F5">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>2C9EFC4C-7B8D-B694-60E8-101673C61B63</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>F3C29603-D227-F724-79E1-21FB1A8783CB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="48E6BCD6-CA39-9FEA-47BA-3774C4EBBC0E" referredColumn="36946644-0BA5-1000-F78E-B02D3BB4C2EB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="30749B82-38E2-5C2A-2837-54FB37C134AD" name="al053_personal_PK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>FBC6C884-F69B-B4D1-2022-7C26CCC5C8A6</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="89A14560-964B-7D41-125C-8AFCDEC347F5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1379F730-CF3A-A87F-94D8-CC8F52EE962E" name="AL053_PERS_REL_FK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>6AE8E4A1-8CB9-7A5A-CF1D-029D9AEFC18A</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="89A14560-964B-7D41-125C-8AFCDEC347F5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

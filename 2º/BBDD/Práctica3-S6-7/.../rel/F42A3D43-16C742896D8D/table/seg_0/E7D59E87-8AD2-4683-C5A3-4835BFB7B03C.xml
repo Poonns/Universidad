@@ -1,0 +1,95 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E7D59E87-8AD2-4683-C5A3-4835BFB7B03C" name="al053_lugar">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>5D7619E8-6475-D4D6-52A6-06EAECDDD8A6</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="647569E2-9E1A-40D7-5ECB-3897363E77CE">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>55BF10D0-0C84-7068-E621-68BCF00A2981</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>F3C29603-D227-F724-79E1-21FB1A8783CB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="direccion" id="FEA18FE8-B8E3-6CAC-F00E-94BC5C9874BC">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>2A094BD7-336F-5F9B-7ABD-94EC3754C18C</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>95749E14-8135-1AD1-B634-FCF8F0F1FD2F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="poblacion" id="F782EDD8-B893-03C7-42EC-CD01F35A41A6">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>DD6BBED2-8BF7-BE80-655A-390DCDB0DBEA</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>4FDA050B-7A94-598D-CB61-39E135A03638</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pais" id="43CD6CB4-5CEC-797B-D9F7-9DBC7727CAC6">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>8B69FAFE-ADD7-0A0F-105D-EB4F01C9ACA0</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>964777AC-737A-3971-3E37-CB5EB88586C0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="latitud" id="A266EAA8-B49D-0562-0425-F7171A2B6844">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>E21787A0-2583-9DE5-39EE-69EBE27B3069</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>9C3D358E-FDC4-19D5-5852-AF57F4444D4A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="longitud" id="B0C05284-AE6E-BF94-01EA-CE8AD817F324">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>46BFD63D-6ABA-AB76-2E1B-73AB04DC9EF8</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>9C3D358E-FDC4-19D5-5852-AF57F4444D4A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="10675A02-9AE2-EA36-9A14-5389BB4A5645" name="al053_lugar_PK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>1B645267-BD5C-1D88-B192-D580457F3C56</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="647569E2-9E1A-40D7-5ECB-3897363E77CE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A1C91E30-B5AC-D06B-58E9-C9F26938780D" name="al053_crea">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<ownerDesignName>...</ownerDesignName>
+<ordsAlias>crea</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="al053_persona_id" id="5AC0AF51-567C-2D9B-EC4E-34259AFAB8D5">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<ownerDesignName>...</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>F3C29603-D227-F724-79E1-21FB1A8783CB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5AD94C16-667F-F86E-39FB-89336D18CEA5" referredColumn="8B1A67C3-E753-06CA-03EA-2278D61E7815"/>
+</associations>
+</Column>
+<Column name="al053_obra_id" id="B707648A-D50E-E58B-E610-A908914A4192">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<ownerDesignName>...</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>F3C29603-D227-F724-79E1-21FB1A8783CB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A064A5AE-38BE-EDD0-47B6-25CF80B54AC8" referredColumn="AEE8051A-9D9F-C749-A041-A6138C56EE22"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C96DB548-C637-DE04-B8DF-1B6CF7BA10F5" name="crea_PK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<ownerDesignName>...</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5AC0AF51-567C-2D9B-EC4E-34259AFAB8D5"/>
+<colUsage columnID="B707648A-D50E-E58B-E610-A908914A4192"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A1EC1195-5E78-6E0C-40E8-A3C34B79F55F" name="AL053_PER_CREA_FK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>38E137E3-702B-6BFC-96BE-2F90506C2C99</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5AC0AF51-567C-2D9B-EC4E-34259AFAB8D5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="606E54DE-7D8C-CD5B-E270-81EA837052BE" name="AL053_CREA_OBRA_FK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>38E137E3-702B-6BFC-96BE-2F90506C2C99</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B707648A-D50E-E58B-E610-A908914A4192"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

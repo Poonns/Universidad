@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8300229A-B38E-CFF8-2AA8-C1BC09493893" name="al053_laboral">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>D892ACC4-2F07-7EDF-7064-C79094B4A3A5</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="718705C3-E434-2D89-0939-896B04F2BC41">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>2C9EFC4C-7B8D-B694-60E8-101673C61B63</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>F3C29603-D227-F724-79E1-21FB1A8783CB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2DC57BB7-B754-0E77-A948-5E09D6B2A3B2" referredColumn="36946644-0BA5-1000-F78E-B02D3BB4C2EB"/>
+</associations>
+</Column>
+<Column name="al053_obra_id" id="408E5CDB-84E1-3610-33CE-C02930200324">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>D807B506-A5B8-947E-80D9-E3F98726BBB0</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>F3C29603-D227-F724-79E1-21FB1A8783CB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DC1D755E-D6A5-9CED-0ABB-BBD6DF435BC6" referredColumn="AEE8051A-9D9F-C749-A041-A6138C56EE22"/>
+</associations>
+</Column>
+<Column name="al053_empresa_id" id="B7115D01-7449-EAD1-0920-98DFC7463EE4">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>78DC7236-3799-BB09-E533-F408EB850EA7</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>F3C29603-D227-F724-79E1-21FB1A8783CB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F2CB2456-02B9-97B1-B5E1-4315C7E467AF" referredColumn="8FDB1E2D-FF53-73BB-AC85-3EC2F8389BAA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="978C50EE-AAD6-3F56-0F95-028EBAAA2B24" name="al053_laboral_PK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>FBC6C884-F69B-B4D1-2022-7C26CCC5C8A6</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="718705C3-E434-2D89-0939-896B04F2BC41"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3BB014A4-ADDA-0012-4FFA-86D0E547A726" name="AL053_LAB_REL_FK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>F64F8C0C-531E-4859-0FEB-77F8EF93D6BD</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="718705C3-E434-2D89-0939-896B04F2BC41"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="78D36D03-5F19-2283-0DF5-72ED32A9505C" name="AL053_LAB_EMP_FK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>715F7B91-AA8F-FE24-61D0-C4C0B3CCFDFA</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B7115D01-7449-EAD1-0920-98DFC7463EE4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CA10AC04-7CBB-1399-FFDF-2AB40F981221" name="AL053_LAB_OBRA_FK">
+<createdBy>hectorpons</createdBy>
+<createdTime>2026-05-09 18:43:26 UTC</createdTime>
+<generatorID>A39E26F1-32E9-0A9D-668E-C8F440FE76FB</generatorID>
+<ownerDesignName>...</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="408E5CDB-84E1-3610-33CE-C02930200324"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

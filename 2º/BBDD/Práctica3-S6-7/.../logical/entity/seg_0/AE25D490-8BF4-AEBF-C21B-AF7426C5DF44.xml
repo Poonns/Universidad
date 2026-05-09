@@ -5,7 +5,7 @@
 <generatorID>25366597-1561-A99C-7C02-AF930CB0C5C3</generatorID>
 <ownerDesignName>...</ownerDesignName>
 <engineerTo>
-<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+<item key="F42A3D43-3A08-123D-AF98-16C742896D8D" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -15,6 +15,7 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<generateDiscrimColumn>true</generateDiscrimColumn>
 <discriminatorAttributeID>B89F8D72-ED61-0A7A-4970-28CDE3B27D40</discriminatorAttributeID>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
 <Attribute name="id" id="53E13222-5D86-F77E-90EA-A6FD722EA903">
@@ -23,7 +24,7 @@
 <generatorID>ABDE4D1F-3BCE-14E1-3639-F41645ABA079</generatorID>
 <ownerDesignName>...</ownerDesignName>
 <engineerTo>
-<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+<item key="F42A3D43-3A08-123D-AF98-16C742896D8D" value="true"/>
 </engineerTo>
 <use>0</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -36,7 +37,7 @@
 <generatorID>3762833B-8EDC-A99E-78C6-0A0A5A8F16D8</generatorID>
 <ownerDesignName>...</ownerDesignName>
 <engineerTo>
-<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+<item key="F42A3D43-3A08-123D-AF98-16C742896D8D" value="true"/>
 </engineerTo>
 <use>0</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -49,7 +50,7 @@
 <generatorID>7F7DCB34-151B-EEF7-57B9-19F5F520CAE1</generatorID>
 <ownerDesignName>...</ownerDesignName>
 <engineerTo>
-<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+<item key="F42A3D43-3A08-123D-AF98-16C742896D8D" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <use>0</use>
@@ -63,7 +64,7 @@
 <generatorID>68F18DEF-5F7B-B765-C0E3-16C6D97183E7</generatorID>
 <ownerDesignName>...</ownerDesignName>
 <engineerTo>
-<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+<item key="F42A3D43-3A08-123D-AF98-16C742896D8D" value="true"/>
 </engineerTo>
 <referedAttribute>55BF10D0-0C84-7068-E621-68BCF00A2981</referedAttribute>
 <use>0</use>
@@ -77,7 +78,7 @@
 <generatorID>84143158-B68C-641F-C0BA-68C676B197CE</generatorID>
 <ownerDesignName>...</ownerDesignName>
 <engineerTo>
-<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+<item key="F42A3D43-3A08-123D-AF98-16C742896D8D" value="true"/>
 </engineerTo>
 <constraintName>ch_inh_al053_institucion</constraintName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -99,7 +100,7 @@
 <generatorID>8B881C3A-5B78-CB76-9E22-95D1B06F5653</generatorID>
 <ownerDesignName>...</ownerDesignName>
 <engineerTo>
-<item key="EB5FE99A-7BCE-CB80-AD1B-CBEDC69E37FD" value="true"/>
+<item key="F42A3D43-3A08-123D-AF98-16C742896D8D" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
