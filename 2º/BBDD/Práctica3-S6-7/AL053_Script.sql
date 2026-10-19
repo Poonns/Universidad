@@ -30,7 +30,7 @@ CREATE TABLE al053_crea (
     al053_obra_id    INTEGER NOT NULL
 );
 
-ALTER TABLE al053_crea ADD CONSTRAINT crea_pk PRIMARY KEY ( al053_persona_id,
+ALTER TABLE al053_crea ADD CONSTRAINT crea_pk PRIMARY KEY ( al053_persona_id, q q q
                                                             al053_obra_id );
 
 CREATE TABLE al053_empresa (

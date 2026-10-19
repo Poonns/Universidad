@@ -1,0 +1,19 @@
+Resumen de la Práctica 4 - JDBC
+
+Dejo por aquí un pequeño resumen de cómo he adaptado el proyecto de ejemplo (el de Mascotas) para hacer esta práctica con las tablas PERSONA y RELACION.
+
+1. Creación de las clases (Modelo)
+Básicamente, me fijé en los atributos que pedía el PDF y creé las clases Persona.java y Relacion.java. He mantenido el uso de java.util.Date y SimpleDateFormat para tratar las fechas tal cual se hacía en la clase Mascota.
+
+2. Los DAOs (PersonaDAO y RelacionDAO)
+He copiado el esqueleto del MascotaDAO porque me venía genial para el tema de abrir la conexión, hacer el commit a mano (setAutoCommit(false)) y capturar las excepciones. 
+He adaptado las consultas SQL (CREATE, READ, UPDATE y DELETE) para que apunten a mis tablas (AL053_PERSONA y AL053_RELACION). También he respetado los TO_DATE y TO_CHAR de Oracle en los PreparedStatements para que no hubiese problemas al pasar las fechas de Java a la base de datos.
+En el RelacionDAO tuve que fijarme bien en usar los nombres reales de las columnas que salieron de mi script de la práctica anterior (por ejemplo, usar 'al053_persona_id' en lugar de un id genérico).
+
+3. Ajustes en la Base de Datos (Muy importante)
+Al probar el código me saltó un error ORA-01400 diciendo que no podía insertar un NULL en la columna AL053_LUGAR_ID. Me di cuenta de que en el script de la práctica anterior de diseño le puse NOT NULL a esa columna. Como en esta práctica de Java solo usamos los 5 atributos que pide el PDF y no enviamos el lugar, la base de datos me bloqueaba el INSERT.
+Para arreglarlo, entré al SQL Developer e hice unos ALTER TABLE para quitar el NOT NULL al LUGAR_ID (en las dos tablas) y al PERSONA_ID1. También borré la restricción (CONSTRAINT) del subtipo para que me dejara meter números en vez de texto. Tras relajar esas restricciones en la BBDD, Java ya me dejaba hacer los inserts sin problema.
+
+4. Los Tests
+He adaptado los main() de prueba para cada clase. Hacen el ciclo completo: crean el registro, lo leen, lo actualizan y, por último, lo borran. He dejado el borrado al final para que la base de datos se quede limpia después de cada prueba y así no me salte el error de clave primaria duplicada (ORA-00001) si le doy a ejecutar varias veces.
+En el test de Relación, he tenido en cuenta la clave foránea, así que antes de probar a crear una relación, el test crea una persona auxiliar para poder asignarle el ID, y al final borra la relación y después la persona.

@@ -1,0 +1,14 @@
+P
+S;L
+S;S;L
+S;S;S;L
+S;S;S;
+S;S;wi;
+S;i=E;wi;
+S;i=E*E;wi;
+S;i=E*n;wi;
+S;i=(E)*n;wi;
+S;i=(E+E)*n;wi;
+S;i=(E+i)*n;wi;
+S;i=(n+i)*n;wi;
+ri;i=(n+i)*n;wi;

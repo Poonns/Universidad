@@ -1,0 +1,37 @@
+<!--elemento raiz-->
+<!ELEMENT lista_ventas (pedido+)> <!--la lista de ventas tiene que tener como minimo un pedido-->
+    
+<!--cada pedido tiene un cliente y las lineas del pedido-->
+<!ELEMENT pedido (cliente, lineas_pedido)>
+<!ATTLIST pedido idpedido CDATA #REQUIRED>
+<!ATTLIST pedido fechapedido CDATA #REQUIRED>
+<!ATTLIST pedido fechaentrega CDATA #REQUIRED>
+<!ATTLIST pedido direccionentrega CDATA #REQUIRED>
+<!ATTLIST pedido empleadoventa CDATA #REQUIRED>
+
+<!--datos del cliente-->
+<!ELEMENT cliente (nombre, apellidos, email, direccionpostal, ciudad)>
+<!ATTLIST cliente idcliente CDATA #REQUIRED>
+    
+<!--elementos con texto del cliente-->
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT direccionpostal (#PCDATA)>
+<!ELEMENT ciudad (#PCDATA)>
+
+<!--para cada pedido agrupamos las lineas-->
+<!ELEMENT lineas_pedido (producto+)> <!--igual que pedido-->
+
+<!--datos del producto y la venta-->
+<!ELEMENT producto (descripcion, precio_compra, precio_venta, stock, cantidad, precioreal)>
+<!ATTLIST producto idproducto CDATA #REQUIRED>
+<!ATTLIST producto idproveedor CDATA #REQUIRED>
+
+<!--elementos con texto de producto-->
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT precio_compra (#PCDATA)>
+<!ELEMENT precio_venta (#PCDATA)>
+<!ELEMENT stock (#PCDATA)>
+<!ELEMENT cantidad (#PCDATA)>
+<!ELEMENT precioreal (#PCDATA)>

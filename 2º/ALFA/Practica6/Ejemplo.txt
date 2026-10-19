@@ -1,0 +1,12 @@
+Válido:
+
+read i;
+i = (n + (i * (n / i)));
+write i;
+
+No válido:
+
+read i
+i = (n + (i * (n / i))
+write i
+

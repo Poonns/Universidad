@@ -360,3 +360,262 @@ excursionista()
     }
     unlock(&m);
 }
+
+
+/*Ejercicio parcial */
+mutex_t m;
+cond_t cX, cY;
+int n = 0, int nEspX = 0,int nEspY = 0; contX = 0; int contY = 0;
+
+X(){
+    lock(&m);
+    nEspX++;
+    while(n>=1 || (nEspY > 0 && contX > 0)){
+        cond_wait(&cX, &m);
+    }
+    nEspX--;
+    n++;
+    unlock(&m);
+    seccion_critica();
+    lock(&m);
+    n--;
+    contX++;
+    contY = 0;
+    if(nEspY <= 0 || (nEspX > 0 && contY > 0)){
+        cond_broadcast(&cX);
+    } else if(nEspX <= 0 || (nEspxY > 0 && contX > 0)){
+        cond_broadcast(&cY);
+    }
+    unlock(&m)
+}
+
+Y(){
+    lock(&m);
+    nEspY++;
+    while(n>=1 || (nEspX > 0 && contX > 0)){
+        cond_wait(&cX, &m);
+    }
+    nEspY--;
+    n++;
+    unlock(&m);
+    seccion_critica();
+    lock(&m);
+    n--;
+    contY++;
+    contX = 0;
+    if(nEspY <= 0 || (nEspX > 0 && contY > 0)){
+        cond_broadcast(&cX);
+    } else if(nEspX <= 0 || (nEspxY > 0 && contX > 0)){
+        cond_broadcast(&cY);
+    }
+    unlock(&m)
+}
+
+mutex_t m;
+cond_t cNiño, cAdulto;
+int nEsp = 0; int aEsp = 0; int pisN = 0; int pisA = 0; int total = 0; int cont = 0;
+
+niño(){
+    lock(&m);
+    nEsp++;
+    while(cont >= 3 && aEsp > 0|| (pisN >= 20 || total >= 40)){
+        cond_wait(&cNiño, &m);
+    }
+    nEsp--;
+    pisN++:
+    total++;
+    cont++;
+    unlock(&m);
+    baño();
+    lock(&m);
+    pisN--;
+    total--;
+    if(nEsp > 0 && cont < 3 && (pisN < 20 && total < 40)){
+        cond_signal(&cNiño);
+    } else if(aEsp > 0 && cont >= 3 && (pisA < 30 && total < 40)) {
+        cond_signal(&cAdulto);
+    }
+    unlock(&m);
+}
+
+adulto(){
+    lock(&m);
+    aEsp++;
+    while(cont < 3 || (pisA >= 30 || total >= 40)){
+        cond_wait(&cAdulto, &m);
+    }
+    aEsp--;
+    pisA++;
+    total++;
+    cont = 0;
+    unlock(&m);
+    baño();
+    lock(&m);
+    pisA--;
+    total--;
+    if(nEsp > 0 && cont < 3 && (pisN < 20 && total < 40)){
+        cond_signal(&cNiño);
+    } else if(aEsp > 0 && cont >= 3 && (pisA < 30 && total < 40)){
+        cond_signal(&cAdulto);
+    }
+    unlock(&m);
+}
+
+mutex_t m;
+cond_t cNorte, cSur;
+int nN = 0;int nS = 0; int nEsp = 0; int sEsp = 0;
+
+coche_norte(){
+    lock(&m);
+    nEsp++;
+    while(nS > 0 || nN >= 3){
+        cond_wait(&cNorte, &m);
+    }
+    nEsp--
+    nN++;
+    unlock(&m);
+    cruzar_puente();
+    lock(&m);
+    nN--;
+    if(nEsp > 0){
+        cond_signal(&cNorte);
+    } else if(sEsp > 0 && nN == 0){
+        cond_signal(&cSur);
+    }
+    unlock(&m);
+}
+
+coche_sur(){
+    lock(&m);
+    sEsp++;
+    while(nN > 0 || nS >= 3){
+        cond_wait(&cSur, &m);
+    }
+    sEsp--;
+    nS++;
+    unlock(&m);
+    cruzar_puente();
+    lock(&m);
+    if(nEsp > 0){
+        cond_signal(&cNorte);
+    } else if(sEsp > 0 && nN == 0){
+        cond_signal(&cSur);
+    }
+    unlock(&m);
+}
+
+mutex_t m;
+cond_t clleno, cvacio;
+int n = 0;
+
+pasajero(){
+    lock(&m);
+    while(n == 4){
+        cond_wait(&cvacio, &m);
+    }
+    n++
+    if(n == 4){
+        cond_broadcast(&clleno);
+    } else{
+        cond_wait(&clleno, &m);
+    }
+    unlock(&m);
+    viaje();
+    lock(&m);
+    n--;
+    if(n==0){
+        cond_broadcast(&cvacio, &m);
+    }
+    unlock(&m);
+}
+
+
+mutex_t m;
+cond_t cPA, cPB;
+int n = 0; int pesoTotal = 0; int nEspPA = 0; int nEspPB = 0; 
+
+planta_alta(){
+    lock(&m);
+    nEspPA++;
+    while(n >= 6 || pesoTotal + peso >= 500){
+        cond_wait(&cPA, &m);
+    }
+    nEspPA--;
+    n++;
+    unlock(&m);
+    subir_ascensor();
+    lock(&m);
+    n--;
+    pesoTotal = pesoTotal - peso;
+    if(nEspPA > 0){
+        cond_signal(&cPA);
+    } else if(nEspPB > 0){
+        cond_signal(&cPB);
+    }
+    unlock(&m);
+}
+
+planta_baja(){
+    lock(&m);
+    nEspPB++;
+    while(n >= 6 || pesoTotal + peso >= 500 || nEspPA > 0){
+        cond_wait(&cPB, &m);
+    }
+    nEspPB--;
+    n++;
+    unlock(&m);
+    subir_ascensor();
+    lock(&m);
+    n--;
+    pesoTotal = pesoTotal - peso;
+    if(nEspPA > 0){
+        cond_signal(&cPA);
+    } else if(nEspPB > 0){
+        cond_signal(&cPB);
+    }
+    unlock(&m);
+}
+
+mutex_t m;
+cond_t cHP, cHL;
+int cont = 0; int nEspHP = 0; int nEspHL = 0;
+
+hilo_pesado(){
+    lock(&m);
+    nEspHP++;
+    while(cont >= 5){
+        cond_wait(&cHP, &m);
+    }
+    nEspHP--;
+    cont++;
+    unlock(&m);
+    usar_recurso();
+    lock(&m);
+    cont--;
+    if(nEspHP > 0 ){
+        cond_broadcast(&cHP);
+    } else if(nEspHL > 0){
+        cond_broadcast(&cHL);
+    }
+    unlock(&m);
+}
+
+hilo_ligero(){
+    lock(&m);
+    nEspHL++;
+    while(cont >= 5 && nEspHP == 0){
+        cond_wait(&cHL, &m);
+    }
+    nEspHL--;
+    cont++;
+    unlock(&m);
+    usar_recurso();
+    lock(&m);
+    cont--;
+    if(nEspHP > 0){
+        cond_broadcast(&cHP);
+    } else if(nEspHL > 0){
+        cond_broadcast(&cHL);
+    }
+    unlock(&m);
+}

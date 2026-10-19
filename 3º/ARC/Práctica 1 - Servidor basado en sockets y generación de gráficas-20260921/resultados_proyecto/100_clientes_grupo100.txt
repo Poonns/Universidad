@@ -1,0 +1,14 @@
+*************RESULTADOS*************	
+Clientes	100
+Nº Vecinos	100
+Iteraciones	5
+Tiempo ejecución (s.)	4,397
+Bytes enviados	643500
+Bytes recibidos	630630
+RTT Avg Cliente (ms)	3340,34357520003
+RTT Avg Grupo	  579,4366616000235 ms
+Max CPU Usage	57,00 %
+Ciclos no acabados	0
+Ciclos del CLIENTE por s        0,2993704023215987	
+**************************************	
+

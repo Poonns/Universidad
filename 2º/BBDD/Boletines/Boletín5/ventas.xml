@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lista_ventas SYSTEM "ventas.dtd">
+<!--elemento raíz-->
+<lista_ventas>  
+    <!--cada pedido agrupa la informacion de los clientes y productos-->
+    <pedido idpedido="" fechapedido="" fechaentrega="" direccionentrega="" empleadoventa="">
+        <!--informacion de cliente-->
+        <cliente idcliente="">
+            <nombre></nombre>
+            <apellidos></apellidos>
+            <email></email>
+            <direccionpostal></direccionpostal>
+            <ciudad></ciudad>
+            </cliente>
+        <!--lineas del pedido-->
+        <lineas_pedido>
+            <!--se almacenan los datos del producto y algunos datos de la venta-->
+            <producto idproducto="" idproveedor="">
+                <descripcion></descripcion>
+                <precio_compra></precio_compra>
+                <precio_venta></precio_venta>
+                <stock></stock>
+                <!--datos de la venta (vienen de la tabla PEDIDOS_PRODUCTOS)-->
+                <cantidad></cantidad>
+                <precioreal></precioreal>
+            </producto>      
+        </lineas_pedido>       
+    </pedido>
+</lista_ventas>
