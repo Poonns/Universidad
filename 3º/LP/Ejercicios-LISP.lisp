@@ -365,3 +365,602 @@
         )
     )
 )
+
+;Sin utilizar funciones de orden superior (mapcar, remove, etc.) y usando exclusivamente recursividad pura, implementa la función aplanar_condicional.
+;La función recibe un predicado y una lista de profundidad arbitraria (un árbol que puede contener átomos, NIL y listas dentro de listas). Debe devolver una lista plana (un solo nivel) que contenga únicamente los átomos de toda la estructura que cumplan el predicado.
+;(aplanar_condicional #'numberp '(A (1 B) ((2) NIL C) 3 (D (E 4)))) -> (1 2 3 4)
+(defun aplanar_condicional (f_cond l)
+    (cond
+        ((null l)nil)
+        ((listp (car l))
+            (append(aplanar_condicional f_cond (car l))(aplanar_condicional f_cond (cdr l)))
+        )
+        ((funcall f_cond (car l))
+            (list
+                (cons (car l)(aplanar_condicional f_cond (cdr l)))
+            )
+        )
+        (t
+            (aplanar_condicional f_cond (cdr l))
+        )
+    )
+)
+
+;Sin usar recursividad y utilizando puramente lógica funcional, implementa la función fusion_columnas.
+;Recibe una lista de funciones de longitud $N$, y un número arbitrario de listas de datos (todas también de longitud $N$). Debe devolver una única lista de longitud $N$, donde el elemento en la posición $i$ es el resultado de aplicar la función de la posición $i$ a todos los elementos en la posición $i$ de las listas de datos.
+;(fusion_columnas '(#'+ #'* #'max) '(1 2 3) '(10 20 30) '(100 200 300)) -> (111 8000 300)
+;; (+ 1 10 100) -> 111
+;; (* 2 20 200) -> 8000
+;; (max 3 30 300) -> 300
+(defun fusion_columnas (lf &rest l)
+    (apply #'mapcar (lambda (f &rest datos)(apply f datos)) lf l)
+)
+
+;Sin utilizar mapcar ni similares, implementa de forma puramente recursiva la función agrupar_iguales.
+;Recibe una lista plana y debe devolver una lista de listas, donde los elementos consecutivos idénticos estén agrupados en la misma sublista.
+;(agrupar_iguales '(A A B C C C A D D)) -> ((A A) (B) (C C C) (A) (D D))
+(defun agrupar_iguales (l)
+    (cond
+        ((null l) nil)
+        ((= (car l)(caar l))
+            (cons
+                (cons
+                    (car l)(car(agrupar_iguales (cdr l)))(cdr(agrupar_iguales (cdr l)))
+                )
+            )
+        )
+        (t
+            (cons
+                (list(car l))(agrupar_iguales (cdr l))
+            )
+        )
+    )
+)
+
+;Sin usar recursividad y utilizando puramente lógica funcional, implementa la función transponer.
+;Recibe una única lista que representa una matriz (una lista que contiene sublistas, todas de la misma longitud). Debe devolver la matriz transpuesta (las filas se convierten en columnas)
+;(transponer '((1 2 3) (4 5 6))) -> ((1 4) (2 5) (3 6))
+(defun trasponer (m)
+    (apply #'mapcar #'list m)
+)
+
+;Sin usar funciones de orden superior y usando exclusivamente recursividad pura, implementa la función podar_arbol.
+;Recibe un valor objetivo y una lista de profundidad arbitraria. Debe devolver una copia exacta de la estructura original, pero eliminando completamente cualquier aparición del valor objetivo en cualquier nivel, sin dejar huecos vacíos (NILs no deseados).
+;(podar_arbol 'X '(A (X B) ((X) NIL C) X (D (E X)))) -> (A (B) (NIL C) (D (E)))
+(defun podar_arbol (n l)
+    (cond 
+        ((null l) nil)
+        ((listp (car l))
+            (cons(podar_arbol n (car l))(podar_arbol n (cdr l)))
+        )
+        ((= n (car l))
+            (podar_arbol n (cdr l))
+        )
+        (t
+            (cons(car l)(podar_arbol n (cdr l)))
+        )
+    )
+)
+
+;Sin utilizar mapcar y de forma puramente recursiva, implementa la función descomprimir.
+;Recibe una lista plana compuesta por pares lógicos: un número entero seguido de un elemento. Debe devolver una lista con los elementos repetidos tantas veces como indique su número asociado. Si el número es 0, el elemento no se incluye.
+(defun descomprimir (l)
+    (cond
+        ((null l) nil)
+        ((> (car l) 0)
+            (cons
+                (cadr l)(descomprimir (cons (1- (car l)) (cdr l)))
+            )
+        )
+        (t
+            (descomprimir (cddr l)) 
+        )
+    )
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada funsmax que, dada una
+;lista de valores y un número arbitrario de funciones, devuelva una lista cuyos elementos sean el máximo
+;de aplicar cada una de las funciones sobre cada uno de los valores de la lista suministrada como
+;parámetro
+(defun funsmax (l &rest f)
+    (mapcar (lambda(elemento)(apply #'max (mapcar (lambda(funcion)(funcall funcion elemento))f)))l)
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada generar_pares que, dadas
+;dos funciones y un número arbitrario de argumentos, devuelva una lista de pares de elementos en
+;formato de lista, donde cada par contenga el resultado de aplicar cada una de las dos funciones sobre el
+;elemento correspondiente.
+;(generarpares #’1+ (lambda(x)(* 2 x)) 1 2 3 4) -> ((2 2) (3 4) (4 6) (5 8))
+;Implementa una versión recursiva que no utilice mapcar y otra basada en el uso de mapcar
+
+;Version mapcar
+(defun generar_pares (f g &rest a)
+    (mapcar (lambda(x)(list (funcall f x)(funcall g x)))a)
+)
+
+;Version recursiva
+(defun generar_pares (f g &rest a)
+    (cond
+        ((null a) nil)
+        (t
+            (cons
+                (list(funcall f (car a))(funcall g (car a))(apply #'generar_pares f g (cdr a)))
+            )
+        )
+    )
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada por_dos que, dada una
+;lista que pudiera ser o no anidada, multiplique por 2 cada uno de sus elementos, manteniendo la
+;estructura de la lista.
+;(por_dos ‘(1 (2 3 (3 4)) 4 (2 3)))  (2 (4 6 (6 8)) 8 (4 6))
+(defun por_dos (l)
+    (cond
+        ((null l) nil)
+        ((listp (car l))
+            (cons (por_dos (car l))(por_dos (cdr l)))
+        )
+        (t
+            (cons(* 2 (car l)(por_dos (cdr l))))
+        )
+    )
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada funmax que, dadas dos
+;funciones y un número arbitrario de parámetros, devuelva una lista cuyos elementos sean el máximo
+;entre aplicar la primera y la segunda función sobre cada uno de los argumentos.
+;(funmax #’1+ (lambda(x) (* 2 x)) 0 1 2 3 4)  (1 2 4 6 8)
+;(funmax (lambda(x) (+ 3 x)) (lambda(x) (* 2 x)) 0 1 2 3 4)  (3 4 5 6 8)
+;Implementa una versión recursiva que no utilice mapcar y otra basada en el uso de mapcar
+
+;version mapcar
+(defun funmax (f g &rest p)
+    (mapcar (lambda (parametro)(max (funcall f parametro)(funcall g parametro)))p)
+)
+
+;version recursiva
+(defun funmax (f g &rest p)
+    (cond
+        ((null p) nil)
+        (t
+            (cons (max (funcall f (car p))(funcall g (car p)))
+                (apply #'funmax f g (cdr p)))
+        )
+    )
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada suma que, dada una lista
+;que pudiera ser o no anidada, calcule la suma de todos los elementos que contiene.
+;(suma ‘(1 (2 3 (3 4)) 4 (2 3)))  22
+;(suma ‘(1 (2 2) 3))  8
+(defun suma (l)
+    (cond
+        ((null l) 0)
+        ((listp (car l))
+            (+ (suma (car l))(suma (cdr l)))
+        )
+        (t
+            (+ (car l)(suma (cdr l)))
+        )
+    )
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada aplicar que, dada una
+;lista sin anidamientos y un número arbitrario de funciones unarias, aplique secuencialmente las
+;funciones sobre cada elemento de la lista.
+;(aplicar ‘(1 2 3) #’1+)  (2 3 4)
+;(aplicar ‘(1 2 3) #’1+ #’1+)  (3 4 5)
+;(aplicar ‘(1 2 3) #’1+ #’1+ (lambda(x)(*2 x)))  (6 8 10)
+(defun aplicar (l &rest f_u)
+    (cond
+        ((null f_u) l)
+        (t
+            (apply #'aplicar (mapcar (car f_u) l) (cdr f_u))
+        )
+    )
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada maximo_anidado que, dada una lista que pudiera ser anidada, formada solo por números y sin listas vacías, devuelva el mayor de todos los valores en cualquier nivel de anidamiento. Proporciona dos versiones: una recursiva sin mapcar y otra basada en mapcar.
+;version recursiva
+(defun maximo_anidado (l)
+    (cond
+        ((null l) 0)
+        ((listp (car l))
+            (max(maximo_anidad (car l)) (maximo_anidado (cdr l)))
+        )
+        (t
+            (max (car l)(maximo_anidado (cdr l)))
+        )
+    )
+)
+
+;version mapcar
+(defun maximo_anidado (l)
+    (apply #'max (mapcar (lambda (x)(if (listp x)(maximo_anidado x) x ))l))
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada decrementar que, dada una lista que pudiera ser o no anidada, reste 1 a cada uno de sus elementos, manteniendo la estructura de la lista
+(defun decrementar (l)
+    (cond
+        ((null l) nil)
+        ((listp (car l))
+            (cons (decrementar (car l)) (decrementar (cdr l)))
+        )
+        (t
+            (cons(1- (car l))(decrementar (cdr l)))
+        )
+    )
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada funmin que, dadas dos funciones y un número arbitrario de parámetros, devuelva una lista cuyos elementos sean el mínimo entre aplicar la primera y la segunda función sobre cada uno de los argumentos. Implementa una versión recursiva que no utilice mapcar y otra basada en el uso de mapcar.
+;version recursiva
+(defun funmin (f g &rest p)
+    (cond
+        ((null p) nil)
+        (t
+            (cons(min (funcall f (car p))(funcall g (car p)))
+                (apply #'funmin f g (cdr p)))
+        )
+    )
+)
+
+;version mapcar
+(defun funmin (f g &ret p)
+    (mapcar (lambda (parametro)(min (funcall f parametro)(funcall g parametro))) p)
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada contar_atomos que, dada una lista que pudiera ser o no anidada, devuelva el número de átomos que contiene en cualquier nivel.
+(defun contar_atomos (l)
+    (cond
+        ((null l) 0)
+        ((listp (car l))
+            (+(contar_atomos (car l))(contar_atomos (cdr l)))
+        )
+        (t
+            (1+ (contar_atomos (cdr l)))
+        )
+    )
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada aplicarSobreUltimos que, dada una función y un número arbitrario de listas no vacías, devuelva una lista con el resultado de aplicar la función sobre el último elemento de cada lista.
+(defun aplicarSobreUltimos (f &rest l)
+    (cond
+        ((null l) nil)
+        (t
+            (cons (funcall f (car (reverse car l)))
+                (apply #'aplicarSobreUltimos f (cdr l)))
+        )
+    )
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada maxMinProdLen que, dado un número arbitrario de argumentos numéricos (al menos uno), devuelva una lista de cuatro elementos con el mayor, el menor, el producto y el número de argumentos.
+(defun maxMinProdLen (&rest a)
+    (cond
+        ((null a)(list nil nil 0 0))
+        (t
+            (list
+                (apply #'max a)
+                (apply #'min a)
+                (apply #'* a)
+                (length a)
+            )
+        )
+    )
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada sumaCubos que, dada una lista sin anidamientos, devuelva la suma de los cubos de los elementos que contiene.
+(defun sumaCubos (l)
+    (cond
+        ((null l) 0)
+        (t
+            (+ (* (car l) (car l) (car l))(sumaCubos (cdr l)))
+        )
+    )
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada sumas que, dado un número arbitrario de listas no anidadas, devuelva la suma de cada una de ellas en forma de lista.
+(defun sumas (&rest l)
+    (cond
+        ((null l) nil)
+        (t
+            (cons (apply #'+ (car l))(apply #'sumas (cdr l)))
+        )
+    )
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada aplicar_en_impares que tome como entrada una función unaria y un número arbitrario de valores numéricos, y devuelva una lista con los argumentos en los que la función se ha aplicado solo sobre los que ocupan posiciones impares (1.º, 3.º…).
+(defun aplicar_en_impares (f &rest a)
+    (cond
+        ((null a) nil)
+        ((null (cdr a))
+            (cons (funcall f (car a))(apply #'aplicar_en_impares f (cdr a)))
+        )
+        (t
+            (cons (funcall (car a))(cons (cadr a)(apply #'aplicar_en_impares f (cddr a))))
+        )
+    )
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada aplicar_pares que tome como entrada una función binaria y un número arbitrario de valores numéricos, y devuelva una lista con los resultados de aplicar la función sobre los argumentos dos a dos. Si el número de valores es impar, el último se deja tal cual.
+(defun aplicar_pares (f &rest a)
+    (cond
+        ((null a) nil)
+        ((null (cdr a))
+            (cons (car a)(apply #'aplicar_pares f (cdr a)))
+        )
+        (t
+            (cons (funcall f (car a) (cadr a))(apply #'aplicar_pares f (cddr a)))
+        )
+    )       
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada separar_paridad que, dado un número arbitrario de argumentos enteros, devuelva una lista de dos elementos: una lista con los pares y otra con los impares. Proporciona dos soluciones: la primera usando mapcar y sin recursión, y la segunda recursiva y sin mapcar.
+;version recursiva
+(defun separar_paridad (&rest a)
+    (cond
+        ((null a)(list nil nil))
+        ((= (mod (car a) 2) 0)
+            (list 
+                (cons (car a) (car (apply #'separar_paridad (cdr a))) 
+                    (cadr (apply #'separar_paridad (cdr a))))
+            )
+        )
+        (t
+            (list 
+                (car (apply #'separar_paridad (cdr a)))
+                    (cons (cadr (apply #'separar_paridad (cdr a))))
+            )
+        )
+    )   
+)
+
+;version mapcar
+(defun separar_paridad (&rest a)
+    (list
+        (remove nil (mapcar (lambda (x)(if(= 0 (mod x 2)) x nil))a))
+        (remove nil (mapcar (lambda (x)(if(= 0 (mod x 2)) nil x))a))
+    )
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada procesar_rotando que, dada una lista de valores y un número arbitrario de funciones, devuelva una lista donde las funciones se hayan ido aplicando de forma rotativa sobre cada elemento: la primera sobre el primer elemento, la segunda sobre el segundo, y al agotarlas se vuelve a la primera. Si no hay funciones se devuelve la lista original.
+(defun procesar_rotando (l &rest f)
+    (cond
+        ((null l) nil)
+        ((null f) l)
+        (t
+            (cons (funcall (car f) (car l))(apply #'procesar_rotando (cdr l) (append (cdr f) (list (car f)))))
+        )
+    )
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada generar_triplas que, dadas tres funciones y un número arbitrario de argumentos, devuelva una lista de listas de tres elementos, donde cada una contenga el resultado de aplicar cada una de las tres funciones sobre el argumento correspondiente. Implementa una versión recursiva que no utilice mapcar y otra basada en mapcar.
+;version recursiva
+(defun generar_triplas (f g h &rest a)
+    (cond
+        ((null l) nil)
+        (t
+            (cons
+                (list
+                    (funcall f (car a))(funcar g (car a))(funcall h (car a))
+                        (apply #'generar_triplas f g h (cdr a))
+                )
+            )
+        )
+    )
+)
+
+;version mapcar
+(defun generar_triplas (f g h &rest a)
+    (list
+        (mapcar (lambda (x)(list (funcall f x)(funcall g x)(funcall h x)))a)
+    )
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada segundo_y_penultimo que, dada una lista sin anidamientos, devuelva una lista con su segundo y su penúltimo elemento. Si alguno no existe, será NIL.
+(defun segundo_y_penultimo (l)
+    (list (cadr l) (cadr (reverse l)))
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada suma_anidada que, dada una lista que pudiera ser o no anidada y que contiene solo números, devuelva la suma de todos ellos, en cualquier nivel de anidamiento.
+(defun suma_anidada (l)
+    (cond
+        ((null l) 0)
+        ((listp (car l))
+            (+ (suma_anidada (car l)) (suma_anidada (cdr l)))
+        )
+        (t
+            (+ (car l)(suma_anidada (cdr l)))
+        )
+    )
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada maxmin_f que, dadas dos funciones y un número arbitrario de argumentos, devuelva una lista de listas de dos elementos. Para cada argumento, la lista contendrá el mayor y el menor de los resultados de aplicar la primera y la segunda función sobre él. Implementa una versión recursiva que no utilice mapcar y otra basada en el uso de mapcar.
+;version recursiva
+(defun maxmin_f (f g &rest a)
+    (cond
+        ((null a) nil)
+        (t
+            (cons
+                (list(max (funcall f (car a))(funcall g (car a)))(min (funcall f (car a))(funcall g (car a))))
+                        (apply #'maxmin_f f g (cdr a))
+            )
+        )
+    )
+)
+
+;version mapcar
+(defun maxmin_f (f g &rest a)
+    (mapcar (lambda (x)(list (max (funcall f x)(funcall g x))
+                                (min (funcall f x)(funcall g x))))a)
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada minimos que, dado un número arbitrario de listas no anidadas del mismo tamaño, devuelva una lista con el menor valor de cada posición, es decir, el mínimo de los primeros elementos, el de los segundos, etc.
+(defun minimos (&rest l)
+    (apply #'mapcar #'min l)
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada aplicar_anidada que, dada una función unaria y una lista que pudiera ser o no anidada y que contiene solo números, devuelva una lista con la misma estructura en la que la función se haya aplicado a cada uno de los números.
+(defun aplicar_anidada (f_u l)
+    (cond
+        ((null l) nil)
+        ((listp (car l))
+            (cons (aplicar_anidada f_u (car l))(aplicar_anidada f_u (cdr l)))
+        )
+        (t
+            (cons (funcall f_u (car l))(aplicar_anidada f_u (cdr l)))
+        )
+    )
+)
+
+;Sin definir otras funciones adicionales y usando mapcar, implementar una función en lisp llamada contar_cumplen que, dada una lista no anidada de números y un número arbitrario de funciones que representan condiciones, devuelva una lista con cuántos elementos de la lista cumplen cada una de las condiciones, en el mismo orden que las funciones.
+(defun contar_cumplen (l &rest f)
+    (mapcar (lambda (funcion)
+        (length(remove nil(mapcar (lambda (x)(if (funcall funcion x)x nil))l))))f)
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada suma_extremos que, dada una lista de listas no anidadas y no vacías, devuelva una lista con la suma del primer y el último elemento de cada una de ellas.
+(defun suma_extremos (l)
+    (cond
+        ((null l) nil)
+        (t
+            (cons(+(caar l)(car(reverse (car l))))(suma_extremos (cdr l)))
+        )
+    )
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada contar_elemento que, dado un elemento y una lista que pudiera ser o no anidada, devuelva cuántas veces aparece ese elemento en la lista, en cualquier nivel de anidamiento.
+(defun contar_elemento (e l)
+    (cond
+        ((null l) 0)
+        ((listp (car l))
+            (+(contar_elemento e (car l))(contar_elemento e (cdr l)))
+        )
+        ((equal e (car l))
+            (+ 1 (contar_elemento e (cdr l)))
+        )
+        (t
+            (contar_elemento e (cdr l))
+        )
+    )
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada suma_productos que, dadas dos funciones y un número arbitrario de argumentos, devuelva la suma, para todos los argumentos, del producto de aplicar la primera función por el resultado de aplicar la segunda. Proporciona dos soluciones: una recursiva sin mapcar y otra basada en mapcar.
+;version recursiva
+(defun suma_productos (f g &rest a)
+    (cond
+        ((null a) 0)
+        (t
+            (+(*(funcall f (car a))(funcall g (car a)))(apply #'suma_productos f g (cdr a)))
+        )
+    )
+)
+
+;version mapcar
+(defun sum_prodcutos (f g &rest a)
+    (apply #'+ (mapcar (lambda (x)(* (funcall f x)(funcall g x)))a))
+)
+
+;Sin definir otras funciones adicionales y usando mapcar, implementar una función en lisp llamada distancia2 que, dadas dos listas no anidadas de números del mismo tamaño, devuelva la suma de los cuadrados de las diferencias entre los elementos que ocupan la misma posición.
+;version recursiva
+(defun distancia2 (l1 l2)
+    (cond
+        ((null l1) 0)
+        (t
+            (+(*(- (car l1) (car l2))(- (car l1) (car l2)))(distancia2 (cdr l1) (cdr l2)))
+        )
+    )
+)
+
+;version mapcar
+(defun distancia2 (l1 l2)
+  (apply #'+ (mapcar (lambda (a b) (* (- a b) (- a b))) l1 l2))
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada quitar que, dado un elemento y una lista que pudiera ser o no anidada, devuelva la lista sin ninguna aparición de ese elemento, en cualquier nivel de anidamiento y manteniendo la estructura del resto. Si una sublista se queda vacía, se conserva como NIL.
+(defun quitar (e l)
+    (cond
+        ((null l) nil)
+        ((listp (car l))
+            (cons (quitar e (car l))(quitar e (cdr l)))
+        )
+        ((equal e (car l))
+            (quitar e (cdr l))
+        )
+        (t
+            (cons (car l)(quitar e (cdr l)))
+        )
+    )
+)
+
+;Sin definir otras funciones adicionales, implementar una función en lisp llamada mayor_resultado que, dada una función unaria y un número arbitrario (al menos uno) de argumentos, devuelva el mayor de los resultados de aplicar la función a cada uno de los argumentos. Proporciona dos soluciones: una recursiva sin mapcar y otra basada en mapcar.
+;version recursiva
+(defun mayor_resultado (f_u &rest a)
+    (cond
+        ((null (cdr a)) (funcall f_u (car a)))
+        (t
+            (max (funcall f_u (car a))(apply #'mayor_resultado f_u (cdr a)))
+        )
+    )
+)
+
+;version mapcar
+(defun mayor_resultado (f_u &rest a)
+    (apply #'max (mapcar (lambda (x)(funcall f_u x))a))
+)
+
+;Sin definir otras funciones adicionales y usando mapcar, implementar una función en lisp llamada longitud_maxima que, dado un número arbitrario de listas no anidadas, devuelva la longitud de la más larga.
+(defun longitud_maxima (&rest l)
+    (apply #'max (mapcar #'length l))
+)
+
+;Sin definir otras funciones adicionales, escribe una función en lisp llamada sumafunciones que acepte un número indeterminado de funciones unarias seguidas de un valor numérico y devuelva la suma resultante de la aplicación de cada una de las funciones sobre el valor.
+(defun sumafunciones (v &rest f)
+    (apply #'+ (mapcar (lambda (funcion)(funcall funcion v))f))
+)
+
+;Sin definir otras funciones auxiliares, define una función en lisp llamada elemento_medio que, dada una función y una lista de enteros, devuelva como resultado la aplicación de la función sobre su elemento central, o NIL si el número de elementos fuera par.
+(defun elemento_medio (f l)
+    (cond
+        ((null l) nil)
+        ((null (cdr l))(funcall f (car l)))
+        (t
+            (elemento_medio f (cdr (reverse (cdr (reverse l)))))
+        )
+    )
+)
+
+;Sin utilizar funciones adicionales, implementa una función en lisp llamada filtrar que, dada una lista, una posición y una función (en ese orden, como en los ejemplos), devuelva una nueva lista en la que:
+;se haya eliminado el elemento que ocupe la posición especificada (la primera posición es la 1), y
+;se haya añadido como último elemento el resultado de aplicar la función sobre el elemento eliminado.
+(defun filtrar (l p f)
+    ((null l) nil)
+    ((= p 1 )
+        (append (cdr l)(list funcall (car l)))
+    )
+    (t
+        (cons (car l)(filtrar (cdr l) (- p 1) f))
+    )
+)
+
+;Sin definir otras funciones adicionales, implementa una función en lisp llamada pasarABinario que, dado un número en ddecimal, devuelva los valores que componen su representación binaria en forma de lista.
+(defun pasarABinario (n)
+    (cond
+        ((< n 2) (list n))
+        (t
+            (append (pasarABinario (/ (- n (mod n 2)) 2)) (list (mod n 2)))
+        )
+    )
+)
+
+;Sin definir otras funciones auxiliares, escribe una función en lisp llamada empareja que, dada una lista sin anidamientos, devuelva una nueva lista cuyos elementos sean pares que contengan el primer y último elemento, el segundo y el penúltimo, y así sucesivamente. Si la lista contiene un número impar de elementos, el último par consistirá del elemento central replicado.
+(defun empareja (l)
+    (cond
+        ((null l) nil)
+        ((null cdr)(list(list (car l)(car l))))
+        (t
+            (cons
+                (list(car l) (car(reverse l))(emparejar (reverse (cdr (reverse (cdr l))))))
+            )
+        )
+    )
+)

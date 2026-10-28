@@ -55,8 +55,8 @@ class Board
 	Board(string file_name);                // Constructor to read the initial board state from an ASCII text file
 	Board(string file_name,ostream &outst); // As before, but also shows in the terminal (cout/cerr) or in an open file the initial and initial-after-compulsory state of the board. 
 // No dynamic structures, so copy constructor and assigment operator left by default
-	unsigned GetSize() { return size; };    // Gets the size (as number of squares in the side) of the board
-	Token Content(Position p);              // Returns the token (w,b or e) at position p
+	unsigned GetSize() const { return size; };    // Gets the size (as number of squares in the side) of the board
+	Token Content(Position p) const;              // Returns the token (w,b or e) at position p
 	void Show(ostream &outst);              // Shows the current state of the board in the terminal using ANSII codes. Argument can be cout, cerr or an open stream
 	void GetNeighbours(lnei &listnei);      // Sets the passed variable (by reference) with the list of possible neighbours, i.e. boards that can be reached from the current state
                                                 // WARNING: a niehgbour is not only the board with the addition of a new pin but the board with the addition of a new pin, AND

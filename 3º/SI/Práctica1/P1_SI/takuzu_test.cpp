@@ -41,7 +41,6 @@ bool AStar(Board start,Board &solved)
  Board::lnei nei;
  Board current(start.GetSize());
 
-
  open.push_back(start);
 
  Move mov_nulo;
@@ -50,10 +49,17 @@ bool AStar(Board start,Board &solved)
  mov_nulo.value = e;
  
  S.SetgValue(start, 0.0);
- S.SetfValue(start, 0.0 + h(start, mov_nulo, start));
+ S.SetfValue(start, 0.0 + h(start));
 
+ unsigned iteration = 0;
  while(! open.empty())
  {
+    if ((iteration != 0) && (iteration % 25 == 0)) 
+    {
+        cout << iteration << "\n";
+        current.Show(cout);
+        
+    }
     Board::lb::iterator mejor_it = open.begin();
 
     for (Board::lb::iterator it = open.begin(); it != open.end(); it++) {
@@ -77,23 +83,29 @@ bool AStar(Board start,Board &solved)
     for (auto &par : nei) 
     {
 
-        Move m = par.first;
         Board vecino_board = par.second;
 
         if (!vecino_board.Member(closed)) 
         {
             float g_provisional = S.GetgValue(current) + dist(current, vecino_board);
-            if (g_provisional < S.GetgValue(vecino_board)) 
-            {
-                S.SetgValue(vecino_board, g_provisional);
-                S.SetfValue(vecino_board, g_provisional + h(current, m, vecino_board));
-                if (!vecino_board.Member(open)) 
+            if (!vecino_board.Member(open)) 
                 {
-                    open.push_back(vecino_board); 
+                    open.push_back(vecino_board);
+
+                    S.SetgValue(vecino_board, g_provisional);
+                    S.SetfValue(vecino_board, g_provisional + h(vecino_board));
+                }
+            else 
+            {
+                if (g_provisional < S.GetgValue(vecino_board)) 
+                {
+                    S.SetgValue(vecino_board, g_provisional);
+                    S.SetfValue(vecino_board, g_provisional + h(vecino_board));
                 }
             }
         }
     }
+    iteration++;
  }
  solved = current;
  return false;

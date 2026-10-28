@@ -84,7 +84,7 @@ Board::Board(string file_name)
  f.close();
 }
 
-Token Board::Content(Position p)
+Token Board::Content(Position p) const
 {
  if ((p.row>=size) || (p.col>=size))
  {
