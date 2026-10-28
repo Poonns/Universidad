@@ -1,0 +1,7 @@
+<map id="tabla.h" name="tabla.h">
+<area shape="rect" id="Node000001" title="DefiniciÃ³n e implementaciÃ³n de una Tabla Hash con resoluciÃ³n de colisiones mediante encadenamiento..." alt="" coords="80,5,147,31"/>
+<area shape="rect" id="Node000002" href="$costes_8cpp.html" title="Programa para analizar el rendimiento (complejidad temporal) de diferentes estructuras de datos." alt="" coords="5,79,96,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,43,63,80,59,77,92,39"/>
+<area shape="rect" id="Node000003" href="$test__tabla_8cpp.html" title="Programa de prueba (Test Suite) para la clase Tabla Hash." alt="" coords="120,79,235,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="135,39,169,77,165,80,131,43"/>
+</map>

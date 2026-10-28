@@ -1,0 +1,17 @@
+<map id="costes.cpp" name="costes.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="277,5,368,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,85,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="279,33,99,79,98,74,277,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="110,79,173,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="295,33,185,76,183,71,293,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="197,79,264,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="310,33,258,72,255,68,306,29"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="288,79,357,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="325,31,325,65,320,65,320,31"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="382,79,455,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="340,29,393,68,390,72,337,33"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="480,79,539,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="354,28,468,71,466,76,352,33"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="563,79,629,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="367,28,551,76,549,81,366,33"/>
+</map>

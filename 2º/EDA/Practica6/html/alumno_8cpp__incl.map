@@ -1,0 +1,15 @@
+<map id="alumno.cpp" name="alumno.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="121,5,220,31"/>
+<area shape="rect" id="Node000002" href="$alumno_8h.html" title=" " alt="" coords="51,79,133,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,33,117,71,113,68,156,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,85,177"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="122,30,77,48,57,62,41,80,35,94,34,109,39,139,33,139,28,109,30,92,36,77,53,58,74,43,120,25"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="125,152,184,177"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="172,31,160,139,155,138,167,31"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="209,79,282,104"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="184,29,225,67,221,71,181,33"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="306,79,371,104"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="199,28,300,71,298,76,197,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,106,63,142,58,139,82,103"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="104,103,137,140,133,143,100,106"/>
+</map>
