@@ -1,0 +1,30 @@
+[
+  {
+    "n": 10000,
+    "valid": true,
+    "generator_peak_rss_kib": {
+      "aggregate": 1119568
+    }
+  },
+  {
+    "n": 20000,
+    "valid": true,
+    "generator_peak_rss_kib": {
+      "aggregate": 2029520
+    }
+  },
+  {
+    "n": 40000,
+    "valid": true,
+    "generator_peak_rss_kib": {
+      "aggregate": 3835276
+    }
+  },
+  {
+    "n": 60000,
+    "valid": true,
+    "generator_peak_rss_kib": {
+      "aggregate": 5644396
+    }
+  }
+]

@@ -1,0 +1,12 @@
+Tests: 81/81 macOS y 81/81 Linux free-threaded
+Workers de referencia: 6 (comparación N=100000, tres referencias por perfil; cuota S=6 CPU)
+Clientes validados: 120000; referencias válidas: 17/17
+A 120K: W6 3/3 válidas; W8 2/2 válidas; parada solicitada.
+Mejor ejecución válida: n80000-w6-r2
+Throughput: 5121.063 POSITION/s
+RTT medio/p95/p99: 11.399/18.083/24.566 ms
+RAM conjunta estimada: máximo campaña 12.107 GiB; mejor caso 8.074 GiB
+CPU S: 535.2%; CPU G: 92.0%, 91.1%, 92.0%, 91.9%, 93.0%
+Retransmisiones/timeouts: 3/26
+Duración simulación/caso: 78.109/209.307 s
+Limitaciones: 140K+ y cinco PCs físicos sin ejecutar; no se buscó el techo absoluto.

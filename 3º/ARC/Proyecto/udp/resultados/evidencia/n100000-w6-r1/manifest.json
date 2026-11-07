@@ -1,0 +1,70 @@
+{
+  "session": "22ebe0b5f4d64b7388eb5adf30f2f8da",
+  "n": 100000,
+  "v": 25,
+  "i": 5,
+  "load": {
+    "request_rate": 32000,
+    "registration_rate": 2000,
+    "retry_rate": 100,
+    "position_window": 64,
+    "registration_window": 64
+  },
+  "generators": [
+    {
+      "id": "g1",
+      "clients": 20000,
+      "limits": {
+        "request_rate": 6400.0,
+        "registration_rate": 400.0,
+        "retry_rate": 20.0,
+        "position_window": 13,
+        "registration_window": 13
+      }
+    },
+    {
+      "id": "g2",
+      "clients": 20000,
+      "limits": {
+        "request_rate": 6400.0,
+        "registration_rate": 400.0,
+        "retry_rate": 20.0,
+        "position_window": 13,
+        "registration_window": 13
+      }
+    },
+    {
+      "id": "g3",
+      "clients": 20000,
+      "limits": {
+        "request_rate": 6400.0,
+        "registration_rate": 400.0,
+        "retry_rate": 20.0,
+        "position_window": 13,
+        "registration_window": 13
+      }
+    },
+    {
+      "id": "g4",
+      "clients": 20000,
+      "limits": {
+        "request_rate": 6400.0,
+        "registration_rate": 400.0,
+        "retry_rate": 20.0,
+        "position_window": 13,
+        "registration_window": 13
+      }
+    },
+    {
+      "id": "g5",
+      "clients": 20000,
+      "limits": {
+        "request_rate": 6400.0,
+        "registration_rate": 400.0,
+        "retry_rate": 20.0,
+        "position_window": 12,
+        "registration_window": 12
+      }
+    }
+  ]
+}

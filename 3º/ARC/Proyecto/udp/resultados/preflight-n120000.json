@@ -1,0 +1,65 @@
+{
+  "environment": {
+    "vm": {
+      "memtotal_bytes": 18830053376,
+      "memavailable_bytes": 18043424768,
+      "swaptotal_bytes": 1073737728,
+      "swapfree_bytes": 1073737728
+    },
+    "ports": [
+      "32768",
+      "60999"
+    ],
+    "rmem_max": "4194304\n",
+    "wmem_max": "4194304\n",
+    "docker": {
+      "NCPU": 12,
+      "MemTotal": 18830053376,
+      "ServerVersion": "29.9.2",
+      "KernelVersion": "7.0.14-linuxkit",
+      "Architecture": "aarch64"
+    }
+  },
+  "host": {
+    "swap_used_bytes": 0,
+    "available_percent": 53
+  },
+  "forecast": {
+    "allowed": true,
+    "reason": "RAM proyectada frente a MemAvailable y reserva 1 GiB",
+    "predicted_bytes": 12316504064.0,
+    "available_bytes": 18043424768,
+    "capacity_bytes": 18830053376,
+    "rss_bytes_per_client": 92030.0544,
+    "intercept_bytes": 278519808.0,
+    "model_points": [
+      [
+        10000,
+        1146437632
+      ],
+      [
+        20000,
+        2078228480
+      ],
+      [
+        40000,
+        3927322624
+      ],
+      [
+        60000,
+        5779861504
+      ],
+      [
+        80000,
+        7640924160.0
+      ],
+      [
+        100000,
+        9481525248.0
+      ]
+    ],
+    "local_clients": 24000,
+    "ports": 28232
+  },
+  "port_range": null
+}

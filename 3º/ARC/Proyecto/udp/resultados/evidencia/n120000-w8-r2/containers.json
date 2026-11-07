@@ -1,0 +1,116 @@
+[
+  {
+    "name": "/arc26867edd1151-g1-1",
+    "image": "sha256:6f3cbeb9a81969c385f7476ea7f915f2b37be23cbdff64409630af19c576f869",
+    "resources": {
+      "NanoCpus": 1000000000,
+      "Memory": 4294967296,
+      "Ulimits": [
+        {
+          "Name": "nofile",
+          "Hard": 65536,
+          "Soft": 65536
+        }
+      ],
+      "PidsLimit": 128
+    },
+    "networks": {
+      "arc26867edd1151_simulation": "172.19.0.7"
+    }
+  },
+  {
+    "name": "/arc26867edd1151-g2-1",
+    "image": "sha256:6f3cbeb9a81969c385f7476ea7f915f2b37be23cbdff64409630af19c576f869",
+    "resources": {
+      "NanoCpus": 1000000000,
+      "Memory": 4294967296,
+      "Ulimits": [
+        {
+          "Name": "nofile",
+          "Hard": 65536,
+          "Soft": 65536
+        }
+      ],
+      "PidsLimit": 128
+    },
+    "networks": {
+      "arc26867edd1151_simulation": "172.19.0.5"
+    }
+  },
+  {
+    "name": "/arc26867edd1151-g3-1",
+    "image": "sha256:6f3cbeb9a81969c385f7476ea7f915f2b37be23cbdff64409630af19c576f869",
+    "resources": {
+      "NanoCpus": 1000000000,
+      "Memory": 4294967296,
+      "Ulimits": [
+        {
+          "Name": "nofile",
+          "Hard": 65536,
+          "Soft": 65536
+        }
+      ],
+      "PidsLimit": 128
+    },
+    "networks": {
+      "arc26867edd1151_simulation": "172.19.0.6"
+    }
+  },
+  {
+    "name": "/arc26867edd1151-g4-1",
+    "image": "sha256:6f3cbeb9a81969c385f7476ea7f915f2b37be23cbdff64409630af19c576f869",
+    "resources": {
+      "NanoCpus": 1000000000,
+      "Memory": 4294967296,
+      "Ulimits": [
+        {
+          "Name": "nofile",
+          "Hard": 65536,
+          "Soft": 65536
+        }
+      ],
+      "PidsLimit": 128
+    },
+    "networks": {
+      "arc26867edd1151_simulation": "172.19.0.3"
+    }
+  },
+  {
+    "name": "/arc26867edd1151-g5-1",
+    "image": "sha256:6f3cbeb9a81969c385f7476ea7f915f2b37be23cbdff64409630af19c576f869",
+    "resources": {
+      "NanoCpus": 1000000000,
+      "Memory": 4294967296,
+      "Ulimits": [
+        {
+          "Name": "nofile",
+          "Hard": 65536,
+          "Soft": 65536
+        }
+      ],
+      "PidsLimit": 128
+    },
+    "networks": {
+      "arc26867edd1151_simulation": "172.19.0.4"
+    }
+  },
+  {
+    "name": "/arc26867edd1151-server-1",
+    "image": "sha256:4fd76ead610b292f9574589493267865c3a4b5836e8bc8db8236998c1de73531",
+    "resources": {
+      "NanoCpus": 6000000000,
+      "Memory": 2147483648,
+      "Ulimits": [
+        {
+          "Name": "nofile",
+          "Hard": 65536,
+          "Soft": 65536
+        }
+      ],
+      "PidsLimit": 128
+    },
+    "networks": {
+      "arc26867edd1151_simulation": "172.19.0.2"
+    }
+  }
+]

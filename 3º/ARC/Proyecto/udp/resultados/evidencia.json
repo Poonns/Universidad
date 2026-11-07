@@ -1,0 +1,78 @@
+{
+  "cases": [
+    {
+      "case": "n100000-w6-r1",
+      "compressed_report": "resultados/evidencia/n100000-w6-r1/result.json.gz",
+      "report_sha256": "837a005a870acc340b56c2cd20363b966d7bdaa86deec2d8867d78aa82f7d1c1",
+      "compressed_sha256": "861b983472bb35ba02c882fb5bf12f05e13707a45df475bed986e1b8e5f9bfe7"
+    },
+    {
+      "case": "n100000-w6-r2",
+      "compressed_report": "resultados/evidencia/n100000-w6-r2/result.json.gz",
+      "report_sha256": "0ff40a6beb396a4b0849bbedf2a206af9250968c457cf4b8ac0df2c2c98d6af0",
+      "compressed_sha256": "4de74abd252cb38c5fba5b15dad20cd3d3d0a72c73df9ece219bc6f6510dcf90"
+    },
+    {
+      "case": "n100000-w6-r3",
+      "compressed_report": "resultados/evidencia/n100000-w6-r3/result.json.gz",
+      "report_sha256": "8bc89a8829b01234feee51748fecbb876d707f3368af39be8371e31f6c0aeec1",
+      "compressed_sha256": "d000b5eb75542a32cdff14ad1f86d3e6a86080a53a294ba78cf43e0014ba094b"
+    },
+    {
+      "case": "n100000-w8-r1",
+      "compressed_report": "resultados/evidencia/n100000-w8-r1/result.json.gz",
+      "report_sha256": "4ad8d3f5f99242ef4917dad4a6f68a598d808ce5d11f3d48b4c3e8d2da7cc12b",
+      "compressed_sha256": "b6569ef1239f0b86d032eb19c7c57846095ba78908b65c3b69875ef64d687491"
+    },
+    {
+      "case": "n100000-w8-r2",
+      "compressed_report": "resultados/evidencia/n100000-w8-r2/result.json.gz",
+      "report_sha256": "1d7f15a2f8181a8091f376d4426e87b838cb6dc66217a78f15825d884c66edbc",
+      "compressed_sha256": "76a000e5f36f3026f1a9dd5732002f8e2b2386eeb6a7cff4e214f2ddb893dd50"
+    },
+    {
+      "case": "n100000-w8-r3",
+      "compressed_report": "resultados/evidencia/n100000-w8-r3/result.json.gz",
+      "report_sha256": "b0125d633e0759fb6cf6bccbda70bb451a5417516f7cd748518aca32c94b8454",
+      "compressed_sha256": "3b862bd42aabcd38ba69657b8f960cbda82e4099bd728f333d1c81afa46e5b72"
+    },
+    {
+      "case": "n120000-w6-r1",
+      "compressed_report": "resultados/evidencia/n120000-w6-r1/result.json.gz",
+      "report_sha256": "54e53f9f143a9c182e0c5e395325a8d2903b2942846006bc0e494c4f5a2d3a9c",
+      "compressed_sha256": "1600330b54bd79b9e3027eae9b1121d5244fa3ac1c5a1466b4f69297dd502a2f"
+    },
+    {
+      "case": "n120000-w6-r2",
+      "compressed_report": "resultados/evidencia/n120000-w6-r2/result.json.gz",
+      "report_sha256": "5e256b57845d0900a59fae50b12b937d66ebd9adbaf82d8ac02615ecfb592f29",
+      "compressed_sha256": "0c59f9790029e7cdc954cbfc4100edf4e5881e4765a4ed4f5272fc4e6b19bc01"
+    },
+    {
+      "case": "n120000-w6-r3",
+      "compressed_report": "resultados/evidencia/n120000-w6-r3/result.json.gz",
+      "report_sha256": "8314278d2bbeb3d4ceee16b31df0b8df9d0fd0e61930e2bd5da5d598c73d011e",
+      "compressed_sha256": "0f49620212644bfc1a6209f70ddac125a548efb505a19fce59a7b934964e1a6c"
+    },
+    {
+      "case": "n120000-w8-r1",
+      "compressed_report": "resultados/evidencia/n120000-w8-r1/result.json.gz",
+      "report_sha256": "17d859cc3dc57b5281b946da588c8bb05cf025deaf4704ef580816aea1efbec3",
+      "compressed_sha256": "dab992be9f2d59963d5024bbee2ed1518daf9c0b001eb9e5a86da559704be968"
+    },
+    {
+      "case": "n120000-w8-r2",
+      "compressed_report": "resultados/evidencia/n120000-w8-r2/result.json.gz",
+      "report_sha256": "b45fe7079cdf28c294d78ece8dc08a1371a870b00ce0a662a232a9da676ee8c5",
+      "compressed_sha256": "8d58a2394570e75744608035946efcadcb90fa6043d6d4b47f0381ee0ebe2f5b"
+    },
+    {
+      "case": "n80000-w6-r2",
+      "compressed_report": "resultados/evidencia/n80000-w6-r2/result.json.gz",
+      "report_sha256": "77725af5ffac8f9ce558d48e1d1af32bc5f16fb843f66016f305ae9dcc399647",
+      "compressed_sha256": "57821877e5e789e1d13b9409fcd698da7e6e6bb50717be20d16c9464302eee02"
+    }
+  ],
+  "raw_backup": "/Users/hectorpons/universidad/3\u00ba/ARC/respaldos-udp/brutos-consolidacion-20261107-233959.tar.gz",
+  "raw_backup_sha256": "4138f037a29144bad9219251872a9df5d4eec5e553778ac0b664c9372e772256"
+}

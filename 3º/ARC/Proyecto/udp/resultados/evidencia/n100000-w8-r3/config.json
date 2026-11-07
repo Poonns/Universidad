@@ -1,0 +1,38 @@
+{
+  "n": 100000,
+  "generators": 5,
+  "deadline": 600,
+  "server_image": "sha256:4fd76ead610b292f9574589493267865c3a4b5836e8bc8db8236998c1de73531",
+  "generator_image": "sha256:6f3cbeb9a81969c385f7476ea7f915f2b37be23cbdff64409630af19c576f869",
+  "host_uid": 501,
+  "workers": 8,
+  "server_memory": "2g",
+  "generator_memory": "4g",
+  "observe": true,
+  "minimum_vm_available_mib": 1024,
+  "port_range": null,
+  "manifest_sha256": "ae466ca0fff90e7848391b6e51f80772c74ad3bfe42cc147da9e413785bd395d",
+  "load": {
+    "request_rate": 32000,
+    "registration_rate": 2000,
+    "retry_rate": 100,
+    "position_window": 64,
+    "registration_window": 64
+  },
+  "source_sha256": {
+    "server_parallel.py": "fe8f64fdf6d68b072be97dd574414b7ed47d313420097f5a137d39079dfd0d4a",
+    "server.py": "be04bcfdb37573b9ac6f299bf374ee615e665ef4cc422f60571c9190da757a5d",
+    "benchmark.py": "89767f1ca4b3dbd846e4b8d2917775ef3b2b4f4fa8e4d856f679a46486802472",
+    "generator_profile.py": "e3006b42c6b42bf62e5ca348b1b2b3db2d9c78d804c6aff3d548697062b3dc52",
+    "protocol.py": "c65634234de300c4c2eb2daa3cf55376b73ec60b622032c234a32c564c5033ac",
+    "client.py": "2e34ad00f4b9a2c38861f30ec600c147daa9e9bcdfae7ce968f55411bde46271",
+    "observability.py": "81359ebbf3dcfd4a39a76178b2a74d96dcc503ea7820519f1f495af571135b21",
+    "remote_control.py": "cf0830681e6e6ec402e5ae0411f51a4bac85ad71ac17878efa6885d4eddb0459",
+    "runtime.py": "9440a3a0a2b03b70ba684b239f02f3067004ec37ceaa5b00dd00643f39796555",
+    "parallel_runtime.py": "fc86a815d15a69a4f69290ac5bb7f74e5127dce6fd9033b64f60f5115c28e3d0",
+    "run_clients.py": "5d8bd7180a5e437f0610290f688029db57524bfd870d6525de42bdf71ca0ea2b",
+    "run_test.py": "474d8cfb2d6d28c82957c3b85342b395d927aae95efdc34f904fc5cd4802d56d",
+    "distributed_config.py": "830c9da4b2ffb76886b0c3fca0710a53d616c4e55c9f1bea9026b75f3c853281",
+    "lab.py": "b84cbada2bfb216a349cd1b1c1e83fa1565e59f708d96da996be1aa576627ed8"
+  }
+}

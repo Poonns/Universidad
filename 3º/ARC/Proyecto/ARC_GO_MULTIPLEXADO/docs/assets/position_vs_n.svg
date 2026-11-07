@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 550" role="img">
+<title>POSITION completas/s frente a N</title><rect width='960' height='550' fill='white'/><g font-family='Arial,sans-serif' fill='#172033'>
+<text x='85' y='30' font-size='21'>POSITION completas/s frente a N</text><text x='85' y='53' font-size='12'>N30K: contexto A5K, media de3. N160K: puntos por run; línea = media.</text>
+<line x1='85' x2='905' y1='442' y2='442' stroke='#e2e8f0'/><text x='76' y='446' text-anchor='end' font-size='12'>0</text>
+<line x1='85' x2='905' y1='318.6666666666667' y2='318.6666666666667' stroke='#e2e8f0'/><text x='76' y='322.6666666666667' text-anchor='end' font-size='12'>2000</text>
+<line x1='85' x2='905' y1='195.33333333333334' y2='195.33333333333334' stroke='#e2e8f0'/><text x='76' y='199.33333333333334' text-anchor='end' font-size='12'>4000</text>
+<line x1='85' x2='905' y1='72' y2='72' stroke='#e2e8f0'/><text x='76' y='76' text-anchor='end' font-size='12'>6000</text>
+<line x1='85' x2='905' y1='442' y2='442' stroke='#475569'/><line x1='85' x2='85' y1='72' y2='442' stroke='#475569'/>
+<text x='238.75' y='462' text-anchor='middle' font-size='12'>30K</text>
+<text x='341.25' y='462' text-anchor='middle' font-size='12'>50K</text>
+<text x='495' y='462' text-anchor='middle' font-size='12'>80K</text>
+<text x='700' y='462' text-anchor='middle' font-size='12'>120K</text>
+<text x='905' y='462' text-anchor='middle' font-size='12'>160K</text>
+<text x='495' y='487' text-anchor='middle' font-size='14'>Clientes lógicos N</text>
+<text x='22' y='260' transform='rotate(-90 22 260)' text-anchor='middle' font-size='14'>POSITION/s</text>
+<polyline points='238.75,118.0197971061318 341.25,118.15369657437972 495,113.63374704846511 700,111.68474291059604 905,111.4581325023237 ' fill='none' stroke='#2563eb' stroke-width='2'/>
+<circle cx='238.75' cy='118.0197971061318' r='4' fill='#2563eb'><title>30K contexto: media de3A5K; N=30000; POSITION/s=5253.733019901</title></circle>
+<circle cx='341.25' cy='118.15369657437972' r='4' fill='#2563eb'><title>N50000; N=50000; POSITION/s=5251.561677172</title></circle>
+<circle cx='495' cy='113.63374704846511' r='4' fill='#2563eb'><title>N80000; N=80000; POSITION/s=5324.858155971</title></circle>
+<circle cx='700' cy='111.68474291059604' r='4' fill='#2563eb'><title>N120000; N=120000; POSITION/s=5356.463628477</title></circle>
+<circle cx='905' cy='111.90206608494786' r='4' fill='#2563eb'><title>N160000; N=160000; POSITION/s=5352.939468893</title></circle>
+<circle cx='905' cy='110.46532599683945' r='4' fill='#2563eb'><title>N160000-r2; N=160000; POSITION/s=5376.237956808</title></circle>
+<circle cx='905' cy='112.00700542518378' r='4' fill='#2563eb'><title>N160000-r3; N=160000; POSITION/s=5351.237749862</title></circle>
+<line x1='85' x2='105' y1='518' y2='518' stroke='#2563eb' stroke-width='3'/><text x='113' y='522' font-size='12'>POSITION/s</text>
+</g></svg>

@@ -1,0 +1,36 @@
+{
+  "path": "/Users/hectorpons/universidad/3\u00ba/ARC/respaldos-udp/fuentes-consolidacion-medidos.tar.gz",
+  "sha256": "c360e7f9274f0e9baf0f48e5bae7ce8fb27b6e93edfa2ea5f64264f9118e1649",
+  "images": {
+    "server_image": "sha256:4fd76ead610b292f9574589493267865c3a4b5836e8bc8db8236998c1de73531",
+    "generator_image": "sha256:6f3cbeb9a81969c385f7476ea7f915f2b37be23cbdff64409630af19c576f869"
+  },
+  "files": {
+    "benchmark.py": "89767f1ca4b3dbd846e4b8d2917775ef3b2b4f4fa8e4d856f679a46486802472",
+    "client.py": "2e34ad00f4b9a2c38861f30ec600c147daa9e9bcdfae7ce968f55411bde46271",
+    "distributed_config.py": "830c9da4b2ffb76886b0c3fca0710a53d616c4e55c9f1bea9026b75f3c853281",
+    "generator_profile.py": "e3006b42c6b42bf62e5ca348b1b2b3db2d9c78d804c6aff3d548697062b3dc52",
+    "lab.py": "b84cbada2bfb216a349cd1b1c1e83fa1565e59f708d96da996be1aa576627ed8",
+    "observability.py": "81359ebbf3dcfd4a39a76178b2a74d96dcc503ea7820519f1f495af571135b21",
+    "parallel_runtime.py": "fc86a815d15a69a4f69290ac5bb7f74e5127dce6fd9033b64f60f5115c28e3d0",
+    "protocol.py": "c65634234de300c4c2eb2daa3cf55376b73ec60b622032c234a32c564c5033ac",
+    "remote_control.py": "cf0830681e6e6ec402e5ae0411f51a4bac85ad71ac17878efa6885d4eddb0459",
+    "run_clients.py": "5d8bd7180a5e437f0610290f688029db57524bfd870d6525de42bdf71ca0ea2b",
+    "run_test.py": "474d8cfb2d6d28c82957c3b85342b395d927aae95efdc34f904fc5cd4802d56d",
+    "runtime.py": "9440a3a0a2b03b70ba684b239f02f3067004ec37ceaa5b00dd00643f39796555",
+    "server.py": "be04bcfdb37573b9ac6f299bf374ee615e665ef4cc422f60571c9190da757a5d",
+    "server_parallel.py": "fe8f64fdf6d68b072be97dd574414b7ed47d313420097f5a137d39079dfd0d4a",
+    "tests/process_generator.py": "29a07614e50f94b791f05e733636e0ebce71a0be60a814500ce853414ff94918",
+    "tests/support.py": "1bda6155aff419104211d8a660740a432424643444ee1e6f50d5fc47fc8709de",
+    "tests/test_benchmark.py": "884167d7b28290581cb948dddb8d7da3f8803db7d40a0018ce4a28328abacda9",
+    "tests/test_distributed.py": "71d0dcd0b0ccba595562b49aaf04d9cd25b1061ac6354995018f477b49d01d4d",
+    "tests/test_parallel.py": "31587e818804f7763e017368f6e26c7c31fd417031294040e15ee74605df01e4",
+    "tests/test_protocol.py": "c0ec2e2fd36a6db3400efb9dab2a4a283245f8f63454ef534919b16265e6a6a6",
+    "tests/test_resilience.py": "d23ba750258332f276b3fca8b9e465ef86ecf260b1d070a89eef88b242c7a790",
+    "tests/test_simulation.py": "22d505dcda9d6b1e724bab08247e18b2832b15d977d831617baebc63d5199235",
+    "tests/test_state.py": "234c3a43d8fd6795127f7a74cc8d256813ca88807bb6dc243083b60dba179216",
+    "tests/verify_process_close.py": "721c1a4be4279060f46b1baeadf374cb5ed5e30230697be0c8a31d23cc850048",
+    "Dockerfile": "4405a3538cba7c31e77ef1b68f4a583d11ed70d7cc59b4d176f08dd10b8459ea",
+    ".dockerignore": "e235d44bcfdb32476025ded659f9374f05887b8aa4a4096d77d211dd5e8ee1f7"
+  }
+}

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 550" role="img">
+<title>Duración de simulación frente a N</title><rect width='960' height='550' fill='white'/><g font-family='Arial,sans-serif' fill='#172033'>
+<text x='85' y='30' font-size='21'>Duración de simulación frente a N</text><text x='85' y='53' font-size='12'>N30K: contexto A5K, media de3. N160K: puntos por run; línea = media.</text>
+<line x1='85' x2='905' y1='442' y2='442' stroke='#e2e8f0'/><text x='76' y='446' text-anchor='end' font-size='12'>0</text>
+<line x1='85' x2='905' y1='368' y2='368' stroke='#e2e8f0'/><text x='76' y='372' text-anchor='end' font-size='12'>30</text>
+<line x1='85' x2='905' y1='294' y2='294' stroke='#e2e8f0'/><text x='76' y='298' text-anchor='end' font-size='12'>60</text>
+<line x1='85' x2='905' y1='220' y2='220' stroke='#e2e8f0'/><text x='76' y='224' text-anchor='end' font-size='12'>90</text>
+<line x1='85' x2='905' y1='145.99999999999997' y2='145.99999999999997' stroke='#e2e8f0'/><text x='76' y='149.99999999999997' text-anchor='end' font-size='12'>120</text>
+<line x1='85' x2='905' y1='72' y2='72' stroke='#e2e8f0'/><text x='76' y='76' text-anchor='end' font-size='12'>150</text>
+<line x1='85' x2='905' y1='442' y2='442' stroke='#475569'/><line x1='85' x2='85' y1='72' y2='442' stroke='#475569'/>
+<text x='238.75' y='462' text-anchor='middle' font-size='12'>30K</text>
+<text x='341.25' y='462' text-anchor='middle' font-size='12'>50K</text>
+<text x='495' y='462' text-anchor='middle' font-size='12'>80K</text>
+<text x='700' y='462' text-anchor='middle' font-size='12'>120K</text>
+<text x='905' y='462' text-anchor='middle' font-size='12'>160K</text>
+<text x='495' y='487' text-anchor='middle' font-size='14'>Clientes lógicos N</text>
+<text x='22' y='260' transform='rotate(-90 22 260)' text-anchor='middle' font-size='14'>Segundos</text>
+<polyline points='238.75,371.57328174962225 341.25,324.5746121678 495,256.70554937500003 700,165.69830122026664 905,73.84863706388884 ' fill='none' stroke='#2563eb' stroke-width='2'/>
+<circle cx='238.75' cy='371.57328174962225' r='4' fill='#2563eb'><title>30K contexto: media de3A5K; N=30000; SimulationDuration=28.551372264</title></circle>
+<circle cx='341.25' cy='324.5746121678' r='4' fill='#2563eb'><title>N50000; N=50000; SimulationDuration=47.604886959</title></circle>
+<circle cx='495' cy='256.70554937500003' r='4' fill='#2563eb'><title>N80000; N=80000; SimulationDuration=75.119371875</title></circle>
+<circle cx='700' cy='165.69830122026664' r='4' fill='#2563eb'><title>N120000; N=120000; SimulationDuration=112.014202208</title></circle>
+<circle cx='905' cy='73.35519375833331' r='4' fill='#2563eb'><title>N160000; N=160000; SimulationDuration=149.450597125</title></circle>
+<circle cx='905' cy='74.952754475' r='4' fill='#2563eb'><title>N160000-r2; N=160000; SimulationDuration=148.802937375</title></circle>
+<circle cx='905' cy='73.23796295833333' r='4' fill='#2563eb'><title>N160000-r3; N=160000; SimulationDuration=149.498123125</title></circle>
+<line x1='85' x2='105' y1='518' y2='518' stroke='#2563eb' stroke-width='3'/><text x='113' y='522' font-size='12'>SimulationDuration</text>
+</g></svg>

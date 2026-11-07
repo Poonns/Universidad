@@ -1,0 +1,31 @@
+{
+  "images": {
+    "server_image": "sha256:63ecf67f11b4d4ec479a29c143b3c6fc436da9d539eb5ef1e308a39790099b68",
+    "generator_image": "sha256:b0d0ad78ea1e8a984ea076369584b80f7a02158b049ddba7737c3afa51f8c0af"
+  },
+  "environment": {
+    "vm": {
+      "memtotal_bytes": 18830053376,
+      "memavailable_bytes": 18185986048,
+      "swaptotal_bytes": 1073737728,
+      "swapfree_bytes": 1073737728
+    },
+    "ports": [
+      "32768",
+      "60999"
+    ],
+    "rmem_max": "4194304\n",
+    "wmem_max": "4194304\n",
+    "docker": {
+      "NCPU": 12,
+      "MemTotal": 18830053376,
+      "ServerVersion": "29.9.2",
+      "KernelVersion": "7.0.14-linuxkit",
+      "Architecture": "aarch64"
+    }
+  },
+  "host": {
+    "swap_used_bytes": 0,
+    "available_percent": 73
+  }
+}

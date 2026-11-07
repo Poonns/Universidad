@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 550" role="img">
+<title>CPU de procesos frente a N</title><rect width='960' height='550' fill='white'/><g font-family='Arial,sans-serif' fill='#172033'>
+<text x='85' y='30' font-size='21'>CPU de procesos frente a N</text><text x='85' y='53' font-size='12'>N30K: contexto A5K, media de3. N160K: puntos por run; línea = media.</text>
+<line x1='85' x2='905' y1='442' y2='442' stroke='#e2e8f0'/><text x='76' y='446' text-anchor='end' font-size='12'>0</text>
+<line x1='85' x2='905' y1='368' y2='368' stroke='#e2e8f0'/><text x='76' y='372' text-anchor='end' font-size='12'>200</text>
+<line x1='85' x2='905' y1='294' y2='294' stroke='#e2e8f0'/><text x='76' y='298' text-anchor='end' font-size='12'>400</text>
+<line x1='85' x2='905' y1='220' y2='220' stroke='#e2e8f0'/><text x='76' y='224' text-anchor='end' font-size='12'>600</text>
+<line x1='85' x2='905' y1='145.99999999999997' y2='145.99999999999997' stroke='#e2e8f0'/><text x='76' y='149.99999999999997' text-anchor='end' font-size='12'>800</text>
+<line x1='85' x2='905' y1='72' y2='72' stroke='#e2e8f0'/><text x='76' y='76' text-anchor='end' font-size='12'>1000</text>
+<line x1='85' x2='905' y1='442' y2='442' stroke='#475569'/><line x1='85' x2='85' y1='72' y2='442' stroke='#475569'/>
+<text x='238.75' y='462' text-anchor='middle' font-size='12'>30K</text>
+<text x='341.25' y='462' text-anchor='middle' font-size='12'>50K</text>
+<text x='495' y='462' text-anchor='middle' font-size='12'>80K</text>
+<text x='700' y='462' text-anchor='middle' font-size='12'>120K</text>
+<text x='905' y='462' text-anchor='middle' font-size='12'>160K</text>
+<text x='495' y='487' text-anchor='middle' font-size='14'>Clientes lógicos N</text>
+<text x='22' y='260' transform='rotate(-90 22 260)' text-anchor='middle' font-size='14'>CPU %;100 %=1core</text>
+<polyline points='238.75,273.7536502007107 341.25,273.34761421319797 495,273.23867730313947 700,273.0883444051419 905,273.6886776610649 ' fill='none' stroke='#2563eb' stroke-width='2'/>
+<circle cx='238.75' cy='273.7536502007107' r='4' fill='#2563eb'><title>30K contexto: media de3A5K; N=30000; Servidor=454.719864322</title></circle>
+<circle cx='341.25' cy='273.34761421319797' r='4' fill='#2563eb'><title>N50000; N=50000; Servidor=455.817258883</title></circle>
+<circle cx='495' cy='273.23867730313947' r='4' fill='#2563eb'><title>N80000; N=80000; Servidor=456.111682964</title></circle>
+<circle cx='700' cy='273.0883444051419' r='4' fill='#2563eb'><title>N120000; N=120000; Servidor=456.517988094</title></circle>
+<circle cx='905' cy='274.68524865808706' r='4' fill='#2563eb'><title>N160000; N=160000; Servidor=452.202030654</title></circle>
+<circle cx='905' cy='273.91627695505326' r='4' fill='#2563eb'><title>N160000-r2; N=160000; Servidor=454.280332554</title></circle>
+<circle cx='905' cy='272.4645073700543' r='4' fill='#2563eb'><title>N160000-r3; N=160000; Servidor=458.204034135</title></circle>
+<line x1='85' x2='105' y1='518' y2='518' stroke='#2563eb' stroke-width='3'/><text x='113' y='522' font-size='12'>Servidor</text>
+<polyline points='238.75,246.44561078668752 341.25,244.16832487309642 495,244.1749196141479 700,243.10586206896554 905,243.25822867857534 ' fill='none' stroke='#d97706' stroke-width='2'/>
+<circle cx='238.75' cy='246.44561078668752' r='4' fill='#d97706'><title>30K contexto: media de3A5K; N=30000; G1+G2=528.525376252</title></circle>
+<circle cx='341.25' cy='244.16832487309642' r='4' fill='#d97706'><title>N50000; N=50000; G1+G2=534.680203046</title></circle>
+<circle cx='495' cy='244.1749196141479' r='4' fill='#d97706'><title>N80000; N=80000; G1+G2=534.662379421</title></circle>
+<circle cx='700' cy='243.10586206896554' r='4' fill='#d97706'><title>N120000; N=120000; G1+G2=537.551724138</title></circle>
+<circle cx='905' cy='243.65293971258222' r='4' fill='#d97706'><title>N160000; N=160000; G1+G2=536.073135912</title></circle>
+<circle cx='905' cy='243.2403246753247' r='4' fill='#d97706'><title>N160000-r2; N=160000; G1+G2=537.188311688</title></circle>
+<circle cx='905' cy='242.88142164781908' r='4' fill='#d97706'><title>N160000-r3; N=160000; G1+G2=538.158319871</title></circle>
+<line x1='330' x2='350' y1='518' y2='518' stroke='#d97706' stroke-width='3'/><text x='358' y='522' font-size='12'>G1+G2</text>
+<polyline points='238.75,78.19926098739823 341.25,75.51593908629444 495,75.41359691728735 700,74.19420647410749 905,74.9469063396402 ' fill='none' stroke='#059669' stroke-width='2'/>
+<circle cx='238.75' cy='78.19926098739823' r='4' fill='#059669'><title>30K contexto: media de3A5K; N=30000; S+G1+G2=983.245240575</title></circle>
+<circle cx='341.25' cy='75.51593908629444' r='4' fill='#059669'><title>N50000; N=50000; S+G1+G2=990.497461929</title></circle>
+<circle cx='495' cy='75.41359691728735' r='4' fill='#059669'><title>N80000; N=80000; S+G1+G2=990.774062386</title></circle>
+<circle cx='700' cy='74.19420647410749' r='4' fill='#059669'><title>N120000; N=120000; S+G1+G2=994.069712232</title></circle>
+<circle cx='905' cy='76.33818837066926' r='4' fill='#059669'><title>N160000; N=160000; S+G1+G2=988.275166566</title></circle>
+<circle cx='905' cy='75.15660163037793' r='4' fill='#059669'><title>N160000-r2; N=160000; S+G1+G2=991.468644242</title></circle>
+<circle cx='905' cy='73.3459290178734' r='4' fill='#059669'><title>N160000-r3; N=160000; S+G1+G2=996.362354006</title></circle>
+<line x1='575' x2='595' y1='518' y2='518' stroke='#059669' stroke-width='3'/><text x='603' y='522' font-size='12'>S+G1+G2</text>
+</g></svg>
