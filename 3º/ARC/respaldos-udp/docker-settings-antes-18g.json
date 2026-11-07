@@ -1,0 +1,15 @@
+{
+  "AutoStart": false,
+  "DisplayedOnboarding": true,
+  "DockerAppLaunchPath": "/Applications/Docker.app",
+  "DockerBinInstallPath": "system",
+  "EnableDefaultDockerSocket": true,
+  "EnableDockerAI": true,
+  "LastContainerdSnapshotterEnable": 1769783930,
+  "LicenseTermsVersion": 2,
+  "SettingsVersion": 48,
+  "ShowInstallScreen": false,
+  "UpdateInstallTime": 0,
+  "UpdateInstallerPid": 0,
+  "UseContainerdSnapshotter": true
+}

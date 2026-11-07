@@ -1,0 +1,13 @@
+	classex1: como está en las transparencias.
+Poda la rama T-G-H, los nodos J y L y toda la rama épsilon. Total: 19 llamadas.
+
+classex2: se invierte el orden de los nodos mu y phi en el nivel 1; el resto de nodos inferiores quedan igual
+Poda la rama X-O-P, el nodo B y la rama T-G-H. Total: 24 llamadas.
+
+classex2B: como classex2, pero se invierte el orden de los nodos delta y épsilon en el nivel 2
+Poda la rama T-G-H. Total: 28 llamadas.
+Se podaría el nodo a la derecha de B y A (un tercer hijo de Q), si lo hubiera.
+
+classex2C: come classex2B, pero se invierte el orden de los nodos Y y Z en el nivel 2
+No poda nada. Total: 31 llamadas (como Minimax).
+Se podaría el nodo a la derecha de B y A (un tercer hijo de Q), si lo hubiera.

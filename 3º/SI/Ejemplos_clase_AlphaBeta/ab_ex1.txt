@@ -1,0 +1,73 @@
+┌─Alphabeta_1(start = Pi, depth = 4, player = Maximixing, alpha_1 = -Infinite, beta_1 = +Infinite)
+│ ├─Alphabeta_1.1(start = Mu, depth = 3, player = Minimizing, alpha_1.1 = -Infinite, beta_1.1 = +Infinite)
+│ │ ├─Alphabeta_1.1.1(start = Y, depth = 2, player = Maximixing, alpha_1.1.1 = -Infinite, beta_1.1.1 = +Infinite)
+│ │ │ ├─Alphabeta_1.1.1.1(start = Q, depth = 1, player = Minimizing, alpha_1.1.1.1 = -Infinite, beta_1.1.1.1 = +Infinite)
+│ │ │ │ ├─Alphabeta_1.1.1.1.1(start = A, depth = 0, player = Maximixing, alpha_1.1.1.1.1 = -Infinite, beta_1.1.1.1.1 = +Infinite)
+│ │ │ │ │ Maximum depth reached.
+│ │ │ │ └─END OF CALL 1.1.1.1.1 returning h(A)=1
+│ │ │ ├┄┄┄▷ Inside call 1.1.1.1: beta_1.1.1.1, which was +Infinite, is updated to value 1
+│ │ │ │ ├─Alphabeta_1.1.1.1.2(start = B, depth = 0, player = Maximixing, alpha_1.1.1.1.2 = -Infinite, beta_1.1.1.1.2 = 1)
+│ │ │ │ │ Maximum depth reached.
+│ │ │ │ └─END OF CALL 1.1.1.1.2 returning h(B)=9
+│ │ │ ├┄┄┄▷ Inside call 1.1.1.1: beta_1.1.1.1, which was 1, is NOT updated, since 9 >= 1
+│ │ │ └─END OF CALL 1.1.1.1 returning the lowest value of the list (1 9) which is 1.
+│ │ ├┄┄┄▷ Inside call 1.1.1: alpha_1.1.1, which was -Infinite, is updated to value 1
+│ │ │ ├─Alphabeta_1.1.1.2(start = R, depth = 1, player = Minimizing, alpha_1.1.1.2 = 1, beta_1.1.1.2 = +Infinite)
+│ │ │ │ ├─Alphabeta_1.1.1.2.1(start = C, depth = 0, player = Maximixing, alpha_1.1.1.2.1 = 1, beta_1.1.1.2.1 = +Infinite)
+│ │ │ │ │ Maximum depth reached.
+│ │ │ │ └─END OF CALL 1.1.1.2.1 returning h(C)=3
+│ │ │ ├┄┄┄▷ Inside call 1.1.1.2: beta_1.1.1.2, which was +Infinite, is updated to value 3
+│ │ │ │ ├─Alphabeta_1.1.1.2.2(start = D, depth = 0, player = Maximixing, alpha_1.1.1.2.2 = 1, beta_1.1.1.2.2 = 3)
+│ │ │ │ │ Maximum depth reached.
+│ │ │ │ └─END OF CALL 1.1.1.2.2 returning h(D)=8
+│ │ │ ├┄┄┄▷ Inside call 1.1.1.2: beta_1.1.1.2, which was 3, is NOT updated, since 8 >= 3
+│ │ │ └─END OF CALL 1.1.1.2 returning the lowest value of the list (3 8) which is 3.
+│ │ ├┄┄┄▷ Inside call 1.1.1: alpha_1.1.1, which was 1, is updated to value 3
+│ │ └─END OF CALL 1.1.1 returning the highest value of the list (1 3) which is 3.
+│ ├┄┄┄▷ Inside call 1.1: beta_1.1, which was +Infinite, is updated to value 3
+│ │ ├─Alphabeta_1.1.2(start = Z, depth = 2, player = Maximixing, alpha_1.1.2 = -Infinite, beta_1.1.2 = 3)
+│ │ │ ├─Alphabeta_1.1.2.1(start = S, depth = 1, player = Minimizing, alpha_1.1.2.1 = -Infinite, beta_1.1.2.1 = 3)
+│ │ │ │ ├─Alphabeta_1.1.2.1.1(start = E, depth = 0, player = Maximixing, alpha_1.1.2.1.1 = -Infinite, beta_1.1.2.1.1 = 3)
+│ │ │ │ │ Maximum depth reached.
+│ │ │ │ └─END OF CALL 1.1.2.1.1 returning h(E)=3
+│ │ │ ├┄┄┄▷ Inside call 1.1.2.1: beta_1.1.2.1, which was 3, is NOT updated, since 3 >= 3
+│ │ │ │ ├─Alphabeta_1.1.2.1.2(start = F, depth = 0, player = Maximixing, alpha_1.1.2.1.2 = -Infinite, beta_1.1.2.1.2 = 3)
+│ │ │ │ │ Maximum depth reached.
+│ │ │ │ └─END OF CALL 1.1.2.1.2 returning h(F)=7
+│ │ │ ├┄┄┄▷ Inside call 1.1.2.1: beta_1.1.2.1, which was 3, is NOT updated, since 7 >= 3
+│ │ │ └─END OF CALL 1.1.2.1 returning the lowest value of the list (3 7) which is 3.
+│ │ ├┄┄┄▷ Inside call 1.1.2: alpha_1.1.2, which was -Infinite, is updated to value 3
+│ │ │     alpha_1.1.2 has turned to be bigger or equal than beta_1.1.2 (which was 3).
+│ │ │     The rest of this branch is pruned.
+│ │ └─▷ PREMATURE END OF CALL 1.1.2 returning the highest value of the list (3) which is 3.
+│ ├┄┄┄▷ Inside call 1.1: beta_1.1, which was 3, is NOT updated, since 3 >= 3
+│ └─END OF CALL 1.1 returning the lowest value of the list (3 3) which is 3.
+├┄┄┄▷ Inside call 1: alpha_1, which was -Infinite, is updated to value 3
+│ ├─Alphabeta_1.2(start = The, depth = 3, player = Minimizing, alpha_1.2 = 3, beta_1.2 = +Infinite)
+│ │ ├─Alphabeta_1.2.1(start = Del, depth = 2, player = Maximixing, alpha_1.2.1 = 3, beta_1.2.1 = +Infinite)
+│ │ │ ├─Alphabeta_1.2.1.1(start = U, depth = 1, player = Minimizing, alpha_1.2.1.1 = 3, beta_1.2.1.1 = +Infinite)
+│ │ │ │ ├─Alphabeta_1.2.1.1.1(start = I, depth = 0, player = Maximixing, alpha_1.2.1.1.1 = 3, beta_1.2.1.1.1 = +Infinite)
+│ │ │ │ │ Maximum depth reached.
+│ │ │ │ └─END OF CALL 1.2.1.1.1 returning h(I)=1
+│ │ │ ├┄┄┄▷ Inside call 1.2.1.1: beta_1.2.1.1, which was +Infinite, is updated to value 1
+│ │ │ │     beta_1.2.1.1 has turned to be lower or equal than alpha_1.2.1.1 (which was 3).
+│ │ │ │     The rest of this branch is pruned.
+│ │ │ └─▷ PREMATURE END OF CALL 1.2.1.1 returning the lowest value of the list (1) which is 1.
+│ │ ├┄┄┄▷ Inside call 1.2.1: alpha_1.2.1, which was 3, is NOT updated, since 1 <= 3
+│ │ │ ├─Alphabeta_1.2.1.2(start = V, depth = 1, player = Minimizing, alpha_1.2.1.2 = 3, beta_1.2.1.2 = +Infinite)
+│ │ │ │ ├─Alphabeta_1.2.1.2.1(start = K, depth = 0, player = Maximixing, alpha_1.2.1.2.1 = 3, beta_1.2.1.2.1 = +Infinite)
+│ │ │ │ │ Maximum depth reached.
+│ │ │ │ └─END OF CALL 1.2.1.2.1 returning h(K)=2
+│ │ │ ├┄┄┄▷ Inside call 1.2.1.2: beta_1.2.1.2, which was +Infinite, is updated to value 2
+│ │ │ │     beta_1.2.1.2 has turned to be lower or equal than alpha_1.2.1.2 (which was 3).
+│ │ │ │     The rest of this branch is pruned.
+│ │ │ └─▷ PREMATURE END OF CALL 1.2.1.2 returning the lowest value of the list (2) which is 2.
+│ │ ├┄┄┄▷ Inside call 1.2.1: alpha_1.2.1, which was 3, is NOT updated, since 2 <= 3
+│ │ └─END OF CALL 1.2.1 returning the highest value of the list (1 2) which is 2.
+│ ├┄┄┄▷ Inside call 1.2: beta_1.2, which was +Infinite, is updated to value 2
+│ │     beta_1.2 has turned to be lower or equal than alpha_1.2 (which was 3).
+│ │     The rest of this branch is pruned.
+│ └─▷ PREMATURE END OF CALL 1.2 returning the lowest value of the list (2) which is 2.
+├┄┄┄▷ Inside call 1: alpha_1, which was 3, is NOT updated, since 2 <= 3
+└─END OF CALL 1 returning the highest value of the list (3 2) which is 3.
+The algorithm has done 19 calls to the Alphabeta function.
