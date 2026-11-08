@@ -26,27 +26,13 @@ N, V e I son enteros positivos; N debe ser divisible por V. Grupo de ID c: `1 + 
 | INICIO | destino, token e instancia |
 | INICIO_ACK | origen/grupo registrados e instancia |
 
-```mermaid
-sequenceDiagram
-    participant G as Generador
-    participant C as Cliente lógico
-    participant S as Servidor
-    G->>S: GENERADOR_HOLA, configuración y nonce
-    S-->>G: GENERADOR_HOLA_ACK
-    C->>S: REGISTRO con N global y token estable
-    S-->>C: REGISTRO_ACK con ID y grupo autoritativos
-    Note over S: Esperar N registros; publicar rutas; todos los workers listos
-    S->>C: INICIO dirigido a identidad/token/instancia
-    C-->>S: INICIO_ACK
-```
-
 N local determina cuántos clientes crea un G; no cambia N global enviado al servidor. El manifiesto exige IDs G únicos, suma exacta de N locales y presupuestos locales que sumen el global. No impone afinidad de grupos por generador.
 
 El registro se deduplica por `(generador, token)`, conservando el mismo endpoint. Repetir la solicitud no consume otro ID. Intentar cambiar el endpoint o registrar más clientes que el cupo se rechaza. Si INICIO adelanta a REGISTRO_ACK, C lo retiene y comprueba después la identidad, en vez de declararse iniciado sin registro confirmado.
 
 Solo worker0 recibe al principio. Tras publicar las rutas inmutables, cualquier receptor puede contestar registros repetidos con la misma identidad. Una posición propia requiere el envío real de INICIO para ese origen; la transición multihilo no elimina esa comprobación.
 
-## POSICION y ACK únicos
+## Comunicación de una iteración
 
 | Mensaje | Datos |
 |---|---|
@@ -54,16 +40,57 @@ Solo worker0 recibe al principio. Tras publicar las rutas inmutables, cualquier 
 | ACK | destino = origen de la operación; iteracion de esa operación; origen = vecino que responde |
 
 ```mermaid
+---
+config:
+  theme: base
+  look: classic
+  fontFamily: Arial, sans-serif
+  fontSize: 22
+  themeVariables:
+    fontFamily: Arial, sans-serif
+    fontSize: 22px
+    actorBkg: '#ffffff'
+    actorBorder: '#64748b'
+    actorTextColor: '#0f172a'
+    actorLineColor: '#94a3b8'
+    signalColor: '#334155'
+    signalTextColor: '#0f172a'
+    noteBkgColor: '#eaf2ff'
+    noteBorderColor: '#2563eb'
+    noteTextColor: '#0f172a'
+  sequence:
+    useMaxWidth: false
+    mirrorActors: false
+    actorFontSize: 24
+    messageFontSize: 24
+    noteFontSize: 22
+    actorMargin: 70
+    width: 180
+    height: 62
+    messageMargin: 36
+    noteMargin: 18
+---
 sequenceDiagram
-    participant A as Origen A
-    participant S as Servidor
-    participant B as Vecino B
-    A->>S: POSICION(A, grupo, iteración k)
-    S->>B: Reenviar la misma POSICION
-    B->>S: ACK(origen B, destino A, iteración k)
-    S->>A: Reenviar ACK
-    Note over A: Completar al reunir V−1 vecinos únicos para k
+    accTitle: Comunicación de una iteración y cálculo del RTT
+    accDescr: POSICION y los ACK de los vecinos pasan siempre por el servidor. El cliente completa el RTT al recibir el último ACK único necesario.
+    box rgb(234,242,255)
+        participant C as Cliente origen
+    end
+    box rgb(231,246,236)
+        participant S as Servidor UDP
+    end
+    box rgb(234,242,255)
+        participant V as V−1 vecinos
+    end
+    Note over C: Inicio de la medición RTT
+    C->>S: POSICION
+    S->>V: POSICION a cada vecino
+    V-->>S: Un ACK por vecino
+    S-->>C: Reenviar cada ACK
+    Note over C: V−1 ACK únicos recibidos:<br/>calcular RTT
 ```
+
+*El servidor reenvía POSICION a los V−1 vecinos y devuelve al origen el ACK de cada uno. El cliente mide el RTT desde el primer envío hasta el último ACK único necesario; los duplicados no cuentan.*
 
 S valida y reenvía DATA directamente; no ejecuta las iteraciones del cliente ni almacena sus posiciones. C conserva una operación por iteración y un conjunto de vecinos que ya confirmaron. Un duplicado no incrementa progreso ni añade otra muestra RTT. Un ACK de k no satisface k+1; se reconoce un ACK tardío de una operación anterior sin confundir estados.
 
@@ -71,7 +98,49 @@ Las posiciones recibidas de vecinos se deduplican por `(origen, iteración)`. Un
 
 RTT de aplicación: reloj local desde el primer envío efectivo de POSICION hasta el último ACK único necesario. Incluye retransmisiones, servicio S, callbacks y planificación; excluye la espera inicial de admisión. Con V=1, el final se toma después del envío. Un timeout no crea una muestra exitosa. La media del cliente se calcula sobre sus I operaciones completas.
 
-## ARQ y control de carga
+## Fiabilidad del protocolo UDP (ARQ)
+
+```mermaid
+---
+config:
+  theme: base
+  look: classic
+  fontFamily: Arial, sans-serif
+  fontSize: 22
+  markdownAutoWrap: false
+  themeVariables:
+    fontFamily: Arial, sans-serif
+    fontSize: 22px
+    primaryTextColor: '#0f172a'
+    lineColor: '#475569'
+    clusterBkg: '#f8fafc'
+    clusterBorder: '#cbd5e1'
+  flowchart:
+    curve: linear
+    nodeSpacing: 34
+    rankSpacing: 44
+    padding: 16
+    wrappingWidth: 340
+---
+flowchart LR
+    accTitle: Fiabilidad mediante ARQ sobre UDP
+    accDescr: El emisor espera confirmación y retransmite tras timeout con límites. El receptor valida y deduplica; si se agotan intentos o tiempo se registra un error.
+    E("Enviar por UDP<br/>solo lo pendiente"):::cliente -->|"Si llega"| R("Receptor<br/>validar y deduplicar"):::worker
+    E -->|"Esperar ACK"| A{"¿ACK<br/>completos?"}:::control
+    R -->|"ACK<br/>también al duplicado válido"| A
+    A -->|"Sí"| O("Operación<br/>confirmada"):::worker
+    A -->|"Timeout"| T{"¿Quedan intentos<br/>y tiempo?"}:::neutro
+    T -->|"Sí: reintentar<br/>con límites"| E
+    T -->|"No"| F("Error<br/>sin completar"):::error
+    classDef cliente fill:#eaf2ff,stroke:#2563eb,color:#0f172a,stroke-width:2px
+    classDef kernel fill:#fff4da,stroke:#b45309,color:#0f172a,stroke-width:2px
+    classDef worker fill:#e7f6ec,stroke:#15803d,color:#0f172a,stroke-width:2px
+    classDef control fill:#f1eafd,stroke:#7c3aed,color:#0f172a,stroke-width:2px
+    classDef neutro fill:#f1f5f9,stroke:#64748b,color:#0f172a,stroke-width:2px
+    classDef error fill:#fff1f2,stroke:#dc2626,color:#881337,stroke-width:2px
+```
+
+*La fiabilidad la aporta ARQ sobre UDP; no se utiliza TCP. Ante timeout se reintenta con el backoff, jitter y limitadores existentes, y un duplicado válido se confirma sin repetir sus efectos. Agotar los intentos o el tiempo disponible produce un error y una ejecución incompleta.*
 
 La misma implementación `_exchange` atiende registro, posiciones y métricas. Se conserva el control existente; no se añade otro mecanismo de fiabilidad ni un transporte alternativo.
 
@@ -89,32 +158,58 @@ INICIO y GRUPO_FIN tienen su propio scheduler de control en S, con los mismos in
 
 Los límites acotan espera y carga; UDP no puede garantizar entrega ante pérdidas permanentes o un receptor caído. La garantía es recuperación acotada o fallo explícito y diagnosticado, nunca progreso ficticio.
 
-## Métricas y cierre verificable
+## Registro, métricas y finalización
 
 METRICAS contiene `latencia_media_ms`, `total_iteraciones` y `acks_unicos`, con origen/grupo registrados. S exige exactamente I y `I×(V−1)` ACK únicos declarados, media finita/no negativa y una fase autorizada. Guarda una sola métrica por cliente: repetir la misma vuelve a recibir METRICAS_ACK; una repetición contradictoria se rechaza.
 
 Los contadores de G acreditan sus operaciones/ACK efectivos. S valida el contenido y las barreras de control; no reconstruye un historial completo de todos los ACK DATA. El certificado de simulación y la validación del benchmark comprueban ambos extremos. El protocolo académico no pretende tolerar clientes maliciosos que inventen estadísticas.
 
 ```mermaid
-sequenceDiagram
-    participant C as Cliente
-    participant S as Servidor
-    participant G as Generador
-    C->>S: METRICAS, tras I operaciones completas
-    S--xC: METRICAS_ACK perdido
-    S->>C: GRUPO_FIN cuando el grupo cumple sus barreras
-    Note over C: Recordar GRUPO_FIN; todavía no confirmar cierre
-    C->>S: Reenviar METRICAS con ARQ acotado
-    S-->>C: METRICAS_ACK; sin duplicar estadística
-    C-->>S: GRUPO_FIN_ACK
-    Note over S: N métricas, N INICIO_ACK y N GRUPO_FIN_ACK
-    G->>S: ESTADO_RUN
-    S-->>G: ESTADO_RUN_ACK completo con certificado
-    Note over G: Mantener endpoints de clientes hasta validar el certificado
-    G->>S: GENERADOR_FIN tras cerrar sus clientes
-    S-->>G: GENERADOR_FIN_ACK
-    Note over S: Esperar todos los G; retener respuestas durante horizonte ARQ
+---
+config:
+  theme: base
+  look: classic
+  fontFamily: Arial, sans-serif
+  fontSize: 22
+  markdownAutoWrap: false
+  themeVariables:
+    fontFamily: Arial, sans-serif
+    fontSize: 22px
+    primaryTextColor: '#0f172a'
+    lineColor: '#475569'
+    clusterBkg: '#f8fafc'
+    clusterBorder: '#cbd5e1'
+  flowchart:
+    curve: linear
+    nodeSpacing: 34
+    rankSpacing: 44
+    padding: 16
+    wrappingWidth: 340
+---
+flowchart TB
+    accTitle: Registro, métricas y finalización coordinada
+    accDescr: Se registran todos los clientes y se preparan los workers antes de INICIO. Cada cliente completa sus iteraciones y confirma métricas antes de confirmar GRUPO_FIN; después se coordina el cierre global.
+    subgraph P["Preparación y arranque"]
+        direction LR
+        R("Registro de todos<br/>REGISTRO / REGISTRO_ACK"):::cliente --> W("Workers listos<br/>y rutas compartidas"):::worker
+        W --> I("INICIO / INICIO_ACK<br/>por cliente"):::control
+    end
+    subgraph C["Ejecución y cierre"]
+        direction LR
+        D("Iteraciones<br/>POSICION y ACK"):::cliente --> M("Entregar METRICAS<br/>recibir METRICAS_ACK"):::control
+        M --> F("Confirmar GRUPO_FIN<br/>con GRUPO_FIN_ACK<br/>tras METRICAS_ACK"):::control
+        F --> G("Cierre global<br/>certificado + fin<br/>de generadores"):::control
+    end
+    P --> C
+    classDef cliente fill:#eaf2ff,stroke:#2563eb,color:#0f172a,stroke-width:2px
+    classDef kernel fill:#fff4da,stroke:#b45309,color:#0f172a,stroke-width:2px
+    classDef worker fill:#e7f6ec,stroke:#15803d,color:#0f172a,stroke-width:2px
+    classDef control fill:#f1eafd,stroke:#7c3aed,color:#0f172a,stroke-width:2px
+    classDef neutro fill:#f1f5f9,stroke:#64748b,color:#0f172a,stroke-width:2px
+    classDef error fill:#fff1f2,stroke:#dc2626,color:#881337,stroke-width:2px
 ```
+
+*El servidor espera todos los registros y prepara los workers antes de enviar INICIO; cada cliente completa sus iteraciones y confirma sus métricas. **GRUPO_FIN no sustituye a METRICAS_ACK**: si llega antes, se retiene GRUPO_FIN_ACK hasta recibir la confirmación de métricas. Tras cerrar todos los grupos, los generadores validan el certificado y confirman su fin para completar el cierre global.*
 
 METRICAS_ACK debe recibirse explícitamente. GRUPO_FIN ya no sustituye ese ACK. Si se adelanta, C difiere GRUPO_FIN_ACK; así S no cierra antes de recuperar las métricas confirmadas. Perder GRUPO_FIN o su ACK se recupera mediante el scheduler de S y la respuesta idempotente de C.
 
