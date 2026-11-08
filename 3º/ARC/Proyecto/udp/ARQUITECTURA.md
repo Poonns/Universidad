@@ -60,7 +60,6 @@ docker run --rm --entrypoint python3.14t arc-udp-server:final \
 ```mermaid
 ---
 config:
-  theme: base
   look: classic
   fontFamily: Arial, sans-serif
   fontSize: 22
@@ -68,10 +67,6 @@ config:
   themeVariables:
     fontFamily: Arial, sans-serif
     fontSize: 22px
-    primaryTextColor: '#0f172a'
-    lineColor: '#475569'
-    clusterBkg: '#f8fafc'
-    clusterBorder: '#cbd5e1'
   flowchart:
     curve: linear
     nodeSpacing: 34
@@ -82,22 +77,16 @@ config:
 flowchart LR
     accTitle: Arquitectura del servidor durante la simulación
     accDescr: Linux distribuye UDP a sockets de workers dentro de un único proceso sin GIL. Cada worker tiene hilo y asyncio propios; worker 0 coordina el control y comparten rutas de solo lectura.
-    C("Clientes<br/>UDP"):::cliente --> K("Kernel Linux<br/>SO_REUSEPORT"):::kernel
+    C("Clientes<br/>UDP") --> K("Kernel Linux<br/>SO_REUSEPORT")
     subgraph S["Un proceso servidor · Python sin GIL"]
-        W0("Worker 0 · coordinador<br/>Hilo + event loop asyncio<br/>+ socket UDP propio"):::control
-        WN("Demás workers<br/>Cada uno: hilo + asyncio<br/>+ socket UDP propio"):::worker
-        R("Rutas compartidas<br/>solo lectura"):::neutro
+        W0("Worker 0 · coordinador<br/>Hilo + event loop asyncio<br/>+ socket UDP propio")
+        WN("Demás workers<br/>Cada uno: hilo + asyncio<br/>+ socket UDP propio")
+        R("Rutas compartidas<br/>solo lectura")
         W0 -. consulta .-> R
         WN -. consulta .-> R
     end
     K --> W0
     K --> WN
-    classDef cliente fill:#eaf2ff,stroke:#2563eb,color:#0f172a,stroke-width:2px
-    classDef kernel fill:#fff4da,stroke:#b45309,color:#0f172a,stroke-width:2px
-    classDef worker fill:#e7f6ec,stroke:#15803d,color:#0f172a,stroke-width:2px
-    classDef control fill:#f1eafd,stroke:#7c3aed,color:#0f172a,stroke-width:2px
-    classDef neutro fill:#f1f5f9,stroke:#64748b,color:#0f172a,stroke-width:2px
-    classDef error fill:#fff1f2,stroke:#dc2626,color:#881337,stroke-width:2px
 ```
 
 *Linux distribuye los datagramas entre sockets; cada worker los atiende con su propio hilo y event loop asyncio dentro de un único proceso sin GIL. Worker 0 también recibe datos y coordina el control; todos consultan las mismas rutas de solo lectura.*
@@ -119,7 +108,6 @@ Cada worker mantiene las autorizaciones INICIO aplicadas localmente. Si un datag
 ```mermaid
 ---
 config:
-  theme: base
   look: classic
   fontFamily: Arial, sans-serif
   fontSize: 22
@@ -127,10 +115,6 @@ config:
   themeVariables:
     fontFamily: Arial, sans-serif
     fontSize: 22px
-    primaryTextColor: '#0f172a'
-    lineColor: '#475569'
-    clusterBkg: '#f8fafc'
-    clusterBorder: '#cbd5e1'
   flowchart:
     curve: linear
     nodeSpacing: 34
@@ -143,25 +127,17 @@ flowchart LR
     accDescr: La alternativa descartada concentra la recepción en una cola central. En el diseño implementado SO_REUSEPORT distribuye directamente a cada socket y worker.
     subgraph A["Alternativa descartada"]
         direction TB
-        C1("Clientes UDP"):::cliente --> U("Receptor único"):::neutro
-        U --> Q("Cola central<br/>de datos"):::error
-        Q --> WA("Workers"):::worker
+        C1("Clientes UDP") --> U("Receptor único")
+        U --> Q("Cola central<br/>de datos")
+        Q --> WA("Workers")
     end
     subgraph B["Diseño implementado"]
         direction TB
-        C2("Clientes UDP"):::cliente --> K("Kernel Linux<br/>SO_REUSEPORT"):::kernel
-        K --> W0("Socket + worker 0"):::worker
-        K --> W1("Socket + otro worker"):::worker
+        C2("Clientes UDP") --> K("Kernel Linux<br/>SO_REUSEPORT")
+        K --> W0("Socket + worker 0")
+        K --> W1("Socket + otro worker")
     end
     A ~~~ B
-    style A fill:#fffafb,stroke:#dc2626,stroke-width:2px
-    style B fill:#f7fcf8,stroke:#15803d,stroke-width:2px
-    classDef cliente fill:#eaf2ff,stroke:#2563eb,color:#0f172a,stroke-width:2px
-    classDef kernel fill:#fff4da,stroke:#b45309,color:#0f172a,stroke-width:2px
-    classDef worker fill:#e7f6ec,stroke:#15803d,color:#0f172a,stroke-width:2px
-    classDef control fill:#f1eafd,stroke:#7c3aed,color:#0f172a,stroke-width:2px
-    classDef neutro fill:#f1f5f9,stroke:#64748b,color:#0f172a,stroke-width:2px
-    classDef error fill:#fff1f2,stroke:#dc2626,color:#881337,stroke-width:2px
 ```
 
 *La alternativa descartada añade un receptor y una cola central como paso común de los datos. En el diseño implementado, SO_REUSEPORT entrega cada datagrama directamente al socket de un worker, que lo procesa y reenvía; los buzones de coordinación pertenecen al control.*

@@ -42,22 +42,12 @@ Solo worker0 recibe al principio. Tras publicar las rutas inmutables, cualquier 
 ```mermaid
 ---
 config:
-  theme: base
   look: classic
   fontFamily: Arial, sans-serif
   fontSize: 22
   themeVariables:
     fontFamily: Arial, sans-serif
     fontSize: 22px
-    actorBkg: '#ffffff'
-    actorBorder: '#64748b'
-    actorTextColor: '#0f172a'
-    actorLineColor: '#94a3b8'
-    signalColor: '#334155'
-    signalTextColor: '#0f172a'
-    noteBkgColor: '#eaf2ff'
-    noteBorderColor: '#2563eb'
-    noteTextColor: '#0f172a'
   sequence:
     useMaxWidth: false
     mirrorActors: false
@@ -73,15 +63,9 @@ config:
 sequenceDiagram
     accTitle: Comunicación de una iteración y cálculo del RTT
     accDescr: POSICION y los ACK de los vecinos pasan siempre por el servidor. El cliente completa el RTT al recibir el último ACK único necesario.
-    box rgb(234,242,255)
-        participant C as Cliente origen
-    end
-    box rgb(231,246,236)
-        participant S as Servidor UDP
-    end
-    box rgb(234,242,255)
-        participant V as V−1 vecinos
-    end
+    participant C as Cliente origen
+    participant S as Servidor UDP
+    participant V as V−1 vecinos
     Note over C: Inicio de la medición RTT
     C->>S: POSICION
     S->>V: POSICION a cada vecino
@@ -103,7 +87,6 @@ RTT de aplicación: reloj local desde el primer envío efectivo de POSICION hast
 ```mermaid
 ---
 config:
-  theme: base
   look: classic
   fontFamily: Arial, sans-serif
   fontSize: 22
@@ -111,10 +94,6 @@ config:
   themeVariables:
     fontFamily: Arial, sans-serif
     fontSize: 22px
-    primaryTextColor: '#0f172a'
-    lineColor: '#475569'
-    clusterBkg: '#f8fafc'
-    clusterBorder: '#cbd5e1'
   flowchart:
     curve: linear
     nodeSpacing: 34
@@ -125,19 +104,13 @@ config:
 flowchart LR
     accTitle: Fiabilidad mediante ARQ sobre UDP
     accDescr: El emisor espera confirmación y retransmite tras timeout con límites. El receptor valida y deduplica; si se agotan intentos o tiempo se registra un error.
-    E("Enviar por UDP<br/>solo lo pendiente"):::cliente -->|"Si llega"| R("Receptor<br/>validar y deduplicar"):::worker
-    E -->|"Esperar ACK"| A{"¿ACK<br/>completos?"}:::control
+    E("Enviar por UDP<br/>solo lo pendiente") -->|"Si llega"| R("Receptor<br/>validar y deduplicar")
+    E -->|"Esperar ACK"| A{"¿ACK<br/>completos?"}
     R -->|"ACK<br/>también al duplicado válido"| A
-    A -->|"Sí"| O("Operación<br/>confirmada"):::worker
-    A -->|"Timeout"| T{"¿Quedan intentos<br/>y tiempo?"}:::neutro
+    A -->|"Sí"| O("Operación<br/>confirmada")
+    A -->|"Timeout"| T{"¿Quedan intentos<br/>y tiempo?"}
     T -->|"Sí: reintentar<br/>con límites"| E
-    T -->|"No"| F("Error<br/>sin completar"):::error
-    classDef cliente fill:#eaf2ff,stroke:#2563eb,color:#0f172a,stroke-width:2px
-    classDef kernel fill:#fff4da,stroke:#b45309,color:#0f172a,stroke-width:2px
-    classDef worker fill:#e7f6ec,stroke:#15803d,color:#0f172a,stroke-width:2px
-    classDef control fill:#f1eafd,stroke:#7c3aed,color:#0f172a,stroke-width:2px
-    classDef neutro fill:#f1f5f9,stroke:#64748b,color:#0f172a,stroke-width:2px
-    classDef error fill:#fff1f2,stroke:#dc2626,color:#881337,stroke-width:2px
+    T -->|"No"| F("Error<br/>sin completar")
 ```
 
 *La fiabilidad la aporta ARQ sobre UDP; no se utiliza TCP. Ante timeout se reintenta con el backoff, jitter y limitadores existentes, y un duplicado válido se confirma sin repetir sus efectos. Agotar los intentos o el tiempo disponible produce un error y una ejecución incompleta.*
@@ -167,7 +140,6 @@ Los contadores de G acreditan sus operaciones/ACK efectivos. S valida el conteni
 ```mermaid
 ---
 config:
-  theme: base
   look: classic
   fontFamily: Arial, sans-serif
   fontSize: 22
@@ -175,10 +147,6 @@ config:
   themeVariables:
     fontFamily: Arial, sans-serif
     fontSize: 22px
-    primaryTextColor: '#0f172a'
-    lineColor: '#475569'
-    clusterBkg: '#f8fafc'
-    clusterBorder: '#cbd5e1'
   flowchart:
     curve: linear
     nodeSpacing: 34
@@ -191,22 +159,16 @@ flowchart TB
     accDescr: Se registran todos los clientes y se preparan los workers antes de INICIO. Cada cliente completa sus iteraciones y confirma métricas antes de confirmar GRUPO_FIN; después se coordina el cierre global.
     subgraph P["Preparación y arranque"]
         direction LR
-        R("Registro de todos<br/>REGISTRO / REGISTRO_ACK"):::cliente --> W("Workers listos<br/>y rutas compartidas"):::worker
-        W --> I("INICIO / INICIO_ACK<br/>por cliente"):::control
+        R("Registro de todos<br/>REGISTRO / REGISTRO_ACK") --> W("Workers listos<br/>y rutas compartidas")
+        W --> I("INICIO / INICIO_ACK<br/>por cliente")
     end
     subgraph C["Ejecución y cierre"]
         direction LR
-        D("Iteraciones<br/>POSICION y ACK"):::cliente --> M("Entregar METRICAS<br/>recibir METRICAS_ACK"):::control
-        M --> F("Confirmar GRUPO_FIN<br/>con GRUPO_FIN_ACK<br/>tras METRICAS_ACK"):::control
-        F --> G("Cierre global<br/>certificado + fin<br/>de generadores"):::control
+        D("Iteraciones<br/>POSICION y ACK") --> M("Entregar METRICAS<br/>recibir METRICAS_ACK")
+        M --> F("Confirmar GRUPO_FIN<br/>con GRUPO_FIN_ACK<br/>tras METRICAS_ACK")
+        F --> G("Cierre global<br/>certificado + fin<br/>de generadores")
     end
     P --> C
-    classDef cliente fill:#eaf2ff,stroke:#2563eb,color:#0f172a,stroke-width:2px
-    classDef kernel fill:#fff4da,stroke:#b45309,color:#0f172a,stroke-width:2px
-    classDef worker fill:#e7f6ec,stroke:#15803d,color:#0f172a,stroke-width:2px
-    classDef control fill:#f1eafd,stroke:#7c3aed,color:#0f172a,stroke-width:2px
-    classDef neutro fill:#f1f5f9,stroke:#64748b,color:#0f172a,stroke-width:2px
-    classDef error fill:#fff1f2,stroke:#dc2626,color:#881337,stroke-width:2px
 ```
 
 *El servidor espera todos los registros y prepara los workers antes de enviar INICIO; cada cliente completa sus iteraciones y confirma sus métricas. **GRUPO_FIN no sustituye a METRICAS_ACK**: si llega antes, se retiene GRUPO_FIN_ACK hasta recibir la confirmación de métricas. Tras cerrar todos los grupos, los generadores validan el certificado y confirman su fin para completar el cierre global.*
